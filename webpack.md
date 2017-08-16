@@ -1,42 +1,56 @@
-**installution
-* setup a floder
-* npm init -y
-* npm install --save-dev webpack@deta
-* ./node_modules/.bin/webpack --help # Shows a list of valid cli commands
-* .\node_modules\.bin\webpack --help # For windows users
-* npm install --save lodash
+# webpack-es6-simple
 
-* setup app floder with index.js
-* setup index.html under root
-* idnex.html script dist/bundle.js
-* cmd run webpack app/index.js dist/bundle.js
-* broswer index.html shows index.js s content
+**prepare to change github to git commond**
 
-**webpack.config.js
-* var path = require('path')
- function resolve (dir) {
-  return path.join(__dirname, '..', dir)
-}
+* npm init -y 
+* npm install webpack -g
 
+
+```bash
+**webpack.config.js**
+var path = require('path');
 module.exports = {
-  entry: './app/index.js',
+  entry: "./app/main.js",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, './dist')//deal with dist path is not absolute
+    path: __dirname,
+    filename: "bundle.js"
+  },
+  module: {
+    loaders: [
+      {
+        test: path.join(__dirname, 'app'),
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      }
+    ]
   }
 }
+```
 
-**监听你的代码的修改
-* npm install --save-dev webpack-dev-server
-* webpack.config.js 
-"devServer": {
-    "contentBase": "./public",//本地服务器所加载的页面所在的目录
-    "historyApiFallback": true,//不跳转
-    "inline: true//实时刷新
-  } 
-* package.json
-"scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "server": "webpack-dev-server --open"
-  }
+* npm install babel-core --save-dev
+* npm install babel-loader --save-dev
+* npm install babel-preset-es2015 --save-dev
+
+```bash
+**index.html**
+<script src="bundle.js"></script>
+```
+
+* npm install node-sass
+* npm install style-loader css-loader --save-dev
+* npm insatll sass-loader --save-dev
+
+```bash
+**webpack.config.js loaders adds**
+* {test: /\.css$/, loader: "style-loader!css-loader"},
+* {test: /\.scss$/, loader: "style-loader!css-loader!sass-loader"}
+**main.js**
+* import "!style-loader!css-loader!sass-loader!./style/*.scss"
+```
+
+* webpack --progress --colors --watch
+
+* test github contributions change green
+* again
