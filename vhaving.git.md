@@ -34,15 +34,15 @@ git reset --hard HEAD^   撤回
 xiaofan123
 
 **step**
-git add .
-git commit -m 'somewords'
-git push
+* git add .
+* git commit -m 'somewords'
+* git push
 
-git checkout master
-git pull
+* git checkout master
+* git pull
 
-git checkout yhy
+* git checkout yhy
 
-git add .
-git commit -m 'ss'
-git push
+* git add .
+* git commit -m 'ss'
+* git push
