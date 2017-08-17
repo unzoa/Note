@@ -75,3 +75,19 @@
 * goods.vue template add button>input
 * data add inputChangeExcel:''
 * methods add change() fixdata()
+
+**yhy** 商店选择商品，尺码对应的颜色值有问题
+* 判断出了问题
+* 获取当前选中的属性返回值有问题
+
+**yhy** 权限问题
+** 改过的组件👌
+* user.vue data,options,权限，查找对应按钮 👌
+* 各种按钮请求的接口
+* 菜单管理加菜单权限，菜单加级别联动
+* 角色管理加权限分析
+** 接收接口数据展示 👌🏻
+* 菜单的选中状态显示：改checkbox为span显示👌🏻
+* 发送选中id
+* 点击非权限按钮，提示弹窗
+* 样式修改 👌🏻

@@ -89,3 +89,8 @@ mutatins内 export const type = (state,value)=>{ state.statename 's operate func
 **** 把方法写在vuex的actions中，或者写在js文件里面，js和图片加载顺序会不规则????
 ** 如果写在本文件下就好了
 ** maybe js or other file load later or earlier than here write.
+
+**商城**
+* anywhere启动
+* gulp watch 
+* 删除template.js执行tmod创建新的template.js
