@@ -61,3 +61,12 @@
 *-action,js   add
 *-mountation.js  add  export const increment = (state,value) => { state.count+=value}
 *-getter  add  export const count = state => state.count
+
+**商城简体变繁体**
+* 引入jquery.s2t.js,依赖jquery.js
+* main.js 注册s2t
+* header.h 中引入s2t
+* 添加a按钮，require s2t 
+	- login.html
+	- register.html
+	- header.html
