@@ -5,4 +5,3 @@
 * gem install sass
 * Petching...
 * sass -v
-* 
