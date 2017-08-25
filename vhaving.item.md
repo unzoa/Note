@@ -54,8 +54,30 @@
 	* 获取点击的用户id>>>>>>>>>>>>>>>
 	* 点击变化事件，点击检查重复选择事件>>>>>>>>>>>>>>>>>>>
 	* 各种按钮请求的接口>>>>>>>>>>
-	* 点击非权限按钮，提示弹窗
 	* 样式修改>>>>>>>>>>>>
+	* 点击非权限按钮，提示弹窗
+		- 几种按钮形式
+			* panel中的保存按钮，更新按钮，operate()->sure()
+			* 直接confirm的确认按钮、
+			* prompt？？
+		- 每个请求接口回掉信息都做判断处理 ErrMsg，Comfirm提示没有权限
+			*	import confirm from '*'
+			*	components :{confirm}
+			*	data:{msg:''}
+			*	<confirm ref="customNamesRef" :msg="msg"></confirm>
+			* 	let msg = item.ErrMsg
+				if(msg){
+					this.$refs.customNamesRef.funcName()
+				}
+		- 设置公用方法提示，或者公用js文件
+			* 根据item的返回数据argument
+			* export const backErrMsg = (item)=>{
+				let msg = item.ErrMsg
+				if(msg){
+					//js文件引入了vue组件？？？？
+					this.$refs.customNamesRef.funcName()
+				}
+			}
 
 **菜单加级别联动**
 
@@ -97,6 +119,6 @@
     ** 从第二行开始匹配
     ** 匹配内存在排列组合或者别的方法  比如 indexof
 
-    // 当前点击的id,如果联动无效，则active、跳转的联动有效的第一个，或者移除active
-    // 判断条件:如果thisId被存储了，则表示是可以联动的，反之
-    // flag
+    ** 当前点击的id,如果联动无效，则active、跳转的联动有效的第一个，或者移除active
+    ** 判断条件:如果thisId被存储了，则表示是可以联动的，反之
+    ** flag
