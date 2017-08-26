@@ -69,15 +69,6 @@
 				if(msg){
 					this.$refs.customNamesRef.funcName()
 				}
-		- 设置公用方法提示，或者公用js文件
-			* 根据item的返回数据argument
-			* export const backErrMsg = (item)=>{
-				let msg = item.ErrMsg
-				if(msg){
-					//js文件引入了vue组件？？？？
-					this.$refs.customNamesRef.funcName()
-				}
-			}
 
 **菜单加级别联动**
 
