@@ -57,6 +57,77 @@
 	* 样式修改>>>>>>>>>>>>
 	* 点击非权限按钮，提示弹窗
 		- 测试返回消息，非权限按钮返回消息
+		- 几种按钮形式
+			
+			* panel中的保存按钮，更新按钮，operate()->sure()
+			* 类panel的保存按钮
+			* 直接confirm的确认按钮 .then( ()=>{} )
+			* prompt？？
+
+		- change places
+		- api添加判断
+			* response字段是否存在
+			* ErrMsg
+			* this.notice({msg:'',type:error})
+			* code
+				- import { mapActions } from 'vuex'
+				- ...mapActions(['notice','judgeItemAction']),
+				- 	
+			        function judgeItem(item,apiname){
+			            if(item.ErrCode){
+			              that.notice({msg: '您没有此权限', type: 'error'})
+			              that.$emit('close', {name: apiname})
+			            }
+			            if (item.responsecode) {
+			              if (item.responsecode=='200') {
+			                that.notice({msg:'保存成功',type:'success'})
+			                that.$emit('close', {name: apiname})
+			              }else{
+			                that.notice({msg:item.responsetext,type:'error'})
+			                that.$emit('close', {name: apiname})
+			              }
+			            }
+			        }
+
+				* /com/awaitpay
+					(view-order-workorder)>>>>>>>>>>>>>>	 
+				* /component/examine  
+					（view-refund）(忘记)(退货审核)vchange.soback.approval
+					（view-barter）vchange.sochange.approval 01170727000005
+				* /com/workorderpanel 
+					(view-workorder) vchange.woline.insert
+					(忘记)(创建部门)vchange.dept.insert
+				* /com/panel 
+					(vie-part)
+				* /comp/authnew
+					update
+				* /comp/edittable 
+					(goods-sku)vchange.skuprop.update 保存
+				* confirm
+					(view-user)
+					(view-sys-role)
+					(view-sys-tenet)
+					(view-sys-journal)
+					(view-sys-category)
+					(view-sys-stock)
+					(view-sys-company)
+					(view-sys-advertmanage)
+					(view-sys-menu)
+					(view-goods)
+					(view-brand)
+					(view-goods-catelogue)
+					(view-goods-parameters)	
+					(view-leaguer-insider)
+					(view-sys-supplier)
+					(view-logistics-enterstorage)
+					(view-activity-auction)
+					(view-orsers-advertisement)
+				* 本组件内
+					view-goods-basic
+					view-packs-create
+					view-purchase-banto
+					comp/purchases/purachese
+		- 直接在post方法内判断，添加store，vuex，noticeAction
 
 **菜单加级别联动**
 
@@ -64,7 +135,7 @@
 	* 权限加在了二级菜单上
 	* child.list
 	*-点击父级时候存储get内的id
-	*一个新的selecternew
+	* 一个新的selecternew
 	* vuex加状态
 	*-index.js  add   state
 	*-action,js   add
@@ -98,6 +169,18 @@
     ** 从第二行开始匹配
     ** 匹配内存在排列组合或者别的方法  比如 indexof
 
-    // 当前点击的id,如果联动无效，则active、跳转的联动有效的第一个，或者移除active
-    // 判断条件:如果thisId被存储了，则表示是可以联动的，反之
-    // flag
+    ** 当前点击的id,如果联动无效，则active、跳转的联动有效的第一个，或者移除active
+    ** 判断条件:如果thisId被存储了，则表示是可以联动的，反之
+    ** flag
+
+**功用商导入**
+	
+	** 添加按钮，组件，事件
+	** 添加接口设置
+
+**供应商-成本价管理**
+	
+	** 添加组件
+	** 添加路由
+	** 添加api接口
+	** 创建菜单
