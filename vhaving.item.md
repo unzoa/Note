@@ -45,7 +45,76 @@
 	* 判断出了问题
 	* 获取当前选中的属性返回值有问题
 
+**商城商品详情选择属性联动**
+
+    ** 取到的sele的valueid
+    ** 因为这些值为定值，那么根据这几个值逐级排列匹配，选出不能匹配的n值
+    ** 首先第一行不动
+    ** 从第二行开始匹配
+    ** 匹配内存在排列组合或者别的方法  比如 indexof
+
+    ** 当前点击的id,如果联动无效，则active、跳转的联动有效的第一个，或者移除active
+    ** 判断条件:如果thisId被存储了，则表示是可以联动的，反之
+    ** flag
+
+**供应商-成本价管理**
+	
+	** 添加组件
+	** 添加路由
+	** 添加api接口
+	** 创建菜单
+
+**三端适应的登陆注册页面**
+
+	* 首先是注册页面，
+		- 手机号，获取验证码验证，首次密码，验证输入密码，直接登录的入口，注册成功后跳转
+	* 登陆页面：
+		- 直接手机号码+密码登陆
+		- 手机验证码登陆方式，注册按钮
+		- 登陆按钮
+
+	* 注册 vchange.drpuser.insert 》》vchange.drpmall.register
+		Pid:pid
+		Name: telnum
+		WorkPhone:telnum
+		Status:1
+	* 账号密码登录vchange.drp.login》》vchange.drpmall.login
+		UserId:
+	* 验证码登录vchange.mobile.login》》vchange.mobile.login
+		UserId:
+
+**商城简体变繁体**
+
+	* 引入jquery.s2t.js,依赖jquery.js
+	* main.js 注册s2t
+	* header.html 中引入s2t
+	* 添加a按钮，require s2t 
+		- login.html
+		- register.html
+		- header.html
+
 **权限问题**
+	
+	**设置权限**
+	* user.vue内更换auth.vue 为authnew.vue
+	* api.js添加接口名称
+		- 'new_menu_tree':'vchange.permission.list',//设置权限新的接口
+		- 'permission_isck':'vchange.permission.isck',//权限标记
+		- 'permission_update':'vchange.permission.update',//更新权限
+
+	**添加菜单加权限**
+	* 创建和编辑菜单加权限
+		- menu.vue data-panels添加组件配置
+		- 增加selecternew新组件，与selector联动，通过vuex进行state存储将值返回到panel，this.updata[value.name] = value.val
+
+		* vuex加状态
+		*-index.js  add   state
+		*-action,js  add
+		*-mountation.js  add  export const increment = (state,value) => {state.count+=value}
+		*-getter add export const count = state => state.count
+
+	**api拦截权限受限加提醒**
+		- 判断条件需要更改
 
 	* user.vue data,options,权限>>>>>>>>>>>>
 	* 接收接口数据展示>>>>>>>>>>>>>>>>>>
@@ -127,60 +196,12 @@
 					view-packs-create
 					view-purchase-banto
 					comp/purchases/purachese
+
 		- 直接在post方法内判断，添加store，vuex，noticeAction
-
-**菜单加级别联动**
-
-	* 主菜单》二级菜单
-	* 权限加在了二级菜单上
-	* child.list
-	*-点击父级时候存储get内的id
-	* 一个新的selecternew
-	* vuex加状态
-	*-index.js  add   state
-	*-action,js   add
-	*-mountation.js  add  export const increment = (state,value) => { state.count+=value}
-	*-getter  add  export const count = state => state.count
-
-**商城简体变繁体**
-
-	* 引入jquery.s2t.js,依赖jquery.js
-	* main.js 注册s2t
-	* header.h 中引入s2t
-	* 添加a按钮，require s2t 
-		- login.html
-		- register.html
-		- header.html
-
-**三端适应的登陆注册页面**
-
-	* 首先是注册页面，
-		- 手机号，获取验证码验证，首次密码，验证输入密码，直接登录的入口，注册成功后跳转
-	* 登陆页面：
-		- 直接手机号码+密码登陆
-		- 手机验证码登陆方式，注册按钮
-		- 登陆按钮
-
-**商城商品详情选择属性联动**
-
-    ** 取到的sele的valueid
-    ** 因为这些值为定值，那么根据这几个值逐级排列匹配，选出不能匹配的n值
-    ** 首先第一行不动
-    ** 从第二行开始匹配
-    ** 匹配内存在排列组合或者别的方法  比如 indexof
-
-    ** 当前点击的id,如果联动无效，则active、跳转的联动有效的第一个，或者移除active
-    ** 判断条件:如果thisId被存储了，则表示是可以联动的，反之
-    ** flag
 
 **功用商导入**
 	
 	** 添加按钮，组件，事件
 	** 添加接口设置
-
-**供应商-成本价管理**
-	
-	** 添加组件
-	** 添加路由
-	** 添加api接口
-	** 创建菜单
+	** 增加合同编号，合同激活
+	** 更新》》》》》》》》》》》》
