@@ -193,4 +193,44 @@ vue - long
 	
 	- webpack.config.js中output输出路径的前缀，publicPath
 	- 设置路径config/index.js 设置build的路径前加点
+
+*15拓展	
 	
+	* npm install vuex --save
+		- vuex floder
+		- mainjs 
+			import store from './vuex'
+			new vue({store})
+	
+	* npm install vue-resource --save
+		- mainjs 
+			import  VueResource  from 'vue-resource'
+			Vue.use(VueResource) 
+			Vue.http.options.emulateJSON = true;
+		- use
+			in component 
+				this.$http.post(url,{}).then((res)=>{})
+
+	* /api/api.js
+		import Vue from 'vue'//将用于调用接口
+
+		const baseurl = 'http://www.fitmee.cn/wx/Home/Interface/myself'
+		const api={}
+
+		api.haha = (requestData)=>{
+			return requestData+'apihaha'
+		}
+		api.post = (requestData)=>{
+			return new Promise((reslove,reject)=>{
+				Vue.http.post(baseurl,requestData).then(function(res){
+					reslove(res)
+				})
+			})
+		}
+
+		export default api
+
+	* import api from '@api/api.js'
+		api.post({openid:'oK-O_t0mp3Br9HoYOFycp3_P1Hi4'}).then((res)=>{
+			console.log(res)
+		})
