@@ -19,3 +19,5 @@
 	* 复制id_rsa.pub到github ssh key
 
 	* ssh -T git@github.com
+
+haha
