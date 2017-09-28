@@ -161,7 +161,7 @@
 		- fieldset 内table bgcolor change
 	* 等待电审核 
 		- 电审框change style
-	* 还款记录里，已还款的变成绿色
+	* 还款记录里，已还款的变成
 
 # 0926
 
@@ -173,6 +173,29 @@
 	6, 部门的类型select，value（admin，user）
 	7, 贷款申请，dk.js bug
 	8, 还款记录的明细添加popover
+
+# 0927
+
+	1，还款记录的上下分栏需加百分比
+	2，滚动条去掉背景
+	2.1, easyui 的datebox加扩展清空功能
+	2.2, 报销记录新增数据的窗口更改modal，去掉input file的保存按钮
+		？ 上传图片不能太大
+		？ 提交时候500
+	3，用户管理，更新用户基本信息的input需要重新加验证
+	4，查找清理浏览器缓存方法
+		<meta http-equiv="pragma" content="no-cache"> 
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
+		<meta http-equiv="expires" content="0">
+	
+	5, 用户管理的表格加混合表头
+	6, 类似还款中首列冻结
+	7, 表格适应后出现滚动条，表头错位5px问题？？未解决
+	8, 渠道管理适应问题
+
+
+	*, 新增用户密码截取身份证后六位
+
 
 	1，还款记录可以删除vvv
 	2，
