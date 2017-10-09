@@ -50,7 +50,6 @@ npm install vuex --save
 
 	export default store
 
-
 # getters.js
 
 	export const count = state => state.count
