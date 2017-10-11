@@ -231,4 +231,24 @@
 	7,贷款申请的combo的美化
 	8,用户管理的全选bug问题
 
-	* 拦截处理：datagrid('getdata'),如果是空的话再去加载。。。
+# 1010
+
+	1，借款
+		* popup修改
+		-1，贷款申请：（1）弹窗更换modal；（2）modal的表格换行处理；（3）住宅信息合并行；
+		-2，待电审：（1）禁用已经保存过的选项的保存按钮
+	2，系统管理
+		-1，用户管理：（1）用户权限省份字段纠正；
+	3，拦截处理：datagrid('getdata'),如果是空的话再去加载。。。
+	4，网页加载问题
+		-1，bootstrap.min.css转cdn（ https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css）
+		-2，jq（https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js）
+		-3，解决easyui的加载问题
+
+# 1011
+
+	1，用户管理修改时弹窗内城市显示
+	2，用户的权限省市的存储利用，在选择搜索条件时
+	3，立案的弹窗初始化清空表格操作
+	4，研究easyui的datagrid加载拦截问题（找到onbeforerender事件）
+	5，研究登出时候undefined问题（刷新接口显示canceled并弹出undefined，在连续刷新时候会出现此种情况）
