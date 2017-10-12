@@ -252,3 +252,12 @@
 	3，立案的弹窗初始化清空表格操作
 	4，研究easyui的datagrid加载拦截问题（找到onbeforerender事件）
 	5，研究登出时候undefined问题（刷新接口显示canceled并弹出undefined，在连续刷新时候会出现此种情况）
+
+# 1012
+
+	1,研究登出时候undefined问题
+		- 禁止logout的error的alert（登出的undefined，但根据下午偶尔出现的未授权，这个undefined出现在check_error中的可能性比较大）
+		- 禁止findmenu的error的alert（大于两次的刷新时候的canceled出现undefined）
+		- check_error的错误errorCode具体化
+	2,
+	4,微信的贷款，联系娇娇更改链接http://yibaba.com/Shouji/index.html
