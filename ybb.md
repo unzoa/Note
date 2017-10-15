@@ -1,19 +1,21 @@
 # 0912
-**adapt**
+	
+	**adapt**
 	
 	* body jq control 100% 100%
 	* each window input is die width
 	* button style change
 	* table style change
 
-**角色管理-用户管理**
+	**角色管理-用户管理**
 
 	* 权限管理xx树形结构
 		- 需再议
 	* 用户管理xx城市选择
 
 # 0913
-**修改个页面样式**
+	
+	**修改个页面样式**
 	
 	* 表格问题
 	* login页面适应
@@ -259,5 +261,19 @@
 		- 禁止logout的error的alert（登出的undefined，但根据下午偶尔出现的未授权，这个undefined出现在check_error中的可能性比较大）
 		- 禁止findmenu的error的alert（大于两次的刷新时候的canceled出现undefined）
 		- check_error的错误errorCode具体化
-	2,
-	4,微信的贷款，联系娇娇更改链接http://yibaba.com/Shouji/index.html
+	2,微信的贷款申请H5转换，联系娇娇更改链接http://yibaba.com/Shouji/index.html
+	3,配合更改上线后的bug
+
+# 1013
+
+	1，解决easyui的datagrid数据拦截
+	2，还款中客户资料限制
+	3，未批款内的批款tab页面批款金额的更改事件，放款时间选择后周几还款自动填充
+	4，电审弹窗的亲属电话的拒绝批款做标记，并且chekcbox默认不选中
+	5，检验登陆的citystr写入
+	6，其他修复
+
+# 1014  
+
+	1，用户管理的修改。调取城市是否全选的（在赋值权限城市为全部的时候处理cityall）
+	2，增加股东各页面
