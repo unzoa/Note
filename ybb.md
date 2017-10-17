@@ -277,3 +277,22 @@
 
 	1，用户管理的修改。调取城市是否全选的（在赋值权限城市为全部的时候处理cityall）
 	2，增加股东各页面
+
+# 1016
+
+	1，数据报表的查询；
+	2，待面审的批款添加放款城市（默认显示，自定义选择）；
+	3，贷款申请单子，查询身份证号码，填充订单内容
+
+# 1017
+
+	1，orderid的弹窗，限制在除了那三个部门
+	2，审批完成的功能bug修复
+		- 定义变量，赋input值$('#id').val(),但是到了下面对象里就不是一个值了，变成了这个input对象了，故在对象内键值直接写入$().val()
+	3, 零用宝接口更改
+		api改成 yaobeiapi
+	4，查询easyui刷新指定的tab下数据,并跳转到该tab下
+			var tab = top.jQuery('#container').tabs('getTab','导流数据');
+			top.jQuery('#container').tabs('update', { tab: tab, options: { title: 'New Title' } });
+			top.jQuery('#container').tabs('select','New Title');
+	5，报销记录 ，状态改变审核
