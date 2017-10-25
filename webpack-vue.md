@@ -234,3 +234,16 @@ vue - long
 		api.post({openid:'oK-O_t0mp3Br9HoYOFycp3_P1Hi4'}).then((res)=>{
 			console.log(res)
 		})
+
+*16跨域
+
+	解决跨域问题
+	config/index.js配置dev:{proxyTable:{
+			'/api':{
+	            target: 'http://192.168.1.26',
+	            changeOrigin: true,
+	            pathRewrite: {
+	              '^/api': '/api'
+	            }
+	        }
+		}}

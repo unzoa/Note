@@ -32,3 +32,5 @@
     	import Element from 'element-ui'
 	    import 'element-ui/lib/theme-default/index.css'
 	    Vue.use(Element)
+
+    4,引入js文件，虚拟数据
