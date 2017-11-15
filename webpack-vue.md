@@ -243,7 +243,7 @@ vue - long
 	            target: 'http://192.168.1.26',
 	            changeOrigin: true,
 	            pathRewrite: {
-	              '^/api': '/api'
+	              '^/api': '/'
 	            }
 	        }
 		}}
