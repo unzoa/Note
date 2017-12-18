@@ -19,14 +19,13 @@ npm run build --report
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-``` bash
+
 # install Vuex
-npm install vuex --save
 
 # setup vuex floder in src,import it path in main.js ,then add it name in Vue instance
 
 # setup idnex.js getters.js actions.js mutations.js
-```
+
 # index.js
 
 	import Vue from 'vue'
@@ -54,15 +53,18 @@ npm install vuex --save
 
 	export const count = state => state.count
 
-	* like vuex computed
+	* 计算属性computed中调用
 
 # mutations.js
 
 	export const increment = (state,value) => { state.count+=value}
 	export const decrement = state => { state.count-- }
 
-	* like state compute , include type，handle
-	* value argument is from a component, format like this.increment(this.data-name) or this.increment({11:'',22:''})					
+	* include type，handle
+	* value is from a component
+	* state只能在这里重置
+	* state的重置，计算
+	* 请求接口数据在action中进行					
 
 # actions.js
 
@@ -70,12 +72,11 @@ npm install vuex --save
 
 	export const increment = ({ commit },value) =>{
 		let hahav = api.haha(value)
-		console.log( hahav )
 		commit('increment',value)
 	}
 	export const decrement = ({ commit }) =>  commit('decrement')
 
-	* named as mutation 's type，request datas and commit type
+	* 请求接口，并将数据送回mutation那里重置commit(type,value)
 
 # api.js
  
@@ -89,7 +90,7 @@ npm install vuex --save
 
 	export default api
 
-# main.js registe
+# main.js
 
 	- import store from './vuex'
 	- new vue({store})
@@ -98,8 +99,5 @@ npm install vuex --save
 
 	# in ur component import {mapGetters ,mapActions} from 'vuex'
 	# then use the mapGetters in computed:{ ...mapGetters(['state-name']) }
+	
 	# then methods:{ ...mapActions(['mutation-type']) }
-
-	# the value of use vuex
-	** in the same component , the state is sync
-	** router-link to anther component ,the state sync too

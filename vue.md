@@ -21,12 +21,7 @@ npm run build --report
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 
-vue - long
-
-**实现**
-* 1,路由
-* 2,弹窗组件
-* 3,侧滑菜单
+vue
 
 **Problem**
 
@@ -163,11 +158,11 @@ vue - long
 *12, 解决overflow:scroll的滑动条问题
 	
 	::-webkit-scrollbar{ width:0;height:1px}
-	/*::-webkit-scrollbar-thumb {
+	::-webkit-scrollbar-thumb {
       	border-radius: 5px;
      	 -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
      	 background: rgba(0, 0, 0, 0.2);
-  	} */
+  	}
     
 *13,Swiper的使用
 	
@@ -230,10 +225,10 @@ vue - long
 
 		export default api
 
-	* import api from '@api/api.js'
-		api.post({openid:'oK-O_t0mp3Br9HoYOFycp3_P1Hi4'}).then((res)=>{
-			console.log(res)
-		})
+		- import api from '@api/api.js'
+			api.post({openid:'oK-O_t0mp3Br9HoYOFycp3_P1Hi4'}).then((res)=>{
+				console.log(res)
+			})
 
 *16跨域
 
@@ -247,3 +242,26 @@ vue - long
 	            }
 	        }
 		}}
+
+*17 缓存
+
+	<keep-alive></keep-alive>
+
+	<keep-alive>
+      <router-view v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive">
+        <!-- 这里是不被缓存的视图组件，比如 page3 -->
+    </router-view>
+
+    {
+      path: '/welcome',
+      name: 'welcome',
+      component: welcome,
+      meta: {
+        keepAlive: true,
+      }
+    },
+
+    利用route的meta组件属性设置keeplive布尔值
+    利用route的meta组件属性设置isback布尔值，用于判断上一个页面是返回路径
