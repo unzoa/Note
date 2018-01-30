@@ -246,7 +246,7 @@ npm run build --report
         
         import api from '@api/api.js'
     
-		api.post({openid:'oK-O_t0mp3Br9HoYOFycp3_P1Hi4'}).then((res)=>{
+		api.post(apiUrl,{openid:'oK-O_t0mp3Br9HoYOFycp3_P1Hi4'}).then((res)=>{
 			console.log(res)
 		})
         

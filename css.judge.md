@@ -1,44 +1,45 @@
-/*1,position:
+
+1,position:
 	relative
 	absolute
 	fixed
-*/
 
-/*2,percent
+
+2,percent
 	rem
 	width:auto
 	width:calc();
 	full window
-*/
 
-/*3,float:left;
+
+3,float:left;
 	overflow:auto scroll;
 	-webkit-overflow-scrolling:touch;
 	clear:both;
 	display:inline-block;
 	display:flex;
 	vertical-align:middle;
-*/
 
-/*4,-webkit-appearence:none;
-*/
 
-/*5,background:
+4,-webkit-appearence:none;
+
+
+5,background:
 	color
 	image
 	size
 	position
 	attachment
-*/
 
-/*6,transform:
+
+6,transform:
 	translate
 	rotate
 	scale
 	skew
-*/
 
-/*7,transition
+
+7,transition
 	property 
 	duration 
 	timing-function 
@@ -49,9 +50,9 @@
 		ease-in-out	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
 		cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。
 	delay
-*/
 
-/*8,animation:
+
+8,animation:
 	custom-name
 	duration
 	timing-function
@@ -65,13 +66,11 @@
 		0%{}
 		100%{}
 	}
-*/
 
-/*9,nth-child(n,2n,odd,even)
+
+9,nth-child(n,2n,odd,even)
 	first-child
 	last-child
-*/
-
 
 
 **优先级**
