@@ -4,10 +4,29 @@
 	** rm -rf .git  // 删除.git
 	** git config --global core.autocrlf false  //禁用自动转换
 
+## 初始化
+
+	git config --global user.name "unzoa"
+	git config --global user.email "unzoa@xxx.com"
+
+	创建文件夹unoza
+	git init
+
+###  和github关联
+
+	0，删除原来的秘要
+
+	1，生成ssh秘a钥
+	ssh-keygen -t rsa -C "unzoa@xxx.com"
+
+	2，测试ssh
+	ssh -T git.github.com
+
 ## 提交修改过的项目
 
 	* git add .    
-	* git commit -a -m 'commit'    
+	* git commit -a -m 'commit'   
+	* git pull 
 	* git push
 
 ## key 挂掉了
