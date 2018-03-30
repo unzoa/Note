@@ -12,12 +12,13 @@
 	* unshit 向数组的开头添加一个或更多元素
 	* concat 连接数组
 	* join 数组变为字符串
-	* slice(start,end) 	
+	* slice(start,end) 
+	* splice(index,count,new1,new2)替换原数组项目从index开始count个位置	
 	* reverse
 	* sort
 
-	* forEach()//返回字符串，数组元素
-	* map(function())//返回新的数组
+	* arr.forEach( ()=>{} )//返回字符串，数组元素
+	* arr.map( ()=>{ return } )//返回新的数组
 	* filter(function(item){ return type item == 'number'})//返回过滤后的数组
 
 ## JSON
@@ -27,14 +28,79 @@
 
 ## dom
 
-	append
-	text
-	html
-	empty
-	remove
+	jQuery:
+		
+		append
+		text
+		html
+		empty
+		remove
 
-	find('')
-	children('')
-	parentsUntil('')
-	eq()
-	siblings('')
+		find('')
+		children('')
+		parentsUntil('')
+		eq()
+		siblings('')
+
+	Js
+
+	### 创建新节点
+		
+		creatElement()
+		creatTextNode()
+
+	### 操作节点
+
+		appendChild()
+		removeChild()
+		replaceChild()
+		insertBefore()
+
+	### 查找
+
+		getElementsByTagName()
+		getElementsByClassName()
+		getElementsByName()
+		getElementById()
+
+		querySeletor()
+
+# ajax
+	
+	```bash
+
+	var xhr = new XHRHttpRquest();
+	xhr.open('get',url,true);
+	xhr.send();
+	xhr.onreadystatechange = function(){
+		if(xhr.readyState === 4 && xhr.status == 200){
+			// do sth
+		}
+	}
+
+	```
+
+# promise
+
+	```bash
+		var pro = new Promise((resolve,reject)=>{
+				if(true){
+					resolve(data)
+				}else{
+					reject(msg)
+				}
+			})
+		pro.then((data)=>{
+
+			}).catch((msg)=>{
+				
+				})
+	```
+
+# 模块化
+
+	commonJs
+		服务器端模块规范，一个文件是一个模块，例如Node.js
+		同步加载，程序在所有模块都加载完毕后才执行
+	amd
+	cmd

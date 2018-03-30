@@ -18,3 +18,7 @@
 		location /api {
 			proxy_pass http://site:8080/
 		}
+
+# reload
+
+	nginx -s reload

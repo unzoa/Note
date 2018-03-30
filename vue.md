@@ -60,8 +60,8 @@ npm run build --report
   
 5,子组件传递命令到父组件
 	
-	子组件：this.$emit(‘event-name’,’para’);
-	在父组件使用子组件的地方添加@event-name = ‘father-method’
+	子组件：this.$emit('event-name','para');
+	在父组件使用子组件的地方添加@event-name = 'father-method'
   
 6，父组件传递参数到子组件
 	
@@ -189,6 +189,10 @@ npm run build --report
 	webpack.config.js中output输出路径的前缀，publicPath
 	设置路径config/index.js 设置build的路径前加点
 
+15, 动态循环组件
+	
+	组件名称和要绑定的数据放在数组里面，
+	在template中利用:is="componentName" v-for="(i,j) in comps"
 ### 拓展	
 	
 1,npm install vuex --save
@@ -257,8 +261,7 @@ npm run build --report
         upLoadImg(e){
             api.upload(url,e.target.files[0],{type:11,deviceId:api._deviceId})
         }
-            
-            
+             
 
 4,跨域
 
