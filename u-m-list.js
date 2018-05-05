@@ -1,3 +1,0 @@
-let list = [
-  'http://m10.music.126.net/20180505225045/b93b0031e17c6c0eb334d9d44036f756/ymusic/39ed/2ac5/0969/22f34e652371c932ac3f63bc5aae6951.mp3'
-]
