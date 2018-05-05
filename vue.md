@@ -115,7 +115,7 @@ npm run build --report
 
 7.1多个组件平行滑动
 		
-        设置data-back:’ ’
+    设置data-back:’ ’
 		返回设置为2，前进设置为1
 		浏览器返回按钮，this.back为空。解决：let backstair = this.back || 2 //设置返回
 		beforeRouterLeave( )
@@ -193,6 +193,7 @@ npm run build --report
 	
 	组件名称和要绑定的数据放在数组里面，
 	在template中利用:is="componentName" v-for="(i,j) in comps"
+  
 ### 拓展	
 	
 1,npm install vuex --save
@@ -302,3 +303,11 @@ npm run build --report
 
     利用route的meta组件属性设置keeplive布尔值
     利用route的meta组件属性设置isback布尔值，用于判断上一个页面是返回路径
+
+6,缓存后，各个路由页面滑动的页面距离一致
+  * router内配置
+  ```bash
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
+  ```
