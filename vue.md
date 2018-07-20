@@ -125,7 +125,7 @@ npm run build --report
 	npm 引入jquery …npm  install jquery —save-dev
 	更改webpack.base.conf.js
 		var webpack = require (‘webpack’) 
-		resolve ‘jquery’:’jquery’
+		<!-- resolve ‘jquery’:’jquery’ -->
 	plugins:[
     	new webpack.optimize.CommonsChunkPlugin('common.js'),
    		new webpack.ProvidePlugin({jQuery: "jquery", $: "jquery"})
@@ -189,11 +189,27 @@ npm run build --report
 	webpack.config.js中output输出路径的前缀，publicPath
 	设置路径config/index.js 设置build的路径前加点
 
-15, 动态循环组件
+15, 动态组件
 	
 	组件名称和要绑定的数据放在数组里面，
-	在template中利用:is="componentName" v-for="(i,j) in comps"
+	在template中
+  <component :is="componentName" v-for="(i,j) in comps"></component>
   
+16, img
+    
+    template ../../static/
+    js 
+    css ../../static/
+        utils.js
+        exports.cssLoaders = function (options) {
+            if (options.extract) {
+              return ExtractTextPlugin.extract({
+                use: loaders,
+                fallback: 'vue-style-loader',
+                publicPath: '../../' // 这里增加打包路径
+              })
+            }
+        }
 ### 拓展	
 	
 1,npm install vuex --save
@@ -215,7 +231,8 @@ npm run build --report
 
 3,/api/api.js
 		
-        import Vue from 'vue'//将用于调用接口
+    import Vue from 'vue'//将用于调用接口
+    import Router from '../router' // 在api.js中哟用router
 
 		const baseurl = 'http://www.fitmee.cn/wx/Home/Interface/myself'
 		const api={}
@@ -228,28 +245,28 @@ npm run build --report
 			})
 		}
         
-        //图片上传
-        api.upload = (Interface,file,_obj) => {
-        
-            let formData = new FormData()
-            formData.append('attach', file)
-            for (var k in _obj) {
-              formData.append(k, _obj[k])
-            }
-        
-            return new Promise((resolve, reject) => {
-              Vue.http.post(api.apiPath+apiArr[Interface], formData)
-              .then(function (response) {
-                resolve(response.body)
-              })
-            })
+    //图片上传
+    api.upload = (Interface,file,_obj) => {
+    
+        let formData = new FormData()
+        formData.append('attach', file)
+        for (var k in _obj) {
+          formData.append(k, _obj[k])
         }
+    
+        return new Promise((resolve, reject) => {
+          Vue.http.post(api.apiPath+apiArr[Interface], formData)
+          .then(function (response) {
+            resolve(response.body)
+          })
+        })
+    }
 
 		export default api
 
 3.1 use
         
-        import api from '@api/api.js'
+    import api from '@api/api.js'
     
 		api.post(apiUrl,{openid:'oK-O_t0mp3Br9HoYOFycp3_P1Hi4'}).then((res)=>{
 			console.log(res)
@@ -311,3 +328,9 @@ npm run build --report
     return { x: 0, y: 0 }
   }
   ```
+7, 打包后控制img显示问题
+    webpack.base.js 
+    img
+    limit:100000 B
+    当size一定大时候，范围内的image都会变成base64，即使是css引入的
+
