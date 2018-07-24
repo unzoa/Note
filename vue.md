@@ -287,11 +287,11 @@ npm run build --report
 	config/index.js配置dev:
     {
         proxyTable:{
-			'/api':{
+			'/api':{ 
 	            target: 'http://192.168.1.26',
 	            changeOrigin: true,
 	            pathRewrite: {
-	              '^/api': '/'
+	              '^/api': '/api' // key is webfront set, value is webback set.
 	            }
 	        }
 		}
