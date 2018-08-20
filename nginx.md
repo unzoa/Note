@@ -1,24 +1,28 @@
-# loaction
+### Config
 	
 	listen       8000;
     server_name  localhost;
 
 	* 配置项目路径
-	* 总的项目路径就是：root/url/index
+	* server_name:listen/locationName = root/locationName
+    * 访问：server_name:listen/locationName/paths/fileName
+    * 文件内：/locationName/paths/fileName
+    * 文件内：./
 
-		loaction /url {
-			root 主路径会加上‘/url’
-			index ...
-		}
+	loaction /path {
+		root 'root/locationName/paths/';
+		index index.html;
+	}
 
 	* 配置代理服务
 	* 代理地址：proxy_pass
-	* 访问指向代理：localhost:8000/api指向proxy_pass
-		
-		location /api {
-			proxy_pass http://site:8080/
-		}
+	* 访问指向代理：server_name:listen/api指向proxy_pass
+	
+	location /api/ {
+		proxy_pass http://server_name:listen/
+	}
 
-# reload
-
+#### Nginx Help
+	start nginx
 	nginx -s reload
+	nginx -s quit

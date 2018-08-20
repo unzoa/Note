@@ -20,7 +20,7 @@
 
 ** 教程开始**
 
-# Entry file(入口文件)
+#### Entry file(入口文件)
 
 Webpack follows `webpack.config.js` to build `bundle.js`.
 
@@ -33,7 +33,7 @@ module.exports = {
 };
 ```
 
-# Multiple(多个入口文件)
+#### Multiple(多个入口文件)
 
 ```javascript
 module.exports = {
@@ -47,7 +47,7 @@ module.exports = {
 };
 ```
 
-# loader，Babel-loader(编译器可以将es6语法转成低版本[如es5语法]提高兼容性)
+#### loader，Babel-loader(编译器可以将es6语法转成低版本[如es5语法]提高兼容性)
 
 - loaders(加载器)是可以转换您的应用程序资源(更多信息)文件的一个预处理器
 
@@ -81,7 +81,7 @@ module: {
 }
 ```
 
-# HTML Webpack Plugin and Open Browser Webpack Plugin,3rd plugin
+#### HTML Webpack Plugin and Open Browser Webpack Plugin,3rd plugin
 
 ```javascript
 var HtmlwebpackPlugin = require('html-webpack-plugin');
@@ -106,7 +106,7 @@ module.exports = {
 
 - Now you don't need to write `index.html` by hand and don't have to open browser by yourself. Webpack did all these things for you.
 
-# Code splitting
+#### Code splitting
 
 * 1.require.ensure
 	
@@ -118,7 +118,7 @@ module.exports = {
 
 	- require('bundle-loader!./a.js') tells Webpack to load a.js from another chunk.
 
-# Common chunk:demo12
+#### Common chunk:demo12
 
 ```javascript
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");

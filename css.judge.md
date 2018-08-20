@@ -1,76 +1,76 @@
-
-1,position:
-	relative
-	absolute
-	fixed
-
-
-2,percent
-	rem
-	width:auto
-	width:calc();
-	full window
+# CSS
+	1,position:
+		relative
+		absolute
+		fixed
 
 
-3,float:left;
-	overflow:auto scroll;
-	-webkit-overflow-scrolling:touch;
-	clear:both;
-	display:inline-block;
-	display:flex;
-	vertical-align:middle;
+	2,responsive mode
+		rem
+		width:auto
+		width:calc();
+		full window
 
 
-4,-webkit-appearence:none;
+	3,layout
+		overflow:auto scroll;
+		-webkit-overflow-scrolling:touch;
+		clear:both;
+		display:inline-block;
+		display:flex;
+		vertical-align:middle;
 
 
-5,background:
-	color
-	image
-	size
-	position
-	attachment
+	4,-webkit-appearence:none;
 
 
-6,transform:
-	translate
-	rotate
-	scale
-	skew
+	5,background:
+		color
+		image
+		size
+		position
+		attachment
 
 
-7,transition
-	property 
-	duration 
-	timing-function 
-		linear	规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
-		ease	规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
-		ease-in	规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
-		ease-out	规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
-		ease-in-out	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
-		cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。
-	delay
+	6,transform:
+		translate
+		rotate
+		scale
+		skew
 
 
-8,animation:
-	custom-name
-	duration
-	timing-function
-	delay
-	teration-count 
-	direction:alternate;
-
-	@keyframes custom-name{
-		from{}
-		to{}
-		0%{}
-		100%{}
-	}
+	7,transition
+		property 
+		duration 
+		timing-function 
+			linear	规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
+			ease	规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
+			ease-in	规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
+			ease-out	规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
+			ease-in-out	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
+			cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。
+		delay
 
 
-9,nth-child(n,2n,odd,even)
-	first-child
-	last-child
+	8,animation:
+		custom-name
+		duration
+		timing-function
+		delay
+		teration-count 
+		direction:alternate;
+		
+		@keyframes custom-name{
+			from{}
+			to{}
+			0%{}
+			100%{}
+		}
+
+
+	9,nth-child(n,2n,odd,even)
+		first-child
+		last-child
 
 
 **优先级**
@@ -116,6 +116,10 @@
 	    text-overflow: ellipsis;
 	    white-space: nowrap;
 	}
+
+**解决ios移动端滑动动画问题：**
+
+    -webkit-overflow-scrolling:touch
 
 **滚动条**
 

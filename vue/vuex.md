@@ -3,31 +3,21 @@
 
 ## Build Setup
 
-``` bash
-# install dependencies
-npm install
+	# install dependencies
+	npm install Vuex --save-dev
 
-# serve with hot reload at localhost:8080
-npm run dev
+	# setup vuex floder in src
+	# import it path in main.js
+	# then add it name in Vue instance
 
-# build for production with minification
-npm run build
+	# setup idnex.js, getters.js, actions.js, mutations.js in this folder
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+##### main.js
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+	- import store from './vuex'
+	- new vue({store})
 
-
-# install Vuex
-
-# setup vuex floder in src,import it path in main.js ,then add it name in Vue instance
-
-# setup idnex.js getters.js actions.js mutations.js
-
-# index.js
-
+##### index.js
 	import Vue from 'vue'
 	import Vuex from 'vuex'
 	import * as getters from './getters'
@@ -49,14 +39,12 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 	export default store
 
-# getters.js
-
+##### getters.js
 	export const count = state => state.count
 
 	* 计算属性computed中调用
 
-# mutations.js
-
+##### mutations.js
 	export const increment = (state,value) => { state.count+=value}
 	export const decrement = state => { state.count-- }
 
@@ -66,8 +54,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 	* state的重置，计算
 	* 请求接口数据在action中进行					
 
-# actions.js
-
+##### actions.js
 	import api from '../api/api.js'
 
 	export const increment = ({ commit },value) =>{
@@ -77,23 +64,6 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 	export const decrement = ({ commit }) =>  commit('decrement')
 
 	* 请求接口，并将数据送回mutation那里重置commit(type,value)
-
-# api.js
- 
-	import Vue from 'vue'//将用于调用接口
-
-	const api={}
-
-	api.haha = (requestData)=>{
-		return requestData+'apihaha'
-	}
-
-	export default api
-
-# main.js
-
-	- import store from './vuex'
-	- new vue({store})
 
 # last step
 
