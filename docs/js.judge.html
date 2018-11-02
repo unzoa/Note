@@ -246,7 +246,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="vue/vuex.html">
+        <li class="chapter " data-level="1.10.3" data-path="vue/api应用.html">
+            
+                <a href="vue/api应用.html">
+            
+                    
+                    api应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="vue/vuex.html">
             
                 <a href="vue/vuex.html">
             
@@ -259,7 +272,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.4" data-path="vue/vue-electron.html">
+        <li class="chapter " data-level="1.10.5" data-path="vue/vue-awsome-swiper.html">
+            
+                <a href="vue/vue-awsome-swiper.html">
+            
+                    
+                    vue-awsome-swiper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="vue/vue-electron.html">
             
                 <a href="vue/vue-electron.html">
             
@@ -296,6 +322,32 @@
             
                     
                     Wex5-Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="mini-program.html">
+            
+                <a href="mini-program.html">
+            
+                    
+                    mini-program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="centOS.html">
+            
+                <a href="centOS.html">
+            
+                    
+                    centOS
             
                 </a>
             
@@ -369,6 +421,22 @@
     getElementById()
     querySeletor()
 
+    eg:
+    &lt;ul class=&quot;test-ul&quot;&gt;
+        &lt;li&gt;111&lt;/li&gt;
+        &lt;li&gt;112&lt;/li&gt;
+        &lt;li&gt;113&lt;/li&gt;
+        &lt;li&gt;114&lt;/li&gt;
+        &lt;li&gt;115&lt;/li&gt;
+    &lt;/ul&gt;
+
+    var lis = document.querySelector(&apos;.test-ul li&apos;)
+    console.log(lis) // &lt;li&gt;111&lt;/li&gt;
+    var lis2 = document.getElementsByClassName(&apos;test-ul&apos;)[0].children
+    console.log(lis2) // li li li li li
+    var lis3 = document.getElementsByTagName(&apos;li&apos;)
+    console.log(lis3) // li li li li li
+
 jQuery:
     append
     text
@@ -381,6 +449,13 @@ jQuery:
     parentsUntil(&apos;&apos;)
     eq()
     siblings(&apos;&apos;)
+</code></pre><h3 id="function">Function</h3>
+<pre><code>1. &#x51FD;&#x6570;&#x58F0;&#x660E; Function Declaration
+function func1 () {}
+2. &#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F; Function Expression
+var func2 = function () {}
+3. &#x6784;&#x9020;&#x51FD;&#x6570;
+new Function(&apos;a&apos;, &apos;b&apos;, &apos;return a + b&apos;);
 </code></pre><h3 id="ajax">Ajax</h3>
 <pre><code>var xhr = new XHRHttpRquest();
 xhr.open(&apos;get&apos;,url,true);
@@ -470,7 +545,7 @@ cmd
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Js-judge","level":"1.7","depth":1,"next":{"title":"Gulp","level":"1.8","depth":1,"path":"gulp.md","ref":"gulp.md","articles":[]},"previous":{"title":"CSS-judge","level":"1.6","depth":1,"path":"css.judge.md","ref":"css.judge.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js.judge.md","mtime":"2018-08-20T02:06:38.556Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-20T03:14:22.911Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Js-judge","level":"1.7","depth":1,"next":{"title":"Gulp","level":"1.8","depth":1,"path":"gulp.md","ref":"gulp.md","articles":[]},"previous":{"title":"CSS-judge","level":"1.6","depth":1,"path":"css.judge.md","ref":"css.judge.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js.judge.md","mtime":"2018-08-30T06:18:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-02T07:52:23.973Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>vuex · GitBook</title>
+        <title>vue-awsome-swiper · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -60,7 +60,7 @@
     <link rel="next" href="vue-electron.html" />
     
     
-    <link rel="prev" href="vue-router.html" />
+    <link rel="prev" href="vuex.html" />
     
 
     </head>
@@ -246,7 +246,20 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.10.3" data-path="vuex.html">
+        <li class="chapter " data-level="1.10.3" data-path="api应用.html">
+            
+                <a href="api应用.html">
+            
+                    
+                    api应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="vuex.html">
             
                 <a href="vuex.html">
             
@@ -259,7 +272,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.4" data-path="vue-electron.html">
+        <li class="chapter active" data-level="1.10.5" data-path="vue-awsome-swiper.html">
+            
+                <a href="vue-awsome-swiper.html">
+            
+                    
+                    vue-awsome-swiper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="vue-electron.html">
             
                 <a href="vue-electron.html">
             
@@ -303,6 +329,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.13" data-path="../mini-program.html">
+            
+                <a href="../mini-program.html">
+            
+                    
+                    mini-program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../centOS.html">
+            
+                <a href="../centOS.html">
+            
+                    
+                    centOS
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -333,7 +385,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >vuex</a>
+        <a href=".." >vue-awsome-swiper</a>
     </h1>
 </div>
 
@@ -348,68 +400,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="vuex-simple">vuex-simple</h1>
-<h2 id="build-setup">Build Setup</h2>
-<pre><code># install dependencies
-npm install Vuex --save-dev
+                                <h1 id="swiper&#x7684;&#x4F7F;&#x7528;">Swiper&#x7684;&#x4F7F;&#x7528;</h1>
+<pre><code># npm install vue-awesome-swiper &#x2014;-save-dev
 
-# setup vuex floder in src
-# import it path in main.js
-# then add it name in Vue instance
+# &#x5F15;&#x5165;vue-awesome-swiper
+main.js.  
+import VueAwesomeSwiper from &#x2018;vue-awesome-swiper&apos;  
+Vue.use(VueAwesomeSwiper)
 
-# setup idnex.js, getters.js, actions.js, mutations.js in this folder
-</code></pre><h5 id="mainjs">main.js</h5>
-<pre><code>- import store from &apos;./vuex&apos;
-- new vue({store})
-</code></pre><h5 id="indexjs">index.js</h5>
-<pre><code>import Vue from &apos;vue&apos;
-import Vuex from &apos;vuex&apos;
-import * as getters from &apos;./getters&apos;
-import * as actions from &apos;./actions&apos;
-import * as mutations from &apos;./mutations&apos;
+# template
+&lt;swiper :options=&quot;swiperOption&quot; ref=&#x201C;mySwiper&quot;&gt;
+&lt;!-- slides --&gt;
+&lt;swiper-slide&gt;I&apos;m Slide 1&lt;/swiper-slide&gt;
+&lt;!-- Optional controls --&gt;
+&lt;div class=&quot;swiper-pagination&quot;  slot=&quot;pagination&quot;&gt;&lt;/div&gt;
 
-Vue.use(Vuex)
+# script
+import { swiper, swiperSlide } from &apos;vue-awesome-swiper&apos;
+data(){}
+swiperOption: {}
+components: {swiper, swiperSlide}
+computed: {swiper() { return this.$refs.mySwiper.swiper } }
 
-const state={
-    count:0
-}
-
-const store = new Vuex.Store({
-    state,
-    getters,
-    actions,
-    mutations
-})
-
-export default store
-</code></pre><h5 id="gettersjs">getters.js</h5>
-<pre><code>export const count = state =&gt; state.count
-
-* &#x8BA1;&#x7B97;&#x5C5E;&#x6027;computed&#x4E2D;&#x8C03;&#x7528;
-</code></pre><h5 id="mutationsjs">mutations.js</h5>
-<pre><code>export const increment = (state,value) =&gt; { state.count+=value}
-export const decrement = state =&gt; { state.count-- }
-
-* include type&#xFF0C;handle
-* value is from a component
-* state&#x53EA;&#x80FD;&#x5728;&#x8FD9;&#x91CC;&#x91CD;&#x7F6E;
-* state&#x7684;&#x91CD;&#x7F6E;&#xFF0C;&#x8BA1;&#x7B97;
-* &#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x6570;&#x636E;&#x5728;action&#x4E2D;&#x8FDB;&#x884C;                    
-</code></pre><h5 id="actionsjs">actions.js</h5>
-<pre><code>import api from &apos;../api/api.js&apos;
-
-export const increment = ({ commit },value) =&gt;{
-    let hahav = api.haha(value)
-    commit(&apos;increment&apos;,value)
-}
-export const decrement = ({ commit }) =&gt;  commit(&apos;decrement&apos;)
-
-* &#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#xFF0C;&#x5E76;&#x5C06;&#x6570;&#x636E;&#x9001;&#x56DE;mutation&#x90A3;&#x91CC;&#x91CD;&#x7F6E;commit(type,value)
-</code></pre><h1 id="last-step">last step</h1>
-<pre><code># in ur component import {mapGetters ,mapActions} from &apos;vuex&apos;
-# then use the mapGetters in computed:{ ...mapGetters([&apos;state-name&apos;]) }
-
-# then methods:{ ...mapActions([&apos;mutation-type&apos;]) }
+# slidesPerView&#x63A7;&#x5236;&#x591A;&#x4E2A;slide&#x540C;&#x6846;&#x5BBD;&#x5EA6;&#x4E3A;body&#x5BBD;&#x5EA6;&#x5E73;&#x5747;
 </code></pre>
                                 
                                 </section>
@@ -437,7 +450,7 @@ export const decrement = ({ commit }) =&gt;  commit(&apos;decrement&apos;)
 
             
                 
-                <a href="vue-router.html" class="navigation navigation-prev " aria-label="Previous page: vue-router">
+                <a href="vuex.html" class="navigation navigation-prev " aria-label="Previous page: vuex">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -453,7 +466,7 @@ export const decrement = ({ commit }) =&gt;  commit(&apos;decrement&apos;)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vuex","level":"1.10.3","depth":2,"next":{"title":"vue-electron","level":"1.10.4","depth":2,"path":"vue/vue-electron.md","ref":"./vue/vue-electron.md","articles":[]},"previous":{"title":"vue-router","level":"1.10.2","depth":2,"path":"vue/vue-router.md","ref":"./vue/vue-router.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vuex.md","mtime":"2018-08-20T03:01:36.203Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-20T03:14:22.911Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vue-awsome-swiper","level":"1.10.5","depth":2,"next":{"title":"vue-electron","level":"1.10.6","depth":2,"path":"vue/vue-electron.md","ref":"./vue/vue-electron.md","articles":[]},"previous":{"title":"vuex","level":"1.10.4","depth":2,"path":"vue/vuex.md","ref":"./vue/vuex.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vue-awsome-swiper.md","mtime":"2018-10-16T07:21:27.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-02T07:52:23.973Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

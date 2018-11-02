@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Gitbook · GitBook</title>
+        <title>centOS · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="git.step.html" />
     
-    
-    <link rel="prev" href="./" />
+    <link rel="prev" href="mini-program.html" />
     
 
     </head>
@@ -102,7 +100,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="gitbook.html">
+        <li class="chapter " data-level="1.2" data-path="gitbook.html">
             
                 <a href="gitbook.html">
             
@@ -246,7 +244,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="vue/vuex.html">
+        <li class="chapter " data-level="1.10.3" data-path="vue/api应用.html">
+            
+                <a href="vue/api应用.html">
+            
+                    
+                    api应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="vue/vuex.html">
             
                 <a href="vue/vuex.html">
             
@@ -259,7 +270,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.4" data-path="vue/vue-electron.html">
+        <li class="chapter " data-level="1.10.5" data-path="vue/vue-awsome-swiper.html">
+            
+                <a href="vue/vue-awsome-swiper.html">
+            
+                    
+                    vue-awsome-swiper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="vue/vue-electron.html">
             
                 <a href="vue/vue-electron.html">
             
@@ -303,6 +327,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.13" data-path="mini-program.html">
+            
+                <a href="mini-program.html">
+            
+                    
+                    mini-program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="centOS.html">
+            
+                <a href="centOS.html">
+            
+                    
+                    centOS
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -333,7 +383,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Gitbook</a>
+        <a href="." >centOS</a>
     </h1>
 </div>
 
@@ -348,15 +398,42 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="gitbook">gitbook</h3>
-<pre><code>npm install gitbook-cli -g
-gitbook init //&#x521D;&#x59CB;&#x5316;&#x76EE;&#x5F55;&#x6587;&#x4EF6;
-gitbook serve //&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x9875;&#x5E76;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x5668;
-gitbook build //&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x9875;
-</code></pre><h5 id="export-pdf">export PDF</h5>
-<pre><code>sudo -s ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
-</code></pre><h5 id="simple-learn-gitbook">Simple learn gitbook</h5>
-<p><a href="http://www.chengweiyang.cn/gitbook/index.html" target="_blank">gitbook</a></p>
+                                <h1 id="centos">centOS</h1>
+<h2 id="&#x6559;&#x7A0B;-httpsblogcsdnnetliliang11676articledetails79213238">&#x6559;&#x7A0B; <a href="https://blog.csdn.net/liliang_11676/article/details/79213238" target="_blank">https://blog.csdn.net/liliang_11676/article/details/79213238</a></h2>
+<h3 id="start">start</h3>
+<ul>
+<li>&#x94FE;&#x63A5;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;<ul>
+<li>ssh root@ip</li>
+<li>&#x8F93;&#x5165;&#x5BC6;&#x7801;</li>
+</ul>
+</li>
+<li>install node</li>
+<li>install nginx<ul>
+<li>&#x64CD;&#x4F5C;<ul>
+<li>cd /usr/local/nginx/sbin</li>
+<li>&#x542F;&#x52A8; ./nginx</li>
+<li>&#x91CD;&#x542F; ./nginx -s reload</li>
+<li>&#x505C;&#x6B62; ./nginx -s stop</li>
+<li>&#x63A8;&#x51FA; ./nginx -s quit </li>
+</ul>
+</li>
+<li>&#x914D;&#x7F6E;<ul>
+<li>listen 80</li>
+<li>root /project/</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x8DDF;&#x4E0B;<ul>
+<li>project</li>
+</ul>
+</li>
+<li>&#x5BFC;&#x5165;&#x9759;&#x6001;&#x9879;&#x76EE;<ul>
+<li>&#x77E5;&#x9053;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#xFF08;&#x684C;&#x9762;&#xFF09;scp filename.format root@ip:/folderIWant</li>
+<li>cd project &amp;&amp; ls &#x67E5;&#x770B;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;</li>
+</ul>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -384,14 +461,10 @@ gitbook build //&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x9875;
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="mini-program.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: mini-program">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="git.step.html" class="navigation navigation-next " aria-label="Next page: Git">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -400,7 +473,7 @@ gitbook build //&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x9875;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Gitbook","level":"1.2","depth":1,"next":{"title":"Git","level":"1.3","depth":1,"path":"git.step.md","ref":"git.step.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook.md","mtime":"2018-08-20T01:38:49.307Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-20T03:14:22.911Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"centOS","level":"1.14","depth":1,"previous":{"title":"mini-program","level":"1.13","depth":1,"path":"mini-program.md","ref":"mini-program.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"centOS.md","mtime":"2018-11-02T07:24:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-02T07:52:23.973Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

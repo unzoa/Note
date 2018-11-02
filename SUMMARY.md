@@ -18,4 +18,5 @@
     - [vue-electron](./vue/vue-electron.md)
 * [React](react.md)
 * [Wex5-Java](wex5-java.md)
+* [mini-program](mini-program.md)
 * [centOS](centOS.md)
