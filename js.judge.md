@@ -20,6 +20,22 @@
 		getElementById()
 		querySeletor()
 
+		eg:
+		<ul class="test-ul">
+		    <li>111</li>
+		    <li>112</li>
+		    <li>113</li>
+		    <li>114</li>
+		    <li>115</li>
+		</ul>
+
+		var lis = document.querySelector('.test-ul li')
+		console.log(lis) // <li>111</li>
+		var lis2 = document.getElementsByClassName('test-ul')[0].children
+		console.log(lis2) // li li li li li
+		var lis3 = document.getElementsByTagName('li')
+		console.log(lis3) // li li li li li
+
 	jQuery:
 		append
 		text
@@ -32,6 +48,15 @@
 		parentsUntil('')
 		eq()
 		siblings('')
+
+### Function
+	1. 函数声明 Function Declaration
+	function func1 () {}
+	2. 函数表达式 Function Expression
+	var func2 = function () {}
+	3. 构造函数
+	new Function('a', 'b', 'return a + b');
+
 
 ### Ajax
 	var xhr = new XHRHttpRquest();

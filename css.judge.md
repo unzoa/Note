@@ -157,6 +157,29 @@
 	background-color: #555;  
 	}  
 
+## 动画停留
+	/*动画*/
+	.act-in{
+		animation: act-in .5s ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes act-in {
+		0%{left: -50%;}
+		100%{left: 0;}
+	}
+	.act-out{
+		animation: act-out .5s ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes act-out {
+		0%{left: 0;}
+		100%{left: -50%;}
+	}
+	/*动画结束*/
+	.actor-dancer {
+		position: relative;
+		left: -50%;
+	}
 
 
 

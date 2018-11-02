@@ -26,3 +26,24 @@
 	start nginx
 	nginx -s reload
 	nginx -s quit
+
+#### 记录版本号
+	- 建立两个js文件，ver-tmp.js, ver.js，格式需要完全一样
+	- ver-tmp
+		const ver = $WCREV$
+		export default ver
+	- ver，程序内引用
+		const ver = 596
+		export default ver
+	- subwcrev . ver-tmpl.js ver.js 执行模版
+
+	vue程序
+	- 建立.bat在windows下可运行
+		cd .\src\assets\js
+		subwcrev . ver-tmpl.js ver.js
+		cd ../../../
+		npm run build
+	- package.json
+		"win-build": "build.bat"
+	- build for production
+		npm run win-build

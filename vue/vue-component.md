@@ -1,5 +1,7 @@
 # 组件
 
+## 传递到组件中的数据，最好是组件真好能应用的
+
 ##### simple use
     import Com from '@/components/Com'
     export default {
