@@ -2,7 +2,6 @@
 
 
 ## Build Setup
-
 	# install dependencies
 	npm install Vuex --save-dev
 
@@ -13,7 +12,6 @@
 	# setup idnex.js, getters.js, actions.js, mutations.js in this folder
 
 ##### main.js
-
 	- import store from './vuex'
 	- new vue({store})
 
@@ -66,8 +64,17 @@
 	* 请求接口，并将数据送回mutation那里重置commit(type,value)
 
 # last step
-
 	# in ur component import {mapGetters ,mapActions} from 'vuex'
 	# then use the mapGetters in computed:{ ...mapGetters(['state-name']) }
 	
 	# then methods:{ ...mapActions(['mutation-type']) }
+
+# 其他方法应用
+	- mutations
+		* this.$store.commit('mutationFunction', params)
+	- getters
+		* this.$store.state.obj
+	- actions
+		* this.$store.dispatch('actionsFunction', params)
+
+

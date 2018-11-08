@@ -21,4 +21,6 @@
     + project
 - 导入静态项目
     + 知道本地路径（桌面）scp filename.format root@ip:/folderIWant
+        * 打包文件 tar -zcvf folder.tar.gz folder
     + cd project && ls 查看上传的文件
+        * 解压文件 tar -xvf fileName
