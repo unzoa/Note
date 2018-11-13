@@ -1,3 +1,6 @@
+### jquery CDN
+- https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js
+
 ### $(document).ready(function)
 	* 当 DOM（文档对象模型） 已经加载，并且页面（包括图像）已经完全呈现时，会发生 ready 事件
 	* onload 事件会在页面或图像加载完成后立即发生
