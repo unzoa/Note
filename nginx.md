@@ -16,9 +16,9 @@
 
 	* 配置代理服务
 	* 代理地址：proxy_pass
-	* 访问指向代理：server_name:listen/api指向proxy_pass
+	* 访问指向代理：server_name:listen/api/ 指向 proxy_pass/api/
 	
-	location /api/ {
+	location /api/ { # api这个前缀，后端也需要配置
 		proxy_pass http://server_name:listen/
 	}
 

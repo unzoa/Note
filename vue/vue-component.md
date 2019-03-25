@@ -54,25 +54,25 @@
             ]
         }
     }
-
+    
     # 在template中
     <component :is="i.componentName" v-for="(i,j) in comps"></component>
 
 ##### 组件跳转
     # click event
     @click="" === v-on:click
-
+    
     # router jump 
     this.$router.push({path:'/component-name'})
-
+    
     # router query
     this.$router.push({path:'/knowledge',query:{para1:'para1-val'}})
     this.$route.query.para1
-
+    
     # router params
-    this.$router.push({path:'/knowledge',params:{para1:'para2-val'}})
+    this.$router.push({name:'knowledge',params:{para1:'para2-val'}})
     this.$route.params.para2
-  
+    
     # 解决组件跳转时从下向上移动卡顿效果
     给组件加position：absolute；top：0；
 
@@ -91,7 +91,7 @@
                 //通过e值改变<transition :name=“data-sth”>的name而改变动画 
             }   
         }
-  
+    
     .slide-enter-active {animation: slideInRight 0.5s; }
     .slide-leave-active {animation: slideOutLeft 0.5s; }
     @keyframes slideInRight {

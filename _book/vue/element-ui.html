@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Vue · GitBook</title>
+        <title>Element-UI · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="vue-component.html" />
+    <link rel="next" href="vue-awsome-swiper.html" />
     
     
-    <link rel="prev" href="../webpack.html" />
+    <link rel="prev" href="vuex.html" />
     
 
     </head>
@@ -206,7 +206,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.10" data-path="vue.html">
+        <li class="chapter " data-level="1.10" data-path="vue.html">
             
                 <a href="vue.html">
             
@@ -225,7 +225,7 @@
                 <a href="vue-component.html">
             
                     
-                    vue-component
+                    组件
             
                 </a>
             
@@ -238,7 +238,7 @@
                 <a href="vue-router.html">
             
                     
-                    vue-router
+                    路由
             
                 </a>
             
@@ -251,7 +251,7 @@
                 <a href="api应用.html">
             
                     
-                    api应用
+                    Api应用
             
                 </a>
             
@@ -264,7 +264,7 @@
                 <a href="vuex.html">
             
                     
-                    vuex
+                    Vuex
             
                 </a>
             
@@ -272,7 +272,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.5" data-path="vue-awsome-swiper.html">
+        <li class="chapter active" data-level="1.10.5" data-path="element-ui.html">
+            
+                <a href="element-ui.html">
+            
+                    
+                    Element-UI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="vue-awsome-swiper.html">
             
                 <a href="vue-awsome-swiper.html">
             
@@ -285,12 +298,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.6" data-path="vue-electron.html">
+        <li class="chapter " data-level="1.10.7" data-path="vue-electron.html">
             
                 <a href="vue-electron.html">
             
                     
-                    vue-electron
+                    vue-Electron
             
                 </a>
             
@@ -334,7 +347,7 @@
                 <a href="../mini-program.html">
             
                     
-                    mini-program
+                    小程序
             
                 </a>
             
@@ -348,6 +361,19 @@
             
                     
                     centOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../sublime.html">
+            
+                <a href="../sublime.html">
+            
+                    
+                    Sublime
             
                 </a>
             
@@ -385,7 +411,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Vue</a>
+        <a href=".." >Element-UI</a>
     </h1>
 </div>
 
@@ -400,60 +426,64 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="vue">Vue</h1>
-<h3 id="build-setup">Build Setup</h3>
-<pre><code># install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-</code></pre><h4 id="img">img</h4>
-<pre><code># template ../../static/
-
-# js 
-
-# css ../../static/
-utils.js
-exports.cssLoaders = function (options) {
-    if (options.extract) {
-      return ExtractTextPlugin.extract({
-        use: loaders,
-        fallback: &apos;vue-style-loader&apos;,
-        publicPath: &apos;../../&apos; // &#x8FD9;&#x91CC;&#x589E;&#x52A0;&#x6253;&#x5305;&#x8DEF;&#x5F84;
-      })
-    }
+                                <h1 id="element-ui">element-ui</h1>
+<h3 id="menu">menu</h3>
+<ul>
+<li><p>&#x83DC;&#x5355;&#x9AD8;&#x4EAE;&#x95EE;&#x9898;</p>
+<ul>
+<li>&#x7531;PathA -menu&#x70B9;&#x51FB;-&gt; PathB<ul>
+<li>&#x6B64;&#x65F6;&#x83DC;&#x5355;&#x7684;defaultActive&#x6CA1;&#x6709;&#x66F4;&#x65B0;</li>
+<li>&#x6B64;&#x65F6;&#x9700;&#x8981;&#x914D;&#x5408;&#x7740; el-menu &#x7684;events select&#x83B7;&#x53D6;index&#xFF08;&#x8DEF;&#x7531;&#x7684;Path&#xFF09;&#x8D4B;&#x503C;&#x7ED9;activeIndex</li>
+</ul>
+</li>
+<li>&#x8DEF;&#x7531;&#x5185;&#x70B9;&#x51FB;&#x8DF3;&#x8F6C; this.$router.push({path: &apos;/&apos; + PathName})<ul>
+<li>&#x6B64;&#x65F6;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E2A;Vue&#x5B9E;&#x4F8B;&#x4E3A;bus.js&#x5B58;&#x50A8;&#x72B6;&#x6001;<ul>
+<li>import Vue from &apos;vue&apos;</li>
+<li>export default new Vue()</li>
+</ul>
+</li>
+<li>&#x5728;&#x6267;&#x884C;&#x8DF3;&#x8F6C;&#x7684;&#x9875;&#x9762;&#x5F15;&#x5165;bus.js<ul>
+<li>import Bus from &apos;@/assets/js/bus&apos;</li>
+<li>this.$router.push({path: &apos;/PatientList&apos;})</li>
+<li>Bus.$emit(&apos;activeIndex2&apos;,&apos;/PatientList&apos;)</li>
+</ul>
+</li>
+<li>&#x5728;el-menu &#x76D1;&#x542C;<ul>
+<li>var self = this</li>
+<li>Bus.$on(&apos;activeIndex2&apos;,function(defaultActive) {</li>
+<li>self.defaultActive = defaultActive</li>
+<li>})</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>table</p>
+<ul>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x8868;&#x5934;&#x5185;&#x5BB9;<ul>
+<li>&#x5229;&#x7528; Table-column Attributes &#x4E0A; render-header &#x5C5E;&#x6027;</li>
+<li>test (h, { column, $index }) {
+  return h(&apos;span&apos;, {<pre><code>class: &apos;errorIcon&apos;,
+domProps: {
+  innerHTML: &apos;haha&apos;
+},
+on: {
+  click: () =&gt; {
+    this.haha()
+  }
 }
+</code></pre>  })
+},
+haha () {
+  console.log(21321321)
+}</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-# &#x6253;&#x5305;&#x540E;&#x63A7;&#x5236;img&#x663E;&#x793A;&#x95EE;&#x9898;
-webpack.base.js 
-img
-limit:100000 B
-&#x5F53;size&#x4E00;&#x5B9A;&#x5927;&#x65F6;&#x5019;&#xFF0C;&#x8303;&#x56F4;&#x5185;&#x7684;image&#x90FD;&#x4F1A;&#x53D8;&#x6210;base64&#xFF0C;&#x5373;&#x4F7F;&#x662F;css&#x5F15;&#x5165;&#x7684;
-</code></pre><h4 id="&#x5F15;&#x5165;&#x7B2C;&#x4E09;&#x65B9;">&#x5F15;&#x5165;&#x7B2C;&#x4E09;&#x65B9;</h4>
-<pre><code># globe import, in main.js
-# or import in component
-import &apos;./assets/animate.css&apos;
-</code></pre><h4 id="jquery-bootstrapjs">jquery bootstrap.js</h4>
-<pre><code>npm install jquery &#x2014;-save-dev
-# &#x66F4;&#x6539;webpack.base.conf.js
-    var webpack = require (&apos;webpack&apos;) 
-    &lt;!-- resolve &apos;jquery&apos;: &apos;jquery&apos; --&gt;
-    plugins:[
-        new webpack.optimize.CommonsChunkPlugin(&apos;common.js&apos;),
-        new webpack.ProvidePlugin({jQuery: &apos;jquery&apos;, $: &apos;jquery&apos;})
-    ]
-
-# &#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5728;main.js&#x4E2D;&#x5F15;&#x5165;boostrap&#x548C;jquery&#x4E86;
-    import $ from &apos;jquery&apos; 
-    import &apos;./assets/bootstrap/js/bootstrap.min.js&apos;
-    import &#x2018;./assets/bootstrap/css/bootstrap.css&apos;
-</code></pre>
                                 
                                 </section>
                             
@@ -480,12 +510,12 @@ import &apos;./assets/animate.css&apos;
 
             
                 
-                <a href="../webpack.html" class="navigation navigation-prev " aria-label="Previous page: Webpack">
+                <a href="vuex.html" class="navigation navigation-prev " aria-label="Previous page: Vuex">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="vue-component.html" class="navigation navigation-next " aria-label="Next page: vue-component">
+                <a href="vue-awsome-swiper.html" class="navigation navigation-next " aria-label="Next page: vue-awsome-swiper">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -496,7 +526,7 @@ import &apos;./assets/animate.css&apos;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Vue","level":"1.10","depth":1,"next":{"title":"vue-component","level":"1.10.1","depth":2,"path":"vue/vue-component.md","ref":"./vue/vue-component.md","articles":[]},"previous":{"title":"Webpack","level":"1.9","depth":1,"path":"webpack.md","ref":"webpack.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vue.md","mtime":"2018-10-16T08:14:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-02T07:52:23.973Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Element-UI","level":"1.10.5","depth":2,"next":{"title":"vue-awsome-swiper","level":"1.10.6","depth":2,"path":"vue/vue-awsome-swiper.md","ref":"./vue/vue-awsome-swiper.md","articles":[]},"previous":{"title":"Vuex","level":"1.10.4","depth":2,"path":"vue/vuex.md","ref":"./vue/vuex.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/element-ui.md","mtime":"2018-12-03T09:44:04.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-15T13:16:41.590Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -504,6 +534,10 @@ import &apos;./assets/animate.css&apos;
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

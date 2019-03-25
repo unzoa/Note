@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>React · GitBook</title>
+        <title>Sublime · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="wex5-java.html" />
     
-    
-    <link rel="prev" href="vue/vue-electron.html" />
+    <link rel="prev" href="centOS.html" />
     
 
     </head>
@@ -225,7 +223,7 @@
                 <a href="vue/vue-component.html">
             
                     
-                    vue-component
+                    组件
             
                 </a>
             
@@ -238,7 +236,7 @@
                 <a href="vue/vue-router.html">
             
                     
-                    vue-router
+                    路由
             
                 </a>
             
@@ -251,7 +249,7 @@
                 <a href="vue/api应用.html">
             
                     
-                    api应用
+                    Api应用
             
                 </a>
             
@@ -264,7 +262,7 @@
                 <a href="vue/vuex.html">
             
                     
-                    vuex
+                    Vuex
             
                 </a>
             
@@ -272,7 +270,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.5" data-path="vue/vue-awsome-swiper.html">
+        <li class="chapter " data-level="1.10.5" data-path="vue/element-ui.html">
+            
+                <a href="vue/element-ui.html">
+            
+                    
+                    Element-UI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="vue/vue-awsome-swiper.html">
             
                 <a href="vue/vue-awsome-swiper.html">
             
@@ -285,12 +296,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.6" data-path="vue/vue-electron.html">
+        <li class="chapter " data-level="1.10.7" data-path="vue/vue-electron.html">
             
                 <a href="vue/vue-electron.html">
             
                     
-                    vue-electron
+                    vue-Electron
             
                 </a>
             
@@ -303,7 +314,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.11" data-path="react.html">
+        <li class="chapter " data-level="1.11" data-path="react.html">
             
                 <a href="react.html">
             
@@ -334,7 +345,7 @@
                 <a href="mini-program.html">
             
                     
-                    mini-program
+                    小程序
             
                 </a>
             
@@ -348,6 +359,19 @@
             
                     
                     centOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="sublime.html">
+            
+                <a href="sublime.html">
+            
+                    
+                    Sublime
             
                 </a>
             
@@ -385,7 +409,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >React</a>
+        <a href="." >Sublime</a>
     </h1>
 </div>
 
@@ -400,45 +424,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="creat-react-app">creat-react-app</h1>
-<h3 id="first">first</h3>
-<p>  1, webpack config</p>
-<p>   &#x5728;node_modules&#x7684;react-scripts&#x91CC;&#x9762;
-   &#x5B9E;&#x73B0;axios&#x8BF7;&#x6C42;&#x6570;&#x636E;
-    &quot;proxy&quot;: {
-      &quot;/api&quot;: {
-        &quot;target&quot;: &quot;<a href="https://battuta.medunes.net/api/" target="_blank">https://battuta.medunes.net/api/</a>&quot;,
-        &quot;secure&quot;: false,
-        &quot;changeOrigin&quot;: true,
-        &quot;pathRewrite&quot;: {
-          &quot;^/api&quot;: &quot;/&quot;
-        }
-      }
-    }</p>
-<p>   2, &#x914D;&#x7F6E;&#x8DEF;&#x7531;</p>
-<p>   |--&#x9879;&#x76EE;&#x8DEF;&#x7531;
-   |--&#x4E1A;&#x52A1;&#x8DEF;&#x7531;</p>
-<p>   3, flux -&gt; redux</p>
-<p>   4, &#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</p>
-<p>   5, &#x6253;&#x5305;&#x95EE;&#x9898;</p>
-<pre><code>|- &#x56FE;&#x7247;&#xFF0C;css&#x6587;&#x4EF6;&#x95EE;&#x9898; &#xFF01; &#x5728;package.json&#x4E2D;&#x4E00;&#x7EA7;&#x5C5E;&#x6027;&#x5BB6;&quot;homepage&quot;: &quot;.&quot;
-|- &#x8DEF;&#x7531;&#x5931;&#x6548;&#x95EE;&#x9898; &#xFF01;
-</code></pre><p>  6, App.test.js &#x662F;&#x505A;&#x4EC0;&#x4E48;&#x7684;&#xFF1F;</p>
-<h3 id="twice">twice</h3>
-<p>  1, &#x8BED;&#x6CD5;
-  &#x5728;jsx&#x5185;js&#x8868;&#x8FBE;&#x5F0F;&#x8981;&#x7528;{2 + 2}, &#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x51FD;&#x6570;{testFunc(params)}, &#x6216;&#x8005;jsx&#x7EC4;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;<testfunc src="{logo}"></testfunc></p>
+                                <h1 id="sublime">sublime</h1>
 <ul>
-<li><p>&#x65B0;&#x5B9A;&#x4E49;&#x7684;jsx&#x8981;&#x7528;(), &#x9632;&#x6B62;&#x2018;&#x5206;&#x53F7;&#x81EA;&#x52A8;&#x63D2;&#x5165;&#x2018;bug</p>
-<p>2, &#x5C06;&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x5728;&#x5355;&#x72EC;&#x6587;&#x4EF6;
-import React, {component} from &apos;react&apos;
-class Test extends Component {
-render () {
-  return (</p>
-<pre><code>// jsx
-</code></pre><p>  )
-}
-}
-export deafult Test</p>
+<li>&#x66F4;&#x6539;&#x56FE;&#x6807;<ul>
+<li>&#x67E5;&#x770B;&#x7B80;&#x4ECB;&#xFF0C;&#x62D6;&#x52A8;&#x56FE;&#x7247;&#x5230;&#x56FE;&#x6807;&#x5904;&#xFF0C;&#x51FA;&#x73B0;&#x7EFF;&#x8272;&#x52A0;&#x53F7;&#x653E;&#x5F00;&#x62D6;&#x52A8;</li>
+</ul>
 </li>
 </ul>
 
@@ -468,14 +458,10 @@ export deafult Test</p>
 
             
                 
-                <a href="vue/vue-electron.html" class="navigation navigation-prev " aria-label="Previous page: vue-electron">
+                <a href="centOS.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: centOS">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="wex5-java.html" class="navigation navigation-next " aria-label="Next page: Wex5-Java">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -484,7 +470,7 @@ export deafult Test</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React","level":"1.11","depth":1,"next":{"title":"Wex5-Java","level":"1.12","depth":1,"path":"wex5-java.md","ref":"wex5-java.md","articles":[]},"previous":{"title":"vue-electron","level":"1.10.6","depth":2,"path":"vue/vue-electron.md","ref":"./vue/vue-electron.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react.md","mtime":"2018-05-02T03:01:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-02T07:52:23.973Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Sublime","level":"1.15","depth":1,"previous":{"title":"centOS","level":"1.14","depth":1,"path":"centOS.md","ref":"centOS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"sublime.md","mtime":"2019-01-10T03:38:04.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-15T13:16:41.590Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -492,6 +478,10 @@ export deafult Test</p>
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>

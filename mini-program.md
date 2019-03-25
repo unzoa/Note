@@ -17,6 +17,9 @@ tap (e) {
 |-|-|-aa.wxss
 
 aa.js
+- options => multipleSlots: true // 在组件定义时的选项中启用多slot支持
+    + <slot name="haha"></slot>
+    + <view slot="haha"></view>
 - properties => 类似于Vue的props，这里属性需要表明数据类型
 - data => 组件内参数
 - methods => funcs

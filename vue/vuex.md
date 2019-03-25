@@ -69,7 +69,7 @@
 	
 	# then methods:{ ...mapActions(['mutation-type']) }
 
-# 其他方法应用
+# 直接应用方法
 	- mutations
 		* this.$store.commit('mutationFunction', params)
 	- getters

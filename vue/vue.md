@@ -3,15 +3,19 @@
 ### Build Setup
     # install dependencies
     npm install
-
+    
     # serve with hot reload at localhost:8080
     npm run dev
-
+    
     # build for production with minification
     npm run build
-
+    
     # build for production and view the bundle analyzer report
     npm run build --report
+
+### import file
+    - 引入组件单独引入css
+        * @import 'path';
 
 #### img
     # template ../../static/
@@ -50,7 +54,7 @@
             new webpack.optimize.CommonsChunkPlugin('common.js'),
             new webpack.ProvidePlugin({jQuery: 'jquery', $: 'jquery'})
         ]
-
+        
     # 然后就可以在main.js中引入boostrap和jquery了
         import $ from 'jquery' 
         import './assets/bootstrap/js/bootstrap.min.js'
