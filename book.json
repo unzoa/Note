@@ -1,3 +1,11 @@
 {
-  "plugins": ["toggle-chapters"]
+  "title": "unzoa",
+  "plugins": [
+    "toggle-chapters",
+    "-sharing"
+  ],
+  "language" : "zh-hans",
+  "styles": {
+    "website": "static/rebuild.css"
+  }
 }

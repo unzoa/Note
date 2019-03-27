@@ -24,3 +24,10 @@ gitbook build //生成静态网页
 - gitbook build
 - gitbook serve
 ```
+
+#### 语言显示
+```
+book.json
+
+"language" : "zh-hans"
+```
