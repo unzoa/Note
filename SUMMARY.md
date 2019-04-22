@@ -7,6 +7,7 @@
 * [CSS-judge](./view/front_technique/css.judge.md)
 * [Js-judge](./view/front_technique/js.judge.md)
 * [Canvas](./view/front_technique/canvas.md)
+* [鉴权](./view/front_technique/authority.md)
 
 ## 前端框架
 
