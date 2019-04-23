@@ -1,6 +1,5 @@
 # centOS
-
-## 教程 https://blog.csdn.net/liliang_11676/article/details/79213238
+> [教程](https://blog.csdn.net/liliang_11676/article/details/79213238)
 
 ### start
 - 链接远程服务器
