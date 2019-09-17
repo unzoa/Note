@@ -19,6 +19,7 @@
     * [Element-UI](./view/front_frame/vue/element-ui.md)
     * [vue-awsome-swiper](./view/front_frame/vue/vue-awsome-swiper.md)
     * [vue-Electron](./view/front_frame/vue/vue-electron.md)
+    * [node-modules](./view/front_frame/vue/npmModules.md)
 * [React](./view/front_frame/react.md)
 * [小程序](./view/front_frame/mini-program.md)
 * [Wex5-Java](./view/front_frame/wex5-java.md)
@@ -31,6 +32,7 @@
 
 ## 应用工具
 
+* [GitBook](./view/tools/gitbook.md)
 * [Mac](./view/tools/mac.md)
 * [Sublime](./view/tools/sublime.md)
 * [Git](./view/tools/git.step.md)
