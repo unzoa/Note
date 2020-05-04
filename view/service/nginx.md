@@ -1,33 +1,48 @@
-### Config
-	
-	listen       8000;
-    server_name  localhost;
+# Nginx
 
-	* 配置项目路径
-	* server_name:listen/locationName = root/locationName
-    * 访问：server_name:listen/locationName/paths/fileName
-    * 文件内：/locationName/paths/fileName
-    * 文件内：./
+### 打开配置文件
+- Mac
+> open /usr/local/etc/nginx/, 打开 nginx.conf
 
-	loaction /path {
-		root 'root/locationName/paths/';
+- Windows
+> 打开 nginx.conf
+
+### 配置
+```
+	...
+
+	listen       port;
+  server_name  localhost;
+
+	# 配置项目路径
+	# server_name:listen/ 相当于 root/paths
+  # 访问：server_name:listen
+
+	loaction / {
+		root root/paths;
 		index index.html;
 	}
 
-	* 配置代理服务
-	* 代理地址：proxy_pass
-	* 访问指向代理：server_name:listen/api/ 指向 proxy_pass/api/
-	
+	# 配置代理服务
+	# 代理地址：proxy_pass
+	# 访问指向代理：server_name:listen/api/ 指向 proxy_pass/api/
+
 	location /api/ { # api这个前缀，后端也需要配置
-		proxy_pass http://server_name:listen/
+		proxy_pass http://server:port/api/;
+	}
+	location /user/ { # user这个前缀，后端也需要配置
+		proxy_pass http://server:port/user/;
 	}
 
-#### Nginx Help
+	...
+```
+
+### Help
 	start nginx
 	nginx -s reload
 	nginx -s quit
 
-#### 记录版本号
+### 记录版本号
 	- 建立两个js文件，ver-tmp.js, ver.js，格式需要完全一样
 	- ver-tmp
 		const ver = $WCREV$

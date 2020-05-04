@@ -20,7 +20,13 @@
     * [vue-awsome-swiper](./view/front_frame/vue/vue-awsome-swiper.md)
     * [vue-Electron](./view/front_frame/vue/vue-electron.md)
     * [node-modules](./view/front_frame/vue/npmModules.md)
-* [React](./view/front_frame/react.md)
+* [React](./view/front_frame/react/react.md)
+    * [配置](./view/front_frame/react/config.md)
+    * [路由](./view/front_frame/react/router.md)
+    * [代码分割](./view/front_frame/react/codeSpliting.md)
+    * [Redux](./view/front_frame/react/redux.md)
+    * [Proxy](./view/front_frame/react/proxy.md)
+    * [样式](./view/front_frame/react/style.md)
 * [小程序](./view/front_frame/mini-program.md)
 * [Wex5-Java](./view/front_frame/wex5-java.md)
 
@@ -35,6 +41,7 @@
 * [GitBook](./view/tools/gitbook.md)
 * [Mac](./view/tools/mac.md)
 * [Sublime](./view/tools/sublime.md)
+* [VS Code](./view/tools/vscode.md)
 * [Git](./view/tools/git.step.md)
 * [Svn](./view/tools/svn.md)
 
