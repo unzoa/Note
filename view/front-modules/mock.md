@@ -1,7 +1,7 @@
 # Mock
+> 单独编辑mock.js，并引用即可
 
-```
-// mock.js
+```js
 import Mock from 'mockjs'
 
 function getHappy (config) {

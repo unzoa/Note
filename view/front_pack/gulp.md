@@ -14,15 +14,15 @@ https://css-tricks.com/gulp-for-beginners/
 
 	npm install gulp-sass --save-dev
 
-	commond.. 
-	gulp sass 
+	commond..
+	gulp sass
 	output css fcnpmile
 
  	gulp watch func
 	gulp.watch() scss file changing ,and output css file immediately
 ```
 
-```bash
+```js
 	var gulp = require('gulp');
 	// 引入依赖包
 	var sass = require('gulp-sass');
@@ -35,7 +35,7 @@ https://css-tricks.com/gulp-for-beginners/
 
 	//Watching Sass files for changes
 	gulp.task('watch', function(){
-	  gulp.watch('app/scss/**/*.scss', ['sass']); 
+	  gulp.watch('app/scss/**/*.scss', ['sass']);
 	  // Other watchers
 	})
 ```
