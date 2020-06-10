@@ -12,12 +12,14 @@
 * [Vue](./view/front_frame/vue/vue.md)
     * [组件](./view/front_frame/vue/vue-component.md)
     * [路由](./view/front_frame/vue/vue-router.md)
-    * [Api应用](./view/front_frame/vue/api应用.md)
     * [Vuex](./view/front_frame/vue/vuex.md)
+    * [Api应用](./view/front_frame/vue/api应用.md)
+    * [打包注意](./view/front_frame/vue/externals.md)
+    ###### 第三方包
     * [Element-UI](./view/front_frame/vue/element-ui.md)
     * [vue-awsome-swiper](./view/front_frame/vue/vue-awsome-swiper.md)
     * [vue-Electron](./view/front_frame/vue/vue-electron.md)
-    * [node-modules](./view/front_frame/vue/npmModules.md)
+    * [创建自己的npm](./view/front_frame/vue/npmModules.md)
 * [React](./view/front_frame/react/react.md)
     * [配置](./view/front_frame/react/config.md)
     * [路由](./view/front_frame/react/router.md)
@@ -29,7 +31,7 @@
 * [Wex5-Java](./view/front_frame/wex5-java.md)
 
 #### 前端模块
-* [Mockjs](./view/front-modules/mock.md)
+* [Mockjs](./view/front_modules/mock.md)
 
 #### 前端打包工具
 * [Gulp](./view/front_pack/gulp.md)
