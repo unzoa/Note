@@ -7,6 +7,7 @@
 * [JavaScript](./view/front_technique/js.judge.md)
 * [Canvas](./view/front_technique/canvas.md)
 * [鉴权](./view/front_technique/authority.md)
+* [导出word](./view/front_technique/exportWord.md)
 
 #### 前端框架
 * [Vue](./view/front_frame/vue/vue.md)
