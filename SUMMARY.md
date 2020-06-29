@@ -18,7 +18,7 @@
     ###### 第三方包
     * [Element-UI](./view/front_frame/vue/element-ui.md)
     * [vue-awsome-swiper](./view/front_frame/vue/vue-awsome-swiper.md)
-    * [vue-Electron](./view/front_frame/vue/vue-electron.md)
+    * [Electron](./view/front_frame/vue/vue-electron.md)
     * [创建自己的npm](./view/front_frame/vue/npmModules.md)
 * [React](./view/front_frame/react/react.md)
     * [配置](./view/front_frame/react/config.md)
@@ -32,6 +32,7 @@
 
 #### 前端模块
 * [Mockjs](./view/front_modules/mock.md)
+* [ExportWord](./view/front_modules/exportWord.md)
 
 #### 前端打包工具
 * [Gulp](./view/front_pack/gulp.md)
@@ -44,6 +45,7 @@
 * [VS Code](./view/tools/vscode.md)
 * [Git](./view/tools/git.step.md)
 * [Svn](./view/tools/svn.md)
+* [zsh](./view/tools/zsh.md)
 
 #### 服务配置
 * [centOS](./view/service/centOS.md)
