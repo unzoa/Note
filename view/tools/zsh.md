@@ -15,10 +15,3 @@
 
 3. 主题文件路径 /你的用户名字/.oh-my-zsh/themes/agnoster.zsh-theme
   + [隐藏主机名](https://github.com/agnoster/agnoster-zsh-theme/issues/39#issuecomment-307338817)
-  ```zsh
-    prompt_context() {
-      if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-        prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-      fi
-    }
-  ```

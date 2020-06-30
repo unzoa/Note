@@ -30,3 +30,36 @@
 ```json
 "language" : "zh-hans"
 ```
+
+## 报错
+
+- gitbook serve 报错
+    + Q
+    ```
+    Error: Couldn't locate plugins "toggle-chapters, splitter, anchor-navigation-ex, prism, copy-code-button, alerts, theme-comscore", Run 'gitbook install' to install plugins from registry.
+
+    Error: ENOENT: no such file or directory, stat 'D:\workspace\core-solution-docs\_book\gitbook\gitbook-plugin-fontsettings\fontsettings.js'
+
+    Error: ENOENT: no such file or directory, stat 'D:\workspace\core-solution-docs\_book\gitbook\gitbook-plugin-livereload\plugin.js'
+
+    Error: ENOENT: no such file or directory, stat 'D:\workspace\core-solution-docs\_book\gitbook\gitbook-plugin-alerts\plugin.js'
+
+    Error: ENOENT: no such file or directory, stat 'D:\workspace\core-solution-docs\_book\gitbook\gitbook-plugin-livereload\plugin.js'
+
+    Error: ENOENT: no such file or directory, stat 'D:\workspace\core-solution-docs\_book\gitbook\gitbook-plugin-search\lunr.min.js'
+    ```
+      * A
+      > 修改.gitbook\versions\3.2.3\lib\output\website\copyPluginAssets.js 搜索关键字 'confirm' 将值改为false
+
+      ```js
+        return fs.copyDir(
+            assetFolder,
+            assetOutputFolder,
+            {
+                deleteFirst: false,
+                overwrite: true,
+                confirm: false
+            }
+        );
+      ```
+
