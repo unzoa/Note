@@ -1,6 +1,6 @@
 # CANVAS
 
-### 解决加载图片模糊问题
+### 1. 解决加载图片模糊问题
 - 获取 canvas
 ```js
   let canvasCon = document.querySelector('.canvas-con')

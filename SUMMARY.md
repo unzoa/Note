@@ -8,6 +8,9 @@
 * [Canvas](./view/front_technique/canvas.md)
 * [鉴权](./view/front_technique/authority.md)
 
+#### 前端方案
+* [文本菜单联动](./view/front_plan/fullpageScrollMenu.md)
+
 #### 前端框架
 * [Vue](./view/front_frame/vue/vue.md)
     * [组件](./view/front_frame/vue/vue-component.md)

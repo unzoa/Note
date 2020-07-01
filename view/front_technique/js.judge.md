@@ -1,28 +1,37 @@
 # JavaScript
 
-### 1.Dom
+### 1. 关于Dom操作
 - 关于节点
-	```js
-		// 创建新节点
-		creatElement()
-		creatTextNode()
 
-		// 操作节点
-		appendChild()
-		removeChild()
-		replaceChild()
-		insertBefore()
+```
+	// 创建新节点
+	creatElement()
+	creatTextNode()
 
-		// 查找
-		getElementsByTagName()
-		getElementsByClassName()
-		getElementsByName()
-		getElementById()
-		querySeletor()
-		
-		// 可在页面上改变元素内容
-		document.body.contentEditable='true'
-	```
+	// 操作节点
+	appendChild()
+	removeChild()
+	replaceChild()
+	insertBefore()
+
+	// 查找
+	getElementsByTagName()
+	getElementsByClassName()
+	getElementsByName()
+	getElementById()
+	querySeletor()
+
+	// 可在页面上改变元素内容
+	document.body.contentEditable='true'
+
+	// 获取可视宽高
+	document.body.offsetWidth
+	document.body.offsetHeight
+
+	// 获取元素的实际
+	document.querrySelect('.sth').getBoundingClientRect()
+```
+
 - 应用
 	```html
 		<ul class="test-ul">
@@ -45,23 +54,24 @@
 - jQuery:
 > cdn https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js
 
-	```js
-		$(document).ready(function)
-		// 当 DOM（文档对象模型） 已经加载，并且页面（包括图像）已经完全呈现时，会发生 ready 事件
-		// onload 事件会在页面或图像加载完成后立即发生
-	
-		append
-		text
-		html
-		empty
-		remove
-	
-		find('')
-		children('')
-		parentsUntil('')
-		eq()
-		siblings('')
-	```
+```js
+	$(document).ready(function)
+
+	// 当 DOM（文档对象模型） 已经加载，并且页面（包括图像）已经完全呈现时，会发生 ready 事件
+	// onload 事件会在页面或图像加载完成后立即发生
+
+	append
+	text
+	html
+	empty
+	remove
+
+	find('')
+	children('')
+	parentsUntil('')
+	eq()
+	siblings('')
+```
 
 ### 2.Function
 ```
@@ -71,6 +81,8 @@
 	var func2 = function () {}
 	3. 构造函数
 	new Function('a', 'b', 'return a + b');
+	4. 箭头函数
+	(params) => {}
 ```
 
 
@@ -102,7 +114,9 @@
 	})
 ```
 
-### 5.Array
+### 5.Array & Object
+
+- Array
 ```js
 	// 直接修改arr
 	push
@@ -122,6 +136,51 @@
 	arr.forEach( ()=>{} ) // 返回字符串，数组元素
 	arr.map( ()=>{ return } ) // 加工原数组
 	filter(function(item){ return type item == 'number'}) // 返回过滤后的数组,满足条件的留下
+```
+
+- Object
+```js
+	// keys & values
+	Object.keys(obj) // 返回一个obj的keys的数组
+	Object.values(obj) // 返回一个obj的values的数组
+	Object.entries(obj) // 返回[ [key, value], [key, value]]
+	function (target) {
+		return Object.keys(obj).map(i => {
+			return [i, obj[i]]
+		})
+	}
+
+	// 融合
+	Object.assign(obj, ...sources) // 返回融合后的对象
+	// es5 浏览器兼容
+	Object.assign = Object.assign ||
+	function (target) {
+		for (var i = 1; i < arguments.length; i++) {
+			var source = arguments[i]
+			for (var key in source) {
+				if (Object.prototype.hasOwnProperty.call(source, key)) {
+					target[key] = source[key]
+				}
+			}
+		}
+		return target
+	}
+
+	// 删除某个值
+	delete obj.key1 // obj中删除了key1
+
+	// 拷贝
+	// 1、利用JSON（推荐，JS语言自支持，不需要依赖其他工具）
+	let newObj = JSON.parse(JSON.stringify(oldObj))
+
+	// 2、Lodash（推荐，在某些集成了Loadsh的开发环境代码显得更简洁）
+	let newObj = _.cloneDeep(oldObj)
+
+	// 3、ES6的对象拓展运算符：...（有坑，慎重使用，参考[关于ES6的拓展运算符进行深拷贝](https://blog.csdn.net/zomixi/article/details/84064255)）
+	let newObj = {...oldObj}
+
+	// 4、ES6的对象拓展运算符：Object.assign()（有坑，同上） 
+	let newObj = Object.assign({}, oldObj)
 ```
 
 ### 6.JSON

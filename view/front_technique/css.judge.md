@@ -1,10 +1,10 @@
 # CSS
 
-#### 1、优先级
+## 1. 优先级
 `!important>>行内>>页内>>link`
 
 
-#### 2、响应式布局
+## 2. 响应式布局
 - meta [介绍](http://caibaojian.com/mobile-meta.html)
 - media query
 - 单位
@@ -21,7 +21,7 @@
 	+ display: grid; [介绍](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout) | [详细](https://www.jianshu.com/p/41c038baf994)
 
 
-#### 3、position
+## 3. position
 
  值 | 描述
 :---|:---
@@ -33,7 +33,7 @@ sticky | 粘性定位，该定位基于用户滚动的位置。 它的行为就�
 inherit | 规定应该从父元素继承 position 属性的值。
 
 
-#### 4、动画属性
+## 4. 动画属性
 
 名称 | 属性
 :---|:---
@@ -50,115 +50,119 @@ ease-out | 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1
 ease-in-out | 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）
 cubic-bezier(n,n,n,n) | 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值
 
-##### 4.1、动画停留
+### 4.1. 动画停留
 ```css
-/*动画*/
-.act-in{
-	animation: act-in .5s ease;
-	animation-fill-mode: forwards;
-}
-@keyframes act-in {
-	0%{left: -50%;}
-	100%{left: 0;}
-}
-.act-out{
-	animation: act-out .5s ease;
-	animation-fill-mode: forwards;
-}
-@keyframes act-out {
-	0%{left: 0;}
-	100%{left: -50%;}
-}
-/*动画结束*/
-.actor-dancer {
-	position: relative;
-	left: -50%;
-}
+	/*动画*/
+	.act-in{
+		animation: act-in .5s ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes act-in {
+		0%{left: -50%;}
+		100%{left: 0;}
+	}
+	.act-out{
+		animation: act-out .5s ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes act-out {
+		0%{left: 0;}
+		100%{left: -50%;}
+	}
+	/*动画结束*/
+	.actor-dancer {
+		position: relative;
+		left: -50%;
+	}
 ```
 
 
-#### 改变placeholder颜色
+## 5. 改变placeholder颜色
 ```css
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  	color: #fff!important;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
- 	color: #fff!important;
- 	opacity: 1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
- 	color: #fff!important;
- 	opacity: 1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
- 	color: #fff!important;
-}
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	  	color: #fff!important;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	 	color: #fff!important;
+	 	opacity: 1;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	 	color: #fff!important;
+	 	opacity: 1;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	 	color: #fff!important;
+	}
 ```
 
 
-#### 加省略号
+## 6. 加省略号
 ```html
-<p class='h_news_title'>bala</p>
+	<p class='h_news_title'>bala</p>
 ```
 ```css
-.h_news_title {
-	width: 55%;
+	.h_news_title {
+		width: 55%;
 
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
 ```
 
 
-#### 滚动条
+## 7. 滚动条
 ```css
-::-webkit-scrollbar {
-	width: 0px;
-	height: 1px;
-}
-::-webkit-scrollbar-thumb {
-	border-radius: 5px;
-	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-	background: rgba(0, 0, 0, 0.2);
-} 
+	::-webkit-scrollbar {
+		width: 0px;
+		height: 1px;
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+		background: rgba(0, 0, 0, 0.2);
+	}
 
-/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
-::-webkit-scrollbar {
-	width: 16px;  
-	height: 16px;  
-	background-color: #F5F5F5;  
-}  
+	/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+	::-webkit-scrollbar {
+		width: 16px;
+		height: 16px;
+		background-color: #F5F5F5;
+	}
 
-/*定义滚动条轨道 内阴影+圆角*/  
-::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
-	border-radius: 10px;  
-	background-color: #F5F5F5;  
-}  
+	/*定义滚动条轨道 内阴影+圆角*/
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		border-radius: 10px;
+		background-color: #F5F5F5;
+	}
 
-/*定义滑块 内阴影+圆角*/  
-::-webkit-scrollbar-thumb {
-	border-radius: 10px;  
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
-	background-color: #555;  
-}
+	/*定义滑块 内阴影+圆角*/
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+		background-color: #555;
+	}
 ```
 
 
-#### 毛玻璃
+## 8. 毛玻璃
 ```css
-.frosted-glass {
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -ms-filter: blur(5px);
-    -o-filter: blur(5px);
-    filter: blur(5px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false); 
-}
+	.frosted-glass {
+	  -webkit-filter: blur(5px);
+	  -moz-filter: blur(5px);
+	  -ms-filter: blur(5px);
+	  -o-filter: blur(5px);
+	  filter: blur(5px);
+	  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
+	}
 ```
 
 
-#### 移动端
+## 9. 移动端
 - 解决ios下样式不一样 -webkit-appearence:none;
 - 解决ios移动端滑动动画问题 -webkit-overflow-scrolling:touch
+
+
+## 10. padding 增加实际容器高度问题
+A：写padding之前，增加box-sizing: border-box;
