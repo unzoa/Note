@@ -5,10 +5,10 @@
 2.设置库的构建，在project.json中配置
 ```json
 "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name unzoa-ui ./src/components/index.js",
-    "lint": "vue-cli-service lint"
+  "serve": "vue-cli-service serve",
+  "build": "vue-cli-service build",
+  "build-bundle": "vue-cli-service build --target lib --name unzoa-ui ./src/components/index.js",
+  "lint": "vue-cli-service lint"
 },
 ```
 **build-bundle命令中, --name 接指定要库的名字**
@@ -35,11 +35,11 @@ export default Components
 5.配置package.json中files属性，配置发布到npm上的路径
 ```json
 "files": [
-    "dist/*",
-    "public/*",
-    "src/*",
-    "*.json",
-    "*.js"
+  "dist/*",
+  "public/*",
+  "src/*",
+  "*.json",
+  "*.js"
 ]
 ```
 
@@ -63,10 +63,10 @@ import 'unzoa-ui'
 组件库是有版本号的，每次更新需要先更新版本号
 - 查看版本 npm view unzoa-ui versions
 - 更新版本号 原1.0.0
-    + npm version []
-        * patch 增加补丁 -> 1.0.1
-        * minor 这个是小修小改 -> 1.1.0
-        * major 这个是大改咯 -> 2.0.0
+  + npm version []
+    * patch 增加补丁 -> 1.0.1
+    * minor 这个是小修小改 -> 1.1.0
+    * major 这个是大改咯 -> 2.0.0
 - npm publish
 - npm view unzoa-ui versions
 > [ '0.1.0', '0.1.1' ]
