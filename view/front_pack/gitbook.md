@@ -1,37 +1,46 @@
 # gitbook
+> [学习](http://www.chengweiyang.cn/gitbook/index.html)
 
 ```bash
-    npm install gitbook-cli -g
-    gitbook init //初始化目录文件
-    gitbook serve //生成静态网页并运行服务器
-    gitbook build //生成静态网页
+  npm install gitbook-cli -g
+
+  # 初始化目录文件
+  gitbook init
+
+  # 生成静态网页并运行服务器
+  gitbook serve
+
+  # 生成静态网页
+  gitbook build
 ```
 
-#### export PDF
-> sudo -s ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
 
-#### Simple learn gitbook
-> [gitbook](http://www.chengweiyang.cn/gitbook/index.html)
-
-#### summry 折叠
+#### 1.summry 折叠
+```bash
+# 安装折叠插件
+npm i gitbook-plugin-toggle-chapters -D
+```
 - sunmary 同级目录增加 book.json文件
 - book.json
-    ```json
-    {
-        "plugins": ["toggle-chapters"]
-    }
-    ```
-- npm install gitbook-plugin-toggle-chapters
-- gitbook build
-- gitbook serve
+  ```json
+  {
+    "plugins": ["toggle-chapters"]
+  }
+  ```
 
-#### 语言显示
+
+#### 2.语言显示
 - book.json
 ```json
-"language" : "zh-hans"
+"language": "zh-hans"
 ```
 
-## 报错
+
+#### 3.export PDF
+> sudo -s ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
+
+
+### 报错
 
 - gitbook serve 报错
     + Q
@@ -53,13 +62,12 @@
 
       ```js
         return fs.copyDir(
-            assetFolder,
-            assetOutputFolder,
-            {
-                deleteFirst: false,
-                overwrite: true,
-                confirm: false
-            }
+          assetFolder,
+          assetOutputFolder,
+          {
+            deleteFirst: false,
+            overwrite: true,
+            confirm: false
+          }
         );
       ```
-

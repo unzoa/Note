@@ -1,5 +1,7 @@
-## Externals
-> webpack 打包
+# 打包
+
+#### 打包app.js vendor文件过大问题解决方案
+> 针对vue-cli2
 
 - Step 1. **webpack.prod.conf.js**
 ```js
@@ -12,11 +14,11 @@
 - Step 2. **index.html**
 ```html
   <!-- <% if (htmlWebpackPlugin.options.isProduction) { %> -->
-  <script src="/static/vendor/vue.min.js"></script>
-  <script src="/static/vendor/vue-router.min.js"></script>
-  <script src="/static/vendor/vuex.min.js"></script>
-  <link rel="stylesheet" href="/static/vendor/element-ui/theme-chalk/index.css" >
-  <script src="/static/vendor/element-ui/index.js"></script>
+    <script src="/static/vendor/vue.min.js"></script>
+    <script src="/static/vendor/vue-router.min.js"></script>
+    <script src="/static/vendor/vuex.min.js"></script>
+    <link rel="stylesheet" href="/static/vendor/element-ui/theme-chalk/index.css" >
+    <script src="/static/vendor/element-ui/index.js"></script>
   <!-- <% } %> -->
 ```
 

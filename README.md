@@ -16,8 +16,6 @@
     * [Api应用](./view/front_frame/vue/api应用.md)
     * [打包注意](./view/front_frame/vue/externals.md)
     ###### 第三方包
-    * [Element-UI](./view/front_frame/vue/element-ui.md)
-    * [vue-awsome-swiper](./view/front_frame/vue/vue-awsome-swiper.md)
     * [Electron](./view/front_frame/vue/vue-electron.md)
     * [创建自己的npm](./view/front_frame/vue/npmModules.md)
 * [React](./view/front_frame/react/react.md)

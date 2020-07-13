@@ -3,7 +3,7 @@
 ### 1. 关于Dom操作
 - 关于节点
 
-```
+```js
 	// 创建新节点
 	creatElement()
 	creatTextNode()
@@ -30,26 +30,35 @@
 
 	// 获取元素的实际
 	document.querrySelect('.sth').getBoundingClientRect()
+
+	// 获取浏览器计算后的元素style
+	// **得到字符串**
+	window.getComputedStyle(ele, null)
+		.getPropertyValue(key)
+
+	// 获取网页可视高度
+	// https://www.cnblogs.com/ckmouse/archive/2012/01/30/2332070.html
+	document.documentElement.clientHeight
 ```
 
 - 应用
-	```html
-		<ul class="test-ul">
-			<li>111</li>
-			<li>112</li>
-			<li>113</li>
-			<li>114</li>
-			<li>115</li>
-		</ul>
-		<script>
-			var lis = document.querySelector('.test-ul li')
-			console.log(lis) // <li>111</li>
-			var lis2 = document.getElementsByClassName('test-ul')[0].children
-			console.log(lis2) // li li li li li
-			var lis3 = document.getElementsByTagName('li')
-			console.log(lis3) // li li li li li
-		</script>
-	```
+```html
+<ul class="test-ul">
+  <li>111</li>
+	<li>112</li>
+	<li>113</li>
+	<li>114</li>
+	<li>115</li>
+</ul>
+<script>
+	var lis = document.querySelector('.test-ul li')
+	console.log(lis) // <li>111</li>
+	var lis2 = document.getElementsByClassName('test-ul')[0].children
+	console.log(lis2) // li li li li li
+	var lis3 = document.getElementsByTagName('li')
+	console.log(lis3) // li li li li li
+</script>
+```
 
 - jQuery:
 > cdn https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js
@@ -136,6 +145,8 @@
 	arr.forEach( ()=>{} ) // 返回字符串，数组元素
 	arr.map( ()=>{ return } ) // 加工原数组
 	filter(function(item){ return type item == 'number'}) // 返回过滤后的数组,满足条件的留下
+
+	a.filter(ea=>b.every(eb=>eb!==ea)) // 数组差集 a包含b
 ```
 
 - Object
@@ -155,7 +166,7 @@
 	// es5 浏览器兼容
 	Object.assign = Object.assign ||
 	function (target) {
-		for (var i = 1; i < arguments.length; i++) {
+	  for (var i = 1; i < arguments.length; i++) {
 			var source = arguments[i]
 			for (var key in source) {
 				if (Object.prototype.hasOwnProperty.call(source, key)) {

@@ -1,56 +1,37 @@
 # Vue
 > [学习](https://www.cnblogs.com/huangfeihong/p/9141273.html)
 
-#### img
-- template ../../static/
+#### img引入问题
+> **如果是图标，应用iconfont实现**
 
-- js 
-无脑的可以直接 import 进来
+- template、script、css
+> 国旗和大的图片存在于static，小的图片使用import引入
+```
+/static/
+```
 
-- css ../../static/
-utils.js
+- 打包后控制img显示问题 webpack.base.js
 ```js
-exports.cssLoaders = function (options) {
-	if (options.extract) {
-		return ExtractTextPlugin.extract({
-		use: loaders,
-		fallback: 'vue-style-loader',
-		publicPath: '../../' // 这里增加打包路径
-		})
-	}
-}
+  {
+    test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+    loader: 'url-loader',
+    options: {
+      limit: 10000, // B,当size低于这个值，图片都会变成base64，即使是css引入的
+      name: utils.assetsPath('img/[name].[hash:7].[ext]')
+    }
+  }
 ```
 
-- 打包后控制img显示问题
-webpack.base.js 
-img
-limit:100000 B
-当size一定大时候，范围内的image都会变成base64，即使是css引入的
+- 图片太大
+> 放置static中；**使用压缩后的图片[压缩网站](https://tinypng.com)**
 
-#### 引入第三方
-- globe import, in main.js
-- or import in component
-```js
-import './assets/animate.css'
-```
 
-#### jquery bootstrap.js
+#### 引入无法npm安装的第三方插件
+> 需要在index.html中根节点之后，script标签引入
+
+e.g.
 ```
-npm install jquery —-save-dev
-```
-- 更改webpack.base.conf.js
-```js
-var webpack = require ('webpack') 
-<!-- resolve 'jquery': 'jquery' -->
-plugins:[
-	new webpack.optimize.CommonsChunkPlugin('common.js'),
-	new webpack.ProvidePlugin({jQuery: 'jquery', $: 'jquery'})
-]
-```
-    
-- 然后就可以在main.js中引入boostrap和jquery了
-```js
-import $ from 'jquery' 
-import './assets/bootstrap/js/bootstrap.min.js'
-import ‘./assets/bootstrap/css/bootstrap.css'
+<script src="./static/d3Graphviz/d3.js"></script>
+<script src="./static/d3Graphviz/viz.js" type="javascript/worker"></script>
+<script src="./static/d3Graphviz/d3-graphviz.js"></script>
 ```

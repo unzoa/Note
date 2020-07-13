@@ -1,24 +1,28 @@
-** 全局环境中安装Webpack和webpack-dev-server **
+# webpack
 
-- npm i -g webpack webpack-dev-server
+1.安装
+```bash
+npm i -g webpack webpack-dev-server
+```
 
-** 安装相关依赖 **
+2.安装相关依赖
+```bash
+npm install
+```
 
-- npm install
-
-** 运行目录下的资源文件 **
-
-- webpack-dev-server
+3.运行目录下的资源文件
+```bash
+webpack-dev-server
+```
 
 ** 命令行选项 **
-
 - webpack– for building once for development(用于构建一个开发目录)
 - webpack -p– for building once for development(用于构建一个生产目录(压缩过的))
 - webpack --watch– for continuous incremental build(用于连续地构建)
 - webpack -d– to include source maps(展示映射关系)
 - webpack --colors– for making things pretty(用于美化展示的信息)
 
-** 教程开始**
+## 教程开始
 
 #### Entry file(入口文件)
 
@@ -62,19 +66,19 @@ module: {
 			presets: ['es2015', 'react']
 			}
 		},
-		{ 
-			test: /\.css$/, 
+		{
+			test: /\.css$/,
 			loader: 'style-loader!css-loader'
-			//css-loader read css,style-loader insert css tag into html 
+			//css-loader read css,style-loader insert css tag into html
 
 			// loader: 'style-loader!css-loader?modules'
 			// :global(.h2){}设置全局样式
 			// .h1{}设置私有样式
 		},
-		{ 
-			test: /\.(png|jpg)$/, 
-			loader: 'url-loader?limit=8192' 
-			
+		{
+			test: /\.(png|jpg)$/,
+			loader: 'url-loader?limit=8192'
+
 			// urll-loader transforms image files,if img size>8192,it'll be transformed insto Data Url;ortherwise , its a normal url
 		}
   ]
@@ -109,7 +113,7 @@ module.exports = {
 #### Code splitting
 
 * 1.require.ensure
-	
+
 	- require.ensure to define a split point
 	- require.ensure tells Webpack that ./a.js should be separated from bundle.js and built into a single chunk file.
 	- a.js -- module.exports = 'Hello World';
