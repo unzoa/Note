@@ -945,126 +945,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="js-&#x5BFC;&#x51FA;-docx">Js &#x5BFC;&#x51FA; docx</h1>
-<pre><code class="lang-js"><span class="hljs-keyword">import</span> JSZipUtils <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;jszip-utils&apos;</span>
-<span class="hljs-keyword">import</span> Docxtemplater <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;docxtemplater&apos;</span>
-<span class="hljs-keyword">import</span> { saveAs } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;file-saver&apos;</span>
-<span class="hljs-keyword">import</span> JSZip <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;jszip&apos;</span>
-<span class="hljs-keyword">import</span> ImageModule <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;open-docxtemplater-image-module&apos;</span>
-
-<span class="hljs-comment">/**
- * [&#x5BFC;&#x51FA;word]
- * @param  {String} tempDocUrl [&#x6A21;&#x7248;&#x6587;&#x4EF6;&#x5730;&#x5740;]
- * @param  {Object} docData    [&#x5BFC;&#x51FA;&#x6570;&#x636E;]
- * @param  {String} fileName   [&#x5BFC;&#x51FA;&#x6587;&#x4EF6;&#x540D;]
- * @param  {Array}  imgSize    [&#x7EDF;&#x4E00;&#x8BBE;&#x7F6E;&#x56FE;&#x7247;&#x5C3A;&#x5BF8;]
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> (tempDocUrl, docData, fileName = <span class="hljs-string">&apos;sample Word&apos;</span>, imgSize) =&gt; {
-  <span class="hljs-comment">// &#x8BFB;&#x53D6;&#x5E76;&#x83B7;&#x5F97;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5185;&#x5BB9;</span>
-  JSZipUtils.getBinaryContent(tempDocUrl, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error, content</span>) </span>{
-    <span class="hljs-comment">// input.docx&#x662F;&#x6A21;&#x677F;&#x3002;&#x6211;&#x4EEC;&#x5728;&#x5BFC;&#x51FA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x6839;&#x636E;&#x6B64;&#x6A21;&#x677F;&#x6765;&#x5BFC;&#x51FA;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;</span>
-    <span class="hljs-comment">// &#x629B;&#x51FA;&#x5F02;&#x5E38;</span>
-    <span class="hljs-keyword">if</span> (error) {
-      <span class="hljs-keyword">throw</span> error
-    }
-
-    <span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;JSZip&#x5B9E;&#x4F8B;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#x6A21;&#x677F;&#x7684;&#x5185;&#x5BB9;</span>
-    <span class="hljs-keyword">let</span> zip = <span class="hljs-keyword">new</span> JSZip(content)
-    <span class="hljs-comment">// &#x521B;&#x5EFA;&#x5E76;&#x52A0;&#x8F7D;docxtemplater&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;</span>
-    <span class="hljs-keyword">let</span> doc = <span class="hljs-keyword">new</span> Docxtemplater()
-      .loadZip(zip)
-      .attachModule(imageModule(imgSize))
-
-    <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x6A21;&#x677F;&#x53D8;&#x91CF;&#x7684;&#x503C;</span>
-    doc.setData(docData)
-
-    <span class="hljs-keyword">try</span> {
-      <span class="hljs-comment">// &#x7528;&#x6A21;&#x677F;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x66FF;&#x6362;&#x6240;&#x6709;&#x6A21;&#x677F;&#x53D8;&#x91CF;</span>
-      doc.render()
-    } <span class="hljs-keyword">catch</span> (error) {
-      <span class="hljs-comment">// &#x629B;&#x51FA;&#x5F02;&#x5E38;</span>
-      <span class="hljs-keyword">let</span> e = {
-        message: error.message,
-        name: error.name,
-        stack: error.stack,
-        properties: error.properties
-      }
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({ error: e }))
-      <span class="hljs-keyword">throw</span> error
-    }
-
-    <span class="hljs-comment">// &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;docxtemplater&#x5BF9;&#x8C61;&#x7684;zip&#x6587;&#x4EF6;&#xFF08;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x771F;&#x5B9E;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x8868;&#x793A;&#xFF09;</span>
-    <span class="hljs-keyword">let</span> out = doc.getZip().generate({
-      type: <span class="hljs-string">&apos;blob&apos;</span>,
-      mimeType: <span class="hljs-string">&apos;application/vnd.openxmlformats-officedocument.wordprocessingml.document&apos;</span>
-    })
-    <span class="hljs-comment">// &#x5C06;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;&#x4FDD;&#x5B58;&#x4E3A;&#x76EE;&#x6807;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x547D;&#x540D;</span>
-    saveAs(out, fileName + <span class="hljs-string">&apos;.docx&apos;</span>)
-  })
-}
-
-<span class="hljs-comment">/**
- * &#x5BFC;&#x51FA;image&#xFF1A;
- * 1. &#x5229;&#x7528; open-docxtemplater-image-module &#x7F16;&#x8F91;imageModule&#x51FD;&#x6570;
- * 2. &#x5728;new Docxtemplater()&#x5B9E;&#x4F8B;&#x4E0A;&#x5229;&#x7528;api&#xFF1A;attachModule&#x52A0;&#x8F7D;ImageModule&#x5B9E;&#x4F8B;
- * 3. doc.setData&#x4E2D;&#x7ED1;&#x5B9A;&#x7684;&#x56FE;&#x7247;&#x5B57;&#x6BB5;&#x5E94;&#x8BE5;&#x662F;base64&#x7684;&#x56FE;&#x7247;
- * 4. temp.docx &#x4E2D;&#x56FE;&#x7247;&#x7684;&#x5B57;&#x6BB5;&#x533A;&#x522B;&#x4E0E;&#x5B57;&#x7B26;&#x4E32;{variable} &#x662F; {%imageVariable}
- * If you would like to choose which images should be centered one by one:
-   - Set the global switch to false opts.centered = false.
-   - Use {%image} for images that shouldn&apos;t be centered.
-   - Use {%%image} for images that you would like to see centered.
- *
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">imageModule</span> (<span class="hljs-params">size = [200, 200]</span>) </span>{
-  <span class="hljs-keyword">let</span> opts = {}
-  opts.centered = <span class="hljs-literal">true</span> <span class="hljs-comment">// &#x56FE;&#x7247;&#x5C45;&#x4E2D;&#xFF0C;&#x5728;word&#x6A21;&#x677F;&#x4E2D;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#x4E3A;{%%image}</span>
-  opts.fileType = <span class="hljs-string">&apos;docx&apos;</span>
-
-  <span class="hljs-comment">/**
-   * [description]
-   * @param  {[type]} tagValue [base64 &#x6216;&#x8005; &#x56FE;&#x7247;&#x7684;url&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x5BF9;url&#x4E0D;&#x505A;&#x652F;&#x6301;]
-   * @param  {[type]} tagName  [docData&#x4E2D;&#x56FE;&#x7247;&#x7684;key]
-   * @return {[type]}          [buffer]
-   */</span>
-  opts.getImage = (tagValue, tagName) =&gt; {
-    <span class="hljs-keyword">return</span> base64DataURLToArrayBuffer(tagValue)
-  }
-
-  <span class="hljs-comment">/**
-   * [getSize description]
-   * @param  {[type]} img      [buffer &#x5BF9;&#x8C61;]
-   * @param  {[type]} tagValue [base64 &#x6216;&#x8005; &#x56FE;&#x7247;&#x7684;url&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x5BF9;url&#x4E0D;&#x505A;&#x652F;&#x6301;]
-   * @param  {[type]} tagName  [docData&#x4E2D;&#x56FE;&#x7247;&#x7684;key]
-   * @return {[type]}          [&#x56FE;&#x7247;width, height]
-   */</span>
-  opts.getSize = (img, tagValue, tagName) =&gt; {
-    <span class="hljs-keyword">return</span> size
-  }
-
-  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ImageModule(opts)
-}
-
-<span class="hljs-comment">// &#x5BFC;&#x51FA;&#x56FE;&#x7247;&#xFF0C;&#x683C;&#x5F0F;&#x8F6C;&#x6362;</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">base64DataURLToArrayBuffer</span> (<span class="hljs-params">dataURL</span>) </span>{
-  <span class="hljs-keyword">const</span> base64Regex = <span class="hljs-regexp">/^data:image\/(png|jpg|svg|svg\+xml);base64,/</span>
-  <span class="hljs-keyword">if</span> (!base64Regex.test(dataURL)) {
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
-  }
-  <span class="hljs-keyword">const</span> stringBase64 = dataURL.replace(base64Regex, <span class="hljs-string">&apos;&apos;</span>)
-  <span class="hljs-keyword">let</span> binaryString
-  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span> !== <span class="hljs-string">&apos;undefined&apos;</span>) {
-    binaryString = <span class="hljs-built_in">window</span>.atob(stringBase64)
-  } <span class="hljs-keyword">else</span> {
-    binaryString = Buffer.from(stringBase64, <span class="hljs-string">&apos;base64&apos;</span>).toString(<span class="hljs-string">&apos;binary&apos;</span>)
-  }
-  <span class="hljs-keyword">const</span> len = binaryString.length
-  <span class="hljs-keyword">const</span> bytes = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Uint8Array</span>(len)
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; len; i++) {
-    <span class="hljs-keyword">const</span> ascii = binaryString.charCodeAt(i)
-    bytes[i] = ascii
-  }
-  <span class="hljs-keyword">return</span> bytes.buffer
-}
-</code></pre>
+<p><a target="_blank" href="../../static/exportWord.js">&#x6A21;&#x5757;&#x6587;&#x4EF6;</a></p>
 
                                 
                                 </section>
@@ -1108,7 +989,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ExportWord","level":"4.2","depth":1,"next":{"title":"文本菜单联动","level":"5.1","depth":1,"path":"view/front_plan/fullpageScrollMenu.md","ref":"./view/front_plan/fullpageScrollMenu.md","articles":[]},"previous":{"title":"Mockjs","level":"4.1","depth":1,"path":"view/front_modules/mock.md","ref":"./view/front_modules/mock.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","-sharing","livereload"],"styles":{"website":"static/rebuild.css"},"pluginsConfig":{"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"unzoa","language":"zh-hans","gitbook":"*"},"file":{"path":"view/front_modules/exportWord.md","mtime":"2020-06-27T15:11:29.701Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-14T09:09:16.374Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ExportWord","level":"4.2","depth":1,"next":{"title":"文本菜单联动","level":"5.1","depth":1,"path":"view/front_plan/fullpageScrollMenu.md","ref":"./view/front_plan/fullpageScrollMenu.md","articles":[]},"previous":{"title":"Mockjs","level":"4.1","depth":1,"path":"view/front_modules/mock.md","ref":"./view/front_modules/mock.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","-sharing","livereload"],"styles":{"website":"static/rebuild.css"},"pluginsConfig":{"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"unzoa","language":"zh-hans","gitbook":"*"},"file":{"path":"view/front_modules/exportWord.md","mtime":"2020-07-14T10:10:33.933Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-14T10:24:32.933Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
