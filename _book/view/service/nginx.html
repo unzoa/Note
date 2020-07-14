@@ -945,83 +945,95 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="nginx">Nginx</h1>
-<h3 id="&#x6253;&#x5F00;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x6253;&#x5F00;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h3>
+<h2 id="&#x6253;&#x5F00;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x6253;&#x5F00;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
 <ul>
-<li><p>Mac</p>
-<blockquote>
-<p>open /usr/local/etc/nginx/, &#x6253;&#x5F00; nginx.conf</p>
-</blockquote>
-</li>
-<li><p>Windows</p>
-<blockquote>
-<p>&#x6253;&#x5F00; nginx.conf</p>
-</blockquote>
-</li>
+<li>Mac&#x4E0A;&#x6253;&#x5F00;&#x914D;&#x7F6E;</li>
 </ul>
-<h3 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h3>
-<pre><code class="lang-nginx">    ...
-
-    listen       port;
-  server_name  localhost;
-
-    # &#x914D;&#x7F6E;&#x9879;&#x76EE;&#x8DEF;&#x5F84;
-    # server_name:listen/ &#x76F8;&#x5F53;&#x4E8E; root/paths
-  # &#x8BBF;&#x95EE;&#xFF1A;server_name:listen
-
-    loaction / {
-        root root/paths;
-        index index.html;
-        # history &#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x5237;&#x65B0;&#x9875;&#x9762;&#x8BF7;&#x6C42;&#x7684;&#x670D;&#x52A1;&#x5730;&#x5740;&#x53EF;&#x80FD;&#x62A5;404&#xFF0C;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x521D;&#x59CB;&#x5316;&#x4F4D;&#x7F6E;
-        try_files $uri /index.html;
-    }
-
-    # &#x914D;&#x7F6E;&#x4EE3;&#x7406;&#x670D;&#x52A1;
-    # &#x4EE3;&#x7406;&#x5730;&#x5740;&#xFF1A;proxy_pass, &#x7ED3;&#x5C3E;&#x5904;&#x5E26;&#x659C;&#x6760;&#xFF0C;&#x8BBF;&#x95EE;&#x6307;&#x5411;&#x7684;&#x5730;&#x5740;&#x4F1A;&#x5220;&#x9664;&#x524D;&#x7F00;&#xFF1B;&#x53CD;&#x4E4B;&#xFF0C;&#x4E0D;&#x5220;&#x9664;&#x3002;
-    # &#x8BBF;&#x95EE;&#xFF1A;server_name:listen/&#x524D;&#x7F00;/sth/
-    # proxy_pass/ &#x6307;&#x5411; proxy_pass/sth/
-    # proxy_pass  &#x6307;&#x5411; proxy_pass/&#x524D;&#x7F00;/sth/
-
-    location /api {
-        proxy_pass http://server:port;
-    }
-    location /user {
-        proxy_pass http://server:port;
-    }
-
-    ...
+<pre><code class="lang-bsh">open /usr/local/etc/nginx/
+# nginx.conf
 </code></pre>
 <ul>
-<li>&#x63A5;&#x53E3;&#x5339;&#x914D;<pre><code class="lang-js">  ajax.get(<span class="hljs-string">&apos;/api/haha/&apos;</span>) <span class="hljs-comment">// react history&#x6A21;&#x5F0F;</span>
+<li>Windows</li>
+</ul>
+<p>&#x76F4;&#x63A5;&#x627E;&#x5230;nginx&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x6253;&#x5F00; nginx.conf</p>
+<h2 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h2>
+<pre><code class="lang-nginx">...
+
+listen       port;
+server_name  localhost;
+
+# &#x914D;&#x7F6E;&#x9879;&#x76EE;&#x8DEF;&#x5F84;
+# server_name:listen/ &#x76F8;&#x5F53;&#x4E8E; root/paths
+# &#x8BBF;&#x95EE;&#xFF1A;server_name:listen
+
+loaction / {
+  root root/paths;
+  index index.html;
+  # history &#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x5237;&#x65B0;&#x9875;&#x9762;&#x8BF7;&#x6C42;&#x7684;&#x670D;&#x52A1;&#x5730;&#x5740;&#x53EF;&#x80FD;&#x62A5;404&#xFF0C;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x521D;&#x59CB;&#x5316;&#x4F4D;&#x7F6E;
+  try_files $uri /index.html;
+}
+
+# &#x914D;&#x7F6E;&#x4EE3;&#x7406;&#x670D;&#x52A1;
+# &#x4EE3;&#x7406;&#x5730;&#x5740;&#xFF1A;proxy_pass, &#x7ED3;&#x5C3E;&#x5904;&#x5E26;&#x659C;&#x6760;&#xFF0C;&#x8BBF;&#x95EE;&#x6307;&#x5411;&#x7684;&#x5730;&#x5740;&#x4F1A;&#x5220;&#x9664;&#x524D;&#x7F00;&#xFF1B;&#x53CD;&#x4E4B;&#xFF0C;&#x4E0D;&#x5220;&#x9664;&#x3002;
+# &#x8BBF;&#x95EE;&#xFF1A;server_name:listen/&#x524D;&#x7F00;/sth/
+# proxy_pass/ &#x6307;&#x5411; proxy_pass/sth/
+# proxy_pass  &#x6307;&#x5411; proxy_pass/&#x524D;&#x7F00;/sth/
+
+location /api {
+  proxy_pass http://server:port;
+}
+location /user {
+  proxy_pass http://server:port;
+}
+
+...
+</code></pre>
+<h2 id="&#x63A5;&#x53E3;&#x5339;&#x914D;">&#x63A5;&#x53E3;&#x5339;&#x914D;</h2>
+<pre><code class="lang-js">  ajax.get(<span class="hljs-string">&apos;/api/haha/&apos;</span>) <span class="hljs-comment">// react history&#x6A21;&#x5F0F;</span>
   <span class="hljs-comment">// &#x6216;&#x8005;</span>
   ajax.get(<span class="hljs-string">&apos;api/haha/&apos;</span>) <span class="hljs-comment">// vue hash&#x6A21;&#x5F0F;</span>
 </code></pre>
-</li>
-</ul>
-<h3 id="help">Help</h3>
-<pre><code>start nginx
-nginx -s reload
-nginx -s quit
-</code></pre><h3 id="&#x8BB0;&#x5F55;&#x7248;&#x672C;&#x53F7;">&#x8BB0;&#x5F55;&#x7248;&#x672C;&#x53F7;</h3>
-<pre><code>- &#x5EFA;&#x7ACB;&#x4E24;&#x4E2A;js&#x6587;&#x4EF6;&#xFF0C;ver-tmp.js, ver.js&#xFF0C;&#x683C;&#x5F0F;&#x9700;&#x8981;&#x5B8C;&#x5168;&#x4E00;&#x6837;
-- ver-tmp
-    const ver = $WCREV$
-    export default ver
-- ver&#xFF0C;&#x7A0B;&#x5E8F;&#x5185;&#x5F15;&#x7528;
-    const ver = 596
-    export default ver
-- subwcrev . ver-tmpl.js ver.js &#x6267;&#x884C;&#x6A21;&#x7248;
-
-vue&#x7A0B;&#x5E8F;
-- &#x5EFA;&#x7ACB;.bat&#x5728;windows&#x4E0B;&#x53EF;&#x8FD0;&#x884C;
-    cd .\src\assets\js
-    subwcrev . ver-tmpl.js ver.js
-    cd ../../../
-    npm run build
-- package.json
-    &quot;win-build&quot;: &quot;build.bat&quot;
-- build for production
-    npm run win-build
+<h2 id="help">Help</h2>
+<pre><code class="lang-bash">  start nginx
+  nginx <span class="hljs-_">-s</span> reload
+  nginx <span class="hljs-_">-s</span> quit
 </code></pre>
+<h2 id="&#x8BB0;&#x5F55;&#x7248;&#x672C;&#x53F7;">&#x8BB0;&#x5F55;&#x7248;&#x672C;&#x53F7;</h2>
+<blockquote>
+<p>&#x5728;windows&#x4E0A;&#x5B9E;&#x73B0;&#xFF0C;&#x53EA;&#x8BB0;&#x5F55;&#x63D0;&#x4EA4;&#x8005;&#x673A;&#x5668;&#x4E0A;&#x7684;&#x7248;&#x672C;&#x597D;</p>
+</blockquote>
+<ul>
+<li>&#x5EFA;&#x7ACB;&#x4E24;&#x4E2A;js&#x6587;&#x4EF6;&#xFF0C;ver-tmp.js, ver.js&#xFF0C;&#x683C;&#x5F0F;&#x9700;&#x8981;&#x5B8C;&#x5168;&#x4E00;&#x6837;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// ver-tmp.js</span>
+<span class="hljs-keyword">const</span> ver = $WCREV$
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ver
+
+<span class="hljs-comment">// ver.js&#xFF0C;&#x7A0B;&#x5E8F;&#x5185;&#x5F15;&#x7528;</span>
+<span class="hljs-keyword">const</span> ver = <span class="hljs-number">596</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ver
+</code></pre>
+<ul>
+<li>&#x6267;&#x884C;&#x6A21;&#x7248;</li>
+</ul>
+<pre><code class="lang-bash">subwcrev . ver-tmpl.js ver.js
+</code></pre>
+<ul>
+<li>&#x7A0B;&#x5E8F;&#x5E94;&#x7528;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5EFA;&#x7ACB;.bat&#x5728;windows&#x4E0B;&#x53EF;&#x8FD0;&#x884C;</span>
+<span class="hljs-built_in">cd</span> .\src\assets\js
+subwcrev . ver-tmpl.js ver.js
+<span class="hljs-built_in">cd</span> ../../../
+npm run build
+
+<span class="hljs-comment"># package.json</span>
+<span class="hljs-string">&quot;win-build&quot;</span>: <span class="hljs-string">&quot;build.bat&quot;</span>
+
+<span class="hljs-comment"># build for production</span>
+npm run win-build
+</code></pre>
+
                                 
                                 </section>
                             
@@ -1064,7 +1076,7 @@ vue&#x7A0B;&#x5E8F;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Nginx","level":"6.2","depth":1,"next":{"title":"Gulp","level":"7.1","depth":1,"path":"view/front_pack/gulp.md","ref":"./view/front_pack/gulp.md","articles":[]},"previous":{"title":"同步文件","level":"6.1.4","depth":2,"path":"view/service/centos/syncFile.md","ref":"view/service/centos/syncFile.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","-sharing"],"styles":{"website":"static/rebuild.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"unzoa","language":"zh-hans","gitbook":"*"},"file":{"path":"view/service/nginx.md","mtime":"2020-06-08T06:01:05.327Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-14T09:31:56.336Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Nginx","level":"6.2","depth":1,"next":{"title":"Gulp","level":"7.1","depth":1,"path":"view/front_pack/gulp.md","ref":"./view/front_pack/gulp.md","articles":[]},"previous":{"title":"同步文件","level":"6.1.4","depth":2,"path":"view/service/centos/syncFile.md","ref":"view/service/centos/syncFile.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","-sharing"],"styles":{"website":"static/rebuild.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"unzoa","language":"zh-hans","gitbook":"*"},"file":{"path":"view/service/nginx.md","mtime":"2020-07-14T09:43:47.107Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-14T09:44:56.703Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
