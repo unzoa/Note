@@ -38,6 +38,7 @@
 ## 前端方案
 
 * [文本菜单联动](./view/front_plan/fullpageScrollMenu.md)
+* [跨域](./view/front_plan/Proxy.md)
 
 ## 服务配置
 

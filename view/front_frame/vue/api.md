@@ -151,7 +151,9 @@ Axios.interceptors.response.use( // 响应拦截器---------------
     return data
   },
   error => {
-    return Promise.reject(error)
+    // return error // 返回请求失败信息
+    // Message.error('服务连接失败...')
+    // return Promise.reject(error)
   }
 )
 ```

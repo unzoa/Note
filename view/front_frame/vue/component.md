@@ -103,9 +103,6 @@ this.$router.push({
   this.$route.params.para2
   ```
 
-4.1 动态路由案例
-> 类似阿里云邮箱，菜单和邮件列表都能打开新的tab**<a target="_blank" href="/static/vue/menuContentTab.vue">完整代码</a>** ｜ [codepen预览](https://codepen.io/unzoa/project/editor/AMvWQg#)
-
 ### 插槽 slot
 > 针对vue@^2.6.0
 

@@ -26,6 +26,12 @@ git add .
 git commit -a -m 'commit'
 git pull
 git push
+
+# 删除仓库文件 or 文件夹
+git rm -r --cached folder/filename
+git rm -r --cached folder
+git commit -m'xxx'
+git push
 ```
 
 ## 解决 warning：LF will replace CRLF

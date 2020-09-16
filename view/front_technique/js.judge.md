@@ -1,5 +1,26 @@
 # JavaScript
 
+
+## 技巧
+
+### 1. && || 替换if
+
+```js
+let a = true
+let b = !a
+
+if (a) {}
+// 相当于
+a && ...
+
+if (!b) {}
+// 相当于
+b || ...
+```
+**注意** 在vue中template中v-bind:style中不能使用
+
+## 基本
+
 ### 1. 关于Dom操作
 - 关于节点
 
@@ -97,7 +118,7 @@
 
 ### 3.Ajax
 ```js
-	var xhr = new XHRHttpRquest();
+	var xhr = new XMLHttpRquest();
 	xhr.open('get',url,true);
 	xhr.send();
 	xhr.onreadystatechange = function(){

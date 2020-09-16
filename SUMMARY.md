@@ -7,6 +7,7 @@
 * [CSS](./view/front_technique/css.judge.md)
 * [JavaScript](./view/front_technique/js.judge.md)
 * [Canvas](./view/front_technique/canvas.md)
+* [SVG](./view/front_technique/svg.md)
 * [鉴权](./view/front_technique/authority.md)
 * [事件循环](./view/front_technique/eventLoop.md)
 
@@ -34,10 +35,12 @@
 
 * [Mockjs](./view/front_modules/mock.md)
 * [ExportWord](./view/front_modules/exportWord.md)
+* [GSAP](./view/front_modules/gsap.md)
 
 ## 前端方案
 
 * [文本菜单联动](./view/front_plan/fullpageScrollMenu.md)
+* [跨域](./view/front_plan/Proxy.md)
 
 ## 服务配置
 

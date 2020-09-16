@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Canvas · unzoa</title>
+        <title>GSAP · unzoa</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -53,10 +53,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="svg.html" />
+    <link rel="next" href="../front_plan/fullpageScrollMenu.html" />
     
     
-    <link rel="prev" href="js.judge.html" />
+    <link rel="prev" href="exportWord.html" />
     
 
     </head>
@@ -105,9 +105,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="css.judge.html">
+        <li class="chapter " data-level="2.1" data-path="../front_technique/css.judge.html">
             
-                <a href="css.judge.html">
+                <a href="../front_technique/css.judge.html">
             
                     
                     CSS
@@ -118,9 +118,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="js.judge.html">
+        <li class="chapter " data-level="2.2" data-path="../front_technique/js.judge.html">
             
-                <a href="js.judge.html">
+                <a href="../front_technique/js.judge.html">
             
                     
                     JavaScript
@@ -131,9 +131,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="canvas.html">
+        <li class="chapter " data-level="2.3" data-path="../front_technique/canvas.html">
             
-                <a href="canvas.html">
+                <a href="../front_technique/canvas.html">
             
                     
                     Canvas
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="svg.html">
+        <li class="chapter " data-level="2.4" data-path="../front_technique/svg.html">
             
-                <a href="svg.html">
+                <a href="../front_technique/svg.html">
             
                     
                     SVG
@@ -157,9 +157,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="authority.html">
+        <li class="chapter " data-level="2.5" data-path="../front_technique/authority.html">
             
-                <a href="authority.html">
+                <a href="../front_technique/authority.html">
             
                     
                     鉴权
@@ -170,9 +170,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6" data-path="eventLoop.html">
+        <li class="chapter " data-level="2.6" data-path="../front_technique/eventLoop.html">
             
-                <a href="eventLoop.html">
+                <a href="../front_technique/eventLoop.html">
             
                     
                     事件循环
@@ -430,9 +430,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../front_modules/mock.html">
+        <li class="chapter " data-level="4.1" data-path="mock.html">
             
-                <a href="../front_modules/mock.html">
+                <a href="mock.html">
             
                     
                     Mockjs
@@ -443,9 +443,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="../front_modules/exportWord.html">
+        <li class="chapter " data-level="4.2" data-path="exportWord.html">
             
-                <a href="../front_modules/exportWord.html">
+                <a href="exportWord.html">
             
                     
                     ExportWord
@@ -456,9 +456,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="../front_modules/gsap.html">
+        <li class="chapter active" data-level="4.3" data-path="gsap.html">
             
-                <a href="../front_modules/gsap.html">
+                <a href="gsap.html">
             
                     
                     GSAP
@@ -968,7 +968,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Canvas</a>
+        <a href="../.." >GSAP</a>
     </h1>
 </div>
 
@@ -983,46 +983,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="canvas">CANVAS</h1>
-<h3 id="1-&#x89E3;&#x51B3;&#x52A0;&#x8F7D;&#x56FE;&#x7247;&#x6A21;&#x7CCA;&#x95EE;&#x9898;">1. &#x89E3;&#x51B3;&#x52A0;&#x8F7D;&#x56FE;&#x7247;&#x6A21;&#x7CCA;&#x95EE;&#x9898;</h3>
+                                <h1 id="gsap">GSAP</h1>
+<p>Installation:</p>
+<pre><code class="lang-bash">npm i gsap -D
+<span class="hljs-comment"># version ^3.4.2</span>
+</code></pre>
 <ul>
-<li><p>&#x83B7;&#x53D6; canvas</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> canvasCon = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;.canvas-con&apos;</span>)
-<span class="hljs-keyword">let</span> canvas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;canvas-id&apos;</span>)
-context = canvas.getContext(<span class="hljs-string">&apos;2d&apos;</span>)
-</code></pre>
+<li><p>Use in vue:<a href="https://blog.usejournal.com/vue-js-gsap-animations-26fc6b1c3c5a" target="_blank">&#x8D44;&#x6599;</a></p>
 </li>
-<li><p>&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x7684; ratio &#x7684;&#x65B9;&#x6CD5;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> getPixelRatio = (context) =&gt; {
-  <span class="hljs-keyword">let</span> backingStore = context.backingStorePixelRatio ||
-    context.webkitBackingStorePixelRatio ||
-    context.mozBackingStorePixelRatio ||
-    context.msBackingStorePixelRatio ||
-    context.oBackingStorePixelRatio ||
-    context.backingStorePixelRatio || <span class="hljs-number">1</span>
-  <span class="hljs-keyword">return</span> (<span class="hljs-built_in">window</span>.devicePixelRatio || <span class="hljs-number">1</span>) / backingStore
-}
-</code></pre>
-</li>
-<li><p>&#x53EF;&#x4EE5;&#x4F7F;&#x5F97; canvas &#x643A;&#x5E26; ratio</p>
-<pre><code class="lang-js">canvas.ratio = getPixelRatio(canvas)
-</code></pre>
-</li>
-<li><p>&#x8BBE;&#x7F6E; canvas &#x5B9E;&#x9645;&#x5BBD;&#x9AD8;</p>
-<pre><code class="lang-js">canvas.height = canvasCon.offsetHeight * canvas.ratio
-canvas.width = canvasCon.offsetWidth * <span class="hljs-number">.6</span> * canvas.ratio
-</code></pre>
-</li>
-<li><p>&#x8BBE;&#x7F6E; canvas &#x6837;&#x5F0F;&#x5BBD;&#x9AD8;</p>
-<pre><code class="lang-js">canvas.style.height = canvasCon.offsetHeight + <span class="hljs-string">&apos;px&apos;</span>
-canvas.style.width = canvasCon.offsetWidth * <span class="hljs-number">.6</span> + <span class="hljs-string">&apos;px&apos;</span>
-</code></pre>
-</li>
-<li><p>&#x5C06; canvas &#x7F29;&#x5C0F;&#x4E00;&#x534A;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x56FE;&#x50CF;&#x6269;&#x5927;&#x4E8C;&#x500D;</p>
-<pre><code class="lang-js">context.scale(canvas.ratio, canvas.ratio)
-</code></pre>
+<li><p>main use:</p>
 </li>
 </ul>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> gsap <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;gsap&apos;</span>
+
+<span class="hljs-comment">// gsap(target, duration, vars)</span>
+gsap.to(<span class="hljs-string">&apos;.logo&apos;</span>, <span class="hljs-number">1</span>, {x: number})
+</code></pre>
+<ul>
+<li>use plugins:</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> gsap <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;gsap&apos;</span>
+<span class="hljs-keyword">import</span> MotionPathPlugin <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;gsap/MotionPathPlugin&apos;</span>
+
+gsap.to(
+  <span class="hljs-string">&apos;.logo&apos;</span>,
+  <span class="hljs-number">1</span>,
+  {
+    motionPath: {
+      path: <span class="hljs-string">&apos;.path&apos;</span>,
+      aligin: <span class="hljs-string">&apos;.path&apos;</span>,
+      alignOrigin: [<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>], <span class="hljs-comment">// logo&#x7684;&#x91CD;&#x5FC3;&#x6CBF;&#x7740;path&#x79FB;&#x52A8;</span>
+      autoRotate: <span class="hljs-literal">true</span> <span class="hljs-comment">// logo&#x7684;&#x6A2A;&#x5411;&#x65B9;&#x5411;&#x548C;path&#x6C34;&#x5E73;</span>
+    },
+    repeat: <span class="hljs-number">-1</span>, <span class="hljs-comment">// &#x91CD;&#x590D;&#x52A8;&#x753B;</span>
+    ease: <span class="hljs-string">&apos;power1&apos;</span> <span class="hljs-comment">// &#x52A8;&#x753B;&#x7684;&#x901F;&#x5EA6;&#x65B9;&#x6848;</span>
+  }
+)
+</code></pre>
 
                                 
                                 </section>
@@ -1050,12 +1047,12 @@ canvas.style.width = canvasCon.offsetWidth * <span class="hljs-number">.6</span>
 
             
                 
-                <a href="js.judge.html" class="navigation navigation-prev " aria-label="Previous page: JavaScript">
+                <a href="exportWord.html" class="navigation navigation-prev " aria-label="Previous page: ExportWord">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="svg.html" class="navigation navigation-next " aria-label="Next page: SVG">
+                <a href="../front_plan/fullpageScrollMenu.html" class="navigation navigation-next " aria-label="Next page: 文本菜单联动">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1066,7 +1063,7 @@ canvas.style.width = canvasCon.offsetWidth * <span class="hljs-number">.6</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Canvas","level":"2.3","depth":1,"next":{"title":"SVG","level":"2.4","depth":1,"path":"view/front_technique/svg.md","ref":"./view/front_technique/svg.md","articles":[]},"previous":{"title":"JavaScript","level":"2.2","depth":1,"path":"view/front_technique/js.judge.md","ref":"./view/front_technique/js.judge.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","-sharing"],"styles":{"website":"static/rebuild.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"unzoa","language":"zh-hans","gitbook":"*"},"file":{"path":"view/front_technique/canvas.md","mtime":"2020-07-01T05:32:38.662Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-16T05:36:40.277Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GSAP","level":"4.3","depth":1,"next":{"title":"文本菜单联动","level":"5.1","depth":1,"path":"view/front_plan/fullpageScrollMenu.md","ref":"./view/front_plan/fullpageScrollMenu.md","articles":[]},"previous":{"title":"ExportWord","level":"4.2","depth":1,"path":"view/front_modules/exportWord.md","ref":"./view/front_modules/exportWord.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","-sharing"],"styles":{"website":"static/rebuild.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"unzoa","language":"zh-hans","gitbook":"*"},"file":{"path":"view/front_modules/gsap.md","mtime":"2020-07-31T10:10:40.143Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-16T05:36:40.277Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

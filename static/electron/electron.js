@@ -9,6 +9,9 @@ const path = require('path')
 const url = require('url')
 const exec = require('child_process').exec
 
+// ignore-certificate-errors: can use unsafe
+app.commandLine.appendSwitch('ignore-certificate-errors')
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -25,7 +28,11 @@ function createWindow () {
     fullscreen: false,
     fullscreenable: false,
 
-    frame: false
+    frame: false,
+
+    webPreferences: {
+      webSecurity: false
+    }
   })
 
   // and load the index.html of the app.

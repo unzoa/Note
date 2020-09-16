@@ -161,3 +161,20 @@ function createWindow () {
       * page: Inno setup preprocessor [next]
       * [finish]
 
+#### 6. 跨域问题
+
+> 前端解决跨域，本项目a页面创建 iframe(目标，携带参数) 目标执行api请求后得到token，创建iframe(本项目b页，携带token等参数)，b页执行存储，a、b同源，所以a定时获取即可。
+
+**当目标https证书在谷歌显示不安全情况下，需要对electron设置忽略证书安全性：**
+```js
+const {app} = require('electron')
+app.commandLine.appendSwitch('ignore-certificate-errors') // 针对不安全证书问题
+
+...
+  new BrowserWindow({
+    webPreferences: {
+      webSecurity: false // 可以针对 not allowed to load local resource
+    }
+  })
+...
+```
