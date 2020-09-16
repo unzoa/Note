@@ -67,24 +67,24 @@ const router = new Router{
 ```
 
 4. **响应路由参数的变化**
-> 原来的组件实例会被复用，不过，这也意味着组件的生命周期钩子不会再被调用。
+  > 原来的组件实例会被复用，不过，这也意味着组件的生命周期钩子不会再被调用。
 
-解决方案1: 可以简单地 watch (监测变化) $route 对象
-```js
-watch: {
-  $route(to, from) {
-    // 对路由变化作出响应...
+  - 解决方案1: 可以简单地 watch (监测变化) $route 对象
+  ```js
+  watch: {
+    $route(to, from) {
+      // 对路由变化作出响应...
+    }
   }
-}
-```
+  ```
 
-解决方案2: 使用 2.2 中引入的 beforeRouteUpdate 导航守卫
-```js
-beforeRouteUpdate (to, from, next) {
-  // react to route changes...
-  // don't forget to call next()
-}
-```
+  - 解决方案2: 使用 2.2 中引入的 beforeRouteUpdate 导航守卫
+  ```js
+  beforeRouteUpdate (to, from, next) {
+    // react to route changes...
+    // don't forget to call next()
+  }
+  ```
 
 5. 通配符
 
