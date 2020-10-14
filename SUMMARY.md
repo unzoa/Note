@@ -51,6 +51,12 @@
   * [同步文件](/view/service/centos/syncFile.md)
 * [Nginx](./view/service/nginx.md)
 
+## 数据库
+* [MySQL](./view/mysql/index.md)
+  * [开始](./view/mysql/start.md)
+  * [首次使用](./view/mysql/firstUse.md)
+  * [常用命令](./view/mysql/command.md)
+
 ## 前端打包工具
 
 * [Gulp](./view/front_pack/gulp.md)

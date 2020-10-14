@@ -1,4 +1,4 @@
-# First use
+# 首次使用
 
 - mac上需要在'系统偏好设置'中MySQL中start MySQL Server；
 - 第一次使用需要自定义密码；

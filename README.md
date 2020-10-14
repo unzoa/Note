@@ -7,6 +7,7 @@
 * [CSS](./view/front_technique/css.judge.md)
 * [JavaScript](./view/front_technique/js.judge.md)
 * [Canvas](./view/front_technique/canvas.md)
+* [SVG](./view/front_technique/svg.md)
 * [鉴权](./view/front_technique/authority.md)
 * [事件循环](./view/front_technique/eventLoop.md)
 
@@ -34,6 +35,7 @@
 
 * [Mockjs](./view/front_modules/mock.md)
 * [ExportWord](./view/front_modules/exportWord.md)
+* [GSAP](./view/front_modules/gsap.md)
 
 ## 前端方案
 
@@ -48,6 +50,11 @@
   * [vim使用](/view/service/centos/vim.md)
   * [同步文件](/view/service/centos/syncFile.md)
 * [Nginx](./view/service/nginx.md)
+
+## 数据库
+* [MySQL](./view/mysql/start.md)
+  * [首次使用](./view/mysql/firstUse.md)
+  * [常用命令](./view/mysql/command.md)
 
 ## 前端打包工具
 
