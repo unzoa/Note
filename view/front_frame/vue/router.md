@@ -12,7 +12,7 @@
 
 > 利用route的meta组件属性设置keeplive布尔值
 
-```
+```html
 <keep-alive>
   <router-view v-if="$route.meta.keepAlive"></router-view>
 </keep-alive>
