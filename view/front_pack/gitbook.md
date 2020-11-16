@@ -16,6 +16,7 @@
 
 
 #### 1.summry 折叠
+
 ```bash
 # 安装折叠插件
 npm i gitbook-plugin-toggle-chapters -D
@@ -30,6 +31,7 @@ npm i gitbook-plugin-toggle-chapters -D
 
 
 #### 2.语言显示
+
 - book.json
 ```json
 "language": "zh-hans"

@@ -52,7 +52,8 @@
 * [Nginx](./view/service/nginx.md)
 
 ## 数据库
-* [MySQL](./view/mysql/start.md)
+* [MySQL](./view/mysql/index.md)
+  * [开始](./view/mysql/start.md)
   * [首次使用](./view/mysql/firstUse.md)
   * [常用命令](./view/mysql/command.md)
 
@@ -80,9 +81,15 @@
 
 ## 应用工具
 
-* [Mac](./view/tools/mac.md)
 * [Sublime](./view/tools/sublime.md)
 * [VS Code](./view/tools/vscode.md)
 * [Git](./view/tools/git.step.md)
 * [Svn](./view/tools/svn.md)
 * [zsh](./view/tools/zsh.md)
+* [ukey](./view/ukey/useage.md)
+
+## Mac
+
+* [清理图标](./view/mac/clearIcon.md)
+* [vue-cli发热](./view/mac/vue-cli项目.md)
+* [x-code](./view/mac/x-code.md)

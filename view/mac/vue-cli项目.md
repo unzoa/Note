@@ -1,12 +1,4 @@
-# Mac
-
-## 清理图标
-
-```bash
-defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
-```
-
-## MacOS上vue-cli项目发热严重，node占用cpu大
+# MacOS上vue-cli项目发热严重，node占用cpu大
 
 ### 1. 现象
 

@@ -81,9 +81,15 @@
 
 ## 应用工具
 
-* [Mac](./view/tools/mac.md)
 * [Sublime](./view/tools/sublime.md)
 * [VS Code](./view/tools/vscode.md)
 * [Git](./view/tools/git.step.md)
 * [Svn](./view/tools/svn.md)
 * [zsh](./view/tools/zsh.md)
+* [ukey](./view/ukey/useage.md)
+
+## Mac
+
+* [清理图标](./view/mac/clearIcon.md)
+* [vue-cli发热](./view/mac/vue-cli项目.md)
+* [x-code](./view/mac/x-code.md)
