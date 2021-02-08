@@ -60,6 +60,9 @@ window.getComputedStyle(ele, null).getPropertyValue(key)
 // 获取网页可视高度
 // https://www.cnblogs.com/ckmouse/archive/2012/01/30/2332070.html
 document.documentElement.clientHeight
+
+// 获取页面是否缩放
+window.visualViewport.scale // 默认是 1
 ```
 
 - 应用

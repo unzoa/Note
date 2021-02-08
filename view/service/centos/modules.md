@@ -10,10 +10,10 @@ install nginx
 - 操作
 
 ```bash
-cd /usr/local/nginx/sbin
+cd /usr/local/nginx/
 
 # 启动
-nginx
+./sbin/nginx
 
 # 重启
 nginx -s reload

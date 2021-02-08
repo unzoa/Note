@@ -12,6 +12,7 @@ use 数据库名
 
 # 创建数据表
 create table `表名` (`字段名` 字段类型, `字段名` 字段类型);
+create table personTable (personID int, name varchar(20), gender varchar(10), primary key(personID));
 
 # 设置主键
 
@@ -30,6 +31,9 @@ select count(*) from 表名;
 
 # 增加字段
 alter tabel 数据表 add 字段名 字段类型;
+
+# 一次添加多个列(字段)
+ALTER TABLE table_name ADD func varchar(50), ADD gene varchar(50), ADD genedetail varchar(50);
 
 # 增加多个字段
 alter table 表名
