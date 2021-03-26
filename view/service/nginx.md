@@ -9,6 +9,17 @@ open /usr/local/etc/nginx/
 # nginx.conf
 ```
 
+- centos 配置
+
+```bash
+cd /etc/nginx
+ls
+vim nginx.conf
+
+# 重启
+/usr/sbin/nginx -s reload
+```
+
 - Windows
 
 直接找到nginx文件夹，打开 nginx.conf
