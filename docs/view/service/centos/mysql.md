@@ -28,7 +28,7 @@
   systemctl start mysqld
 
   # 获取安装时的临时密码
-  grep 'temporary password' /var/log/mysqld.log
+  grep 'temporary password' /var/log/mysqld.log // O11RdxUQ5M=D
   # 2020-11-02T08:56:09.728544Z 1 [Note] A temporary password is generated for root@localhost: fO*Ti+oeL6)c
 
   # 登录验证
@@ -43,3 +43,28 @@
   # 首次使用修改密码
   set password for 'root'@'localhost' = '密码';
 ```
+
+4. 修改mysql存储emoji
+
+```bash
+# /etc 下创建my.cnf, 并修改内容
+
+[client]
+default-character-set = utf8mb4
+
+[mysql]
+default-character-set = utf8mb4
+
+[mysqld]
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+init_connect='SET NAMES utf8mb4'
+
+# 重启
+systemctl restart mysqld
+
+# 查看编辑结果
+SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';
+```
+
