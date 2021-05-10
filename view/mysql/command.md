@@ -58,11 +58,13 @@ alter table 表名 convert to character set utf8;
 # 插入新数据
 insert into weibo(id, text, originImg) values(0,?,?)
 
+# 更新数据
+update students set stu_name = "zhangsan", stu_gender = "m" where stu_id = 5;
+
 # 删除数据
 delete from 数据表 where age = 23;
 
 # 查询全部
 select * from 表名;
 select 字段名 from 表名;
-
 ```
