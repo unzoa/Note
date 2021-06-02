@@ -80,7 +80,7 @@ export const increment = ({ commit }, value) =>{
 
 #### 应用
 ```js
-import {mapGetters, mapActions} from 'store'
+import {mapGetters, mapActions} from 'vuex'
 computed:{
 	...mapGetters(['state-name'])
 }，
