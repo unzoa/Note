@@ -1,9 +1,4 @@
-# Note
-
-> 关于知识库的记录。
-
-
-# 导出pdf
+# 正片文档转一个PDF
 
 ```bash
 yarn add docsify-pdf-converter # 会报错，🥚不用管

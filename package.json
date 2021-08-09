@@ -7,6 +7,12 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "docsify serve ./docs"
+    "dev": "docsify serve ./docs",
+    "main-md": "node md2pdf/h.js",
+    "md2pdf": "node md2pdf/d.js",
+    "convert": "npm run main-md && npm run md2pdf"
+  },
+  "dependencies": {
+    "markdown-pdf": "^10.0.0"
   }
 }

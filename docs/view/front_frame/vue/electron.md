@@ -8,7 +8,7 @@ npm install electron-packager@^12.2.0 --save-dev
 ```
 
 ### 2.调用electron-quick-start
-> 把electron-quick-start项目中的main.js搬到vue的build文件中，并改个名字，这是最终dist下的文件**<a href="/static/electron/electron.js" target="_blank">electron.js</a>**，与build下差异就在与入口文件的地址。
+> 把electron-quick-start项目中的main.js搬到vue的build文件中，并改个名字，这是最终dist下的文件**<a href="/_media/electron/electron.js" target="_blank">electron.js</a>**，与build下差异就在与入口文件的地址。
 
 ```js
   // and load the index.html of the app.
@@ -21,7 +21,7 @@ npm install electron-packager@^12.2.0 --save-dev
 ```
 
 ### 3.编辑package.json
-> 在package.json文件中增加两条指令，electron-dev和electron-build，这是最终的文件**<a href="/static/electron/package.json" target="_blank">package.json</a>**
+> 在package.json文件中增加两条指令，electron-dev和electron-build，这是最终的文件**<a href="/_media/electron/package.json" target="_blank">package.json</a>**
 
 ```json
   "scripts": {

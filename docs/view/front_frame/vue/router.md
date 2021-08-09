@@ -47,7 +47,7 @@ const router = new Router{
 #### 动态路由
 
 案例
-> 类似阿里云邮箱，菜单和邮件列表都能打开新的tab**<a target="_blank" href="/static/vue/menuContentTab.vue">完整代码</a>** ｜ [codepen预览](https://codepen.io/unzoa/project/editor/AMvWQg#)
+> 类似阿里云邮箱，菜单和邮件列表都能打开新的tab**<a target="_blank" href="/_media/vue/menuContentTab.vue">完整代码</a>** ｜ [codepen预览](https://codepen.io/unzoa/project/editor/AMvWQg#)
 
 1. 路由的path后面必须有对应的参数, ':'为界
 ```js
