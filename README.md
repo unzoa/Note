@@ -3,7 +3,7 @@
 > 关于知识库的记录。
 
 
-# 导出pdf
+## 导出pdf
 
 ```bash
 # 参阅：/docs/docsify/md2pdf.md
