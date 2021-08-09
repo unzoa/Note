@@ -4,7 +4,7 @@
 
 ```bash
 　　# cd 要导出到的目录
-　　# mysqldump -u root -p 要导出的数据库名>名字随意.sql
+　　mysqldump -u root -p 要导出的数据库名>名字随意.sql
 ```
 
 2. 目标主机导入sql文件

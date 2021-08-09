@@ -6,23 +6,7 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {
-    "gitbook-plugin-toggle-chapters": "^0.0.3"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gitbook"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/unzoa/Note.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/unzoa/Note/issues"
-  },
-  "homepage": "https://github.com/unzoa/Note#readme"
+    "dev": "docsify serve ./docs"
+  }
 }
