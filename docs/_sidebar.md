@@ -22,7 +22,6 @@
     * [请求](view/front_frame/vue/api.md)
     * [打包](view/front_frame/vue/build.md)
     * [Electron](view/front_frame/vue/electron.md)
-    * [创建自己的npm](view/front_frame/vue/npmModules.md)
 
   * [小程序](view/front_frame/mini-program.md)
 
@@ -39,6 +38,9 @@
 
   * [CSS](view/front_technique/css.judge.md)
   * [JavaScript](view/front_technique/js.judge.md)
+    * [技巧](view/js/knife.md)
+    * [插件](view/js/plugin.md)
+    * [NPM](view/js/npmModules.md)
   * [Canvas](view/front_technique/canvas.md)
   * [SVG](view/front_technique/svg.md)
   * [鉴权](view/front_technique/authority.md)
