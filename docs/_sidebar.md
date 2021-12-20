@@ -68,6 +68,8 @@
       * [搭建本地服务](view/front_pack/webpack/train/localServer.md)
       * [创建多页面应用](view/front_pack/webpack/train/multiPage.md)
   * [Gulp](view/front_pack/gulp.md)
+  * [NW.js](view/nw/README.md)
+    * [Useage](view/nw/useage.md)
 
 * 前端方案
 
