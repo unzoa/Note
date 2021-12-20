@@ -33,14 +33,6 @@ b || ...
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
-## 404 Page
-
-<iframe height="300" style="width: 100%;" scrolling="no" title="404page" src="https://codepen.io/unzoa/embed/XWegRoB?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/unzoa/pen/XWegRoB">
-  404page</a> by unzoa (<a href="https://codepen.io/unzoa">@unzoa</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
-
 ## 当前时间
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="当前时间" src="https://codepen.io/unzoa/embed/WNZOjPj?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
@@ -59,6 +51,14 @@ b || ...
 </iframe>
 
 
+##  canvas 弹球
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="bouncing-balls" src="https://codepen.io/unzoa/embed/wvrexPr?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/unzoa/pen/wvrexPr">
+  bouncing-balls</a> by unzoa (<a href="https://codepen.io/unzoa">@unzoa</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
 ## 分割对象为目标个数组对象
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="分割对象为目标个数组对象" src="https://codepen.io/unzoa/embed/LYzLLPK?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
@@ -72,5 +72,13 @@ b || ...
 <iframe height="300" style="width: 100%;" scrolling="no" title="js与iosAPP联动" src="https://codepen.io/unzoa/embed/GRMEEpq?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/unzoa/pen/GRMEEpq">
   js与iosAPP联动</a> by unzoa (<a href="https://codepen.io/unzoa">@unzoa</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+## 纯js 信息滚动增加swiper
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/unzoa/embed/KKXqxvO?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/unzoa/pen/KKXqxvO">
+  Untitled</a> by unzoa (<a href="https://codepen.io/unzoa">@unzoa</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
