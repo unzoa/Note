@@ -82,3 +82,11 @@ b || ...
   Untitled</a> by unzoa (<a href="https://codepen.io/unzoa">@unzoa</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+
+## 简单的spa页面 hash
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="simple-spa" src="https://codepen.io/unzoa/embed/bGoRJKZ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/unzoa/pen/bGoRJKZ">
+  simple-spa</a> by unzoa (<a href="https://codepen.io/unzoa">@unzoa</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
