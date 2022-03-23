@@ -23,7 +23,7 @@
     * [请求](view/front_frame/vue/api.md)
     * [打包](view/front_frame/vue/build.md)
     * [Electron](view/front_frame/vue/electron.md)
-    * [Flexible](view/front-frame/vue/flexible.md)
+    * [Flexible](view/front_frame/vue/flexible.md)
 
   * [小程序](view/front_frame/mini-program.md)
 
