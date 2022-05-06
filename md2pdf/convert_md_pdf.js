@@ -1,5 +1,5 @@
-var markdownpdf = require("markdown-pdf")
-  , fs = require("fs")
+const markdownpdf = require("markdown-pdf")
+const fs = require("fs")
 
 fs.createReadStream("static/main.md")
   .pipe(markdownpdf())

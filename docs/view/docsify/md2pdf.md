@@ -1,16 +1,18 @@
-# 正片文档转一个PDF
+1. 将整篇文档整合成一个md文件
 
 ```bash
 yarn add docsify-pdf-converter # 会报错，🥚不用管
 
-node h.js
+node full_content_md.js
+
+# 输出了/static/main.md
 ```
 
-输出了/static/main.md
-转pdf
+
+2. 将1中md转pdf
 
 ```bash
 npm i markdown-pdf
 
-node d.js
+node convert_md_pdf.js
 ```

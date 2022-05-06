@@ -39,8 +39,11 @@
 
 * 前端技术
 
-  * [CSS](view/front_technique/css.judge.md)
-  * [JavaScript](view/front_technique/js.judge.md)
+  * CSS
+    * [基础](view/css/css.judge.md)
+    * [案例](view/css/knife.md)
+  * JavaScript
+    * [基础](view/js/js.judge.md)
     * [技巧](view/js/knife.md)
     * [插件](view/js/plugin.md)
     * [NPM](view/js/npmModules.md)
