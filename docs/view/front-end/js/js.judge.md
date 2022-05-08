@@ -1,6 +1,6 @@
-### 1. 关于Dom操作
+# JS 基础
 
-- 关于节点
+## 关于Dom操作
 
 ```js
 // 创建新节点
@@ -42,28 +42,7 @@ document.documentElement.clientHeight
 window.visualViewport.scale // 默认是 1
 ```
 
-- 应用
-
-```html
-<ul class="test-ul">
-  <li>111</li>
-	<li>112</li>
-	<li>113</li>
-	<li>114</li>
-	<li>115</li>
-</ul>
-
-<script>
-	var lis = document.querySelector('.test-ul li')
-	console.log(lis) // <li>111</li>
-	var lis2 = document.getElementsByClassName('test-ul')[0].children
-	console.log(lis2) // li li li li li
-	var lis3 = document.getElementsByTagName('li')
-	console.log(lis3) // li li li li li
-</script>
-```
-
-- jQuery:
+### jQuery
 
 > cdn https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js
 
@@ -86,20 +65,91 @@ eq()
 siblings('')
 ```
 
-### 2.Function
+### 获取元素位置与尺寸
 
+```js
+// 1、内高度、内宽度： 内边距 + 内容框
+element.clientWidth
+element.clientHeight
+
+
+// 2、外高度，外宽度： 边框 + 内边距 + 内容框
+element.offsetWidth
+element.offsetHeight
+
+
+// 3、上边框、左边框
+element.clientTop
+element.clientLeft
+
+
+// 4、元素的大小及其相对于视口的位置
+element.getBoundingClientRect()
+// x\y:元素的左上角和父元素左上角的距离
+// width/height:边框 + 内边距 + 内容框
+// top:元素的上边界和父元素上边界的距离
+// left:元素的左边界和父元素左边界的距离
+// right:元素的右边界和父元素的左边界的距离
+// bottom:元素的下边界和父元素上边界的距离
+
+
+// 5、上边偏移量，左边的偏移量
+element.offsetTop
+element.offsetLest
+
+
+// 6、可视区域的大小
+document.documentElement.clientWidth
+document.documentElement.clientHeight
+
+
+// 7、页面的实际大小
+document.documentElement.scrollWidth
+document.documentElement.scrollHeight
+
+
+// 8、窗口左上角 与 屏幕左上角的 距离
+window.screenX
+window.screenY
+
+
+// 9、屏幕宽高
+window.screen.width
+window.screen.height
+
+
+// 10、屏幕可用宽高（去除任务栏）
+window.screen.availWidth
+window.screen.availHeight
+
+
+// 11、窗口的内高度、内宽度（文档显示区域+滚动条）
+window.innerWidth
+window.innerHeight
+
+
+// 12、窗口的外高度、外宽度
+window.outerWidth
+window.outerHeiht
 ```
-1. 函数声明 Function Declaration
+
+## Function
+
+```js
+// 1. 函数声明 Function Declaration
 function func1 () {}
-2. 函数表达式 Function Expression
+
+// 2. 函数表达式 Function Expression
 var func2 = function () {}
-3. 构造函数
+
+// 3. 构造函数
 new Function('a', 'b', 'return a + b');
-4. 箭头函数
+
+// 4. 箭头函数
 (params) => {}
 ```
 
-### 3.Ajax
+## Ajax
 
 ```js
 var xhr = new XMLHttpRquest();
@@ -112,7 +162,7 @@ xhr.onreadystatechange = function(){
 }
 ```
 
-### 4.Promise
+## Promise
 
 ```js
 var pro = new Promise((resolve,reject)=>{
@@ -129,12 +179,12 @@ pro.then((data)=>{
 })
 ```
 
-### 5.Array & Object
+## Array & Object
 
-- Array
+### Array
 
 ```js
-// 直接修改arr
+// 修改原数组
 push
 pop
 shift // 把数组的第一个元素从其中删除
@@ -143,26 +193,27 @@ reverse
 sort arr.sort((a, b) => { return a - b })
 splice(index,count,new1,new2) // 替换原数组项目从index开始count个位置
 
-// 新数组
+// 返回新数组
 concat // 连接数组
 join // 数组变为字符串
 slice(start,end)
 set 去重 Array.from(new Set(arr))
 
-arr.forEach( ()=>{} ) // 返回字符串，数组元素
-arr.map( ()=>{ return } ) // 加工原数组
-filter(function(item){ return type item == 'number'}) // 返回过滤后的数组,满足条件的留下
-
-a.filter(ea=>b.every(eb=>eb!==ea)) // 数组差集 a包含b
+// 遍历
+arr.forEach( (i) => {i} )
+arr.map( () => { return } ) // 返回新数组
+arr.filter((item) => { return type item == 'number'}) // 返回过滤后的数组,满足条件的留下
+arr.filter( ea => b.every( eb => eb!==ea ) ) // 数组差集 a包含b
 ```
 
-- Object
+### Object
 
 ```js
 // keys & values
 Object.keys(obj) // 返回一个obj的keys的数组
 Object.values(obj) // 返回一个obj的values的数组
 Object.entries(obj) // 返回[ [key, value], [key, value]]
+Object.fromEntries(Map or arr[[k,v]])
 function (target) {
 	return Object.keys(obj).map(i => {
 		return [i, obj[i]]
@@ -172,8 +223,7 @@ function (target) {
 // 融合
 Object.assign(obj, ...sources) // 返回融合后的对象
 // es5 浏览器兼容
-Object.assign = Object.assign ||
-function (target) {
+Object.assign = Object.assign || function (target) {
 	for (var i = 1; i < arguments.length; i++) {
 		var source = arguments[i]
 		for (var key in source) {
@@ -202,14 +252,14 @@ let newObj = {...oldObj}
 let newObj = Object.assign({}, oldObj)
 ```
 
-### 6.JSON
+## JSON
 
 ```js
 JSON.parse() 解析一个JSON字符串，构造由字符串描述的JavaScript值或对象
 JSON.stringify()
 ```
 
-### 7.模块化
+## 模块化
 ```
 commonJs
 	服务器端模块规范，一个文件是一个模块，例如Node.js
@@ -218,7 +268,7 @@ amd
 cmd
 ```
 
-### 8.call & apply & bind
+## call & apply & bind
 
 > 每个函数都包含，并且是非继承下来的
 > 执行函数person，函数内this指向thisObject, 携带的参数arg
@@ -229,21 +279,22 @@ function person (name = 'bob', sex = 'dragon') {
 }
 ```
 
-- call 主构造函数call(目标构造函数)，即：目标构造函数继承了主构造的属性
+### call
 
 ```js
+// 主构造函数call(目标构造函数)，即：目标构造函数继承了主构造的属性
 // 携带的参数arg需要枚举
 person.call(thisObject, arg1, arg2)
 ```
 
-- apply
+### apply
 
 ```js
 // 参数需要是数组
 person.apply(thisObject, argArray)
 ```
 
-- bind 函数继承对象的属性
+### bind
 
 ```js
 const a = {
@@ -254,5 +305,6 @@ function b () {
 	console.log(this.x)
 }
 
+// 函数继承对象的属性
 b.bind(a)()
 ```
