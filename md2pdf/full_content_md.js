@@ -2,7 +2,7 @@
  * 导出main.md
  * 将侧边栏中所有引用md文件整合成一个md文件
  */
-const converter = require('docsify-pdf-converter');
+const converter = require('../docsify-to-pdf-converter');
 
 converter({
   contents: [ "docs/_sidebar.md" ], // array of "table of contents" files path

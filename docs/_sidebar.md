@@ -1,31 +1,16 @@
 * [介绍](README.md)
 
-* 后端
-  * Node
-    * [初始化](view/back-end/node/init.md)
-    * package
-      * [install注意](view/back-end/node/npm_install.md)
-
-* 电脑
-  * Mac
-    * [清理图标](view/computer/mac/clearIcon.md)
-    * [vue-cli发热](view/computer/mac/vue-cli项目.md)
-    * [x-code](view/computer/mac/x-code.md)
-    * [安装](view/computer/mac/install.md)
-
-* 网路安全
-  * 威胁情报
-    * IOC
-      * [介绍](view/cyber_security/threat_intelligence/IOC/ioc.md)
-
 * 前端
   * CSS
-    * [基础](view/front-end/css/css.judge.md)
+    * [基础](view/front-end/css/base.md)
     * [案例](view/front-end/css/knife.md)
 
   * 桌面端-混合
-    * [NW.js](view/front-end/desktop/nw/README.md)
-      * [Useage](view/front-end/desktop/nw/useage.md)
+    * NW.js
+      * [介绍](view/front-end/desktop/nw/README.md)
+      * [使用](view/front-end/desktop/nw/useage.md)
+      * [进程](view/front-end/desktop/nw/process.md)
+      * [托盘](view/front-end/desktop/nw/tray.md)
     * [Electron](view/front-end/desktop/electron.md)
 
   * 框架
@@ -49,14 +34,11 @@
       * [Flexible](view/front-end/frame/vue/flexible.md)
       * [RichText](view/front-end/frame/vue/richtext.md)
 
-    * 小程序
-      * [介绍](view/front-end/frame/mini-program.md)
-
-    * Wex5
-      * [Wex5-Java](view/front-end/frame/wex5-java.md)
+    * [小程序](view/front-end/frame/mini-program.md)
+    * [Wex5-Java](view/front-end/frame/wex5-java.md)
 
   * JavaScript
-    * [基础](view/front-end/js/js.judge.md)
+    * [基础](view/front-end/js/base.md)
     * [技巧](view/front-end/js/knife.md)
     * [插件](view/front-end/js/plugin.md)
 
@@ -100,20 +82,11 @@
     * [鉴权](view/front-end/technique/authority.md)
     * [事件循环](view/front-end/technique/eventLoop.md)
 
-* 服务
-  * centOS
-    * [Start](view/service/centos/start.md)
-    * 安装
-      * [mysql](view/service/centos/mysql.md)
-      * [nginx](view/service/centos/nginx.md)
-      * [ndoe](view/service/centos/node.md)
-    * 命令
-      * [同步文件](view/service/centos/syncFile.md)
-      * [vim使用](view/service/centos/vim.md)
-      * [查询内存](view/service/centos/storage.md)
-
-  * Nginx
-    * [使用须知](view/service/nginx.md)
+* 后端
+  * Node
+    * [初始化](view/back-end/node/init.md)
+    * package
+      * [install注意](view/back-end/node/npm_install.md)
 
 * 数据库
   * MySQL
@@ -126,17 +99,41 @@
     * 问题
       * [不能启动](view/sql/mysql/cantStart.md)
 
+* 服务
+  * centOS
+    * [Start](view/service/centos/start.md)
+    * 安装
+      * [mysql](view/service/centos/mysql.md)
+      * [nginx](view/service/centos/nginx.md)
+      * [ndoe](view/service/centos/node.md)
+    * 命令
+      * [同步文件](view/service/centos/syncFile.md)
+      * [vim使用](view/service/centos/vim.md)
+      * [查询内存](view/service/centos/storage.md)
+
+  * [Nginx 使用](view/service/nginx.md)
+
+* 网路安全
+  * 威胁情报
+    * IOC
+      * [介绍](view/cyber_security/threat_intelligence/IOC/ioc.md)
+
 * 工具
   * 电子书工具
     * Docsify
       * [使用须知](view/tools/e-book/docsify/useage.md)
       * [导出PDF](view/tools/e-book/docsify/md2pdf.md)
-    * Gitbbok
-      * [使用须知](view/tools/e-book/gitbook/gitbook.md)
-  * UKey
-    * [使用须知](view/tools/ukey/useage.md)
+    * [Gitbbok](view/tools/e-book/gitbook/gitbook.md)
+  * [UKey](view/tools/ukey/useage.md)
   * [Git](view/tools/git.step.md)
   * [Sublime](view/tools/sublime.md)
   * [Svn](view/tools/svn.md)
   * [VS Code](view/tools/vscode.md)
   * [zsh](view/tools/zsh.md)
+
+* 电脑
+  * Mac
+    * [清理图标](view/computer/mac/clearIcon.md)
+    * [vue-cli发热](view/computer/mac/vue-cli项目.md)
+    * [x-code](view/computer/mac/x-code.md)
+    * [安装](view/computer/mac/install.md)

@@ -11,8 +11,5 @@
     "full_content_md": "node md2pdf/full_content_md.js",
     "md2pdf": "node md2pdf/convert_md_pdf.js",
     "convert": "npm run full_content_md && npm run md2pdf"
-  },
-  "dependencies": {
-    "markdown-pdf": "^10.0.0"
   }
 }
