@@ -2,8 +2,8 @@
 
 * 前端
   * CSS
-    * [基础](view/front-end/css/base.md)
-    * [案例](view/front-end/css/knife.md)
+    * [基础](view/front-end/css/css-base.md)
+    * [案例](view/front-end/css/css-knife.md)
 
   * 桌面端-混合
     * NW.js
@@ -85,8 +85,7 @@
 * 后端
   * Node
     * [初始化](view/back-end/node/init.md)
-    * package
-      * [install注意](view/back-end/node/npm_install.md)
+    * [install](view/back-end/node/npm_install.md)
 
 * 数据库
   * MySQL
