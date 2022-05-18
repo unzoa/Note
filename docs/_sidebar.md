@@ -85,16 +85,16 @@
 * 后端
   * Node
     * [初始化](view/back-end/node/init.md)
-    * [install](view/back-end/node/npm_install.md)
+    * [安装注意](view/back-end/node/npm_install.md)
+    * [简单的项目](view/back-end/node/node_project.md)
 
 * 数据库
   * MySQL
-    * [开始](view/sql/mysql/start.md)
-    * [首次使用](view/sql/mysql/firstUse.md)
+    * [Mac下安装](view/sql/mysql/start.md)
     * [迁移sql文件](view/sql/mysql/movesql.md)
     * 常用命令
-      * [数据库相关](view/sql/mysql/database.md)
-      * [表相关](view/sql/mysql/table.md)
+      * [库](view/sql/mysql/database.md)
+      * [表](view/sql/mysql/table.md)
     * 问题
       * [不能启动](view/sql/mysql/cantStart.md)
 
