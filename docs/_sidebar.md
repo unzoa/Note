@@ -5,7 +5,7 @@
     * [基础](view/front-end/css/css-base.md)
     * [案例](view/front-end/css/css-knife.md)
 
-  * 桌面端-混合
+  * 桌面端
     * NW.js
       * [介绍](view/front-end/desktop/nw/README.md)
       * [使用](view/front-end/desktop/nw/useage.md)
@@ -50,7 +50,7 @@
       * [ExportWord](view/front-end/npm/other/exportWord.md)
       * [GSAP](view/front-end/npm/other/gsap.md)
 
-  * 打包工具
+  * 打包
     * webpack4.x
       * 基本
         * [entry](view/front-end/pack/webpack/base/entry.md)
@@ -74,9 +74,9 @@
 
   * 方案
     * [文本菜单联动](view/front-end/plan/fullpageScrollMenu.md)
-    * [跨域](view/front-end/plan/Proxy.md)
 
   * 其他
+    * [跨域](view/front-end/technique/Proxy.md)
     * [Canvas](view/front-end/technique/canvas.md)
     * [SVG](view/front-end/technique/svg.md)
     * [鉴权](view/front-end/technique/authority.md)
@@ -87,6 +87,8 @@
     * [初始化](view/back-end/node/init.md)
     * [安装注意](view/back-end/node/npm_install.md)
     * [简单的项目](view/back-end/node/node_project.md)
+  * Python
+    * [pip安装](view/back-end/python/install.md)
 
 * 数据库
   * MySQL
@@ -95,8 +97,7 @@
     * 常用命令
       * [库](view/sql/mysql/database.md)
       * [表](view/sql/mysql/table.md)
-    * 问题
-      * [不能启动](view/sql/mysql/cantStart.md)
+    * [问题](view/sql/mysql/qa.md)
 
 * 服务
   * centOS

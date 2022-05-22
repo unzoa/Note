@@ -23,9 +23,8 @@ create table personTable
 # 展示table下的编码
 show create table 表名;
 
-desc 数据表;
-
 # 展示数据表下字段描述
+desc 数据表;
 show columns from 数据表;
 
 # 更改table字符集
@@ -33,6 +32,14 @@ alter table 表名 convert to character set utf8;
 
 # 删除数据表
 drop table 表名;
+
+# 复制表
+# 只复制表结构（没有表数据
+create table moneyTmp like moneyTable;
+
+# 复制数据到新表
+insert into weibo2(id,text) select id,user_text from weibo;
+
 ```
 
 ## 查询
@@ -57,6 +64,7 @@ select * from 表 desc;
 select * from 表 limit 10;
 
 # 模糊查询
+# IFNULL(字段, '如果值是null，要替换的值')
 select * from 表
   where concat(name,IFNULL(retweeted_name, '')) like '%模糊字段%';
 

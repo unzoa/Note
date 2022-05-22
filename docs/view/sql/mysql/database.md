@@ -1,6 +1,6 @@
 # 数据库相关
 
-```bash
+```sql
 # 目前拥有的数据库
 show databases;
 
