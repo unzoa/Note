@@ -1,6 +1,6 @@
 # Docsify
 
-> [基本使用](https://docsify.js.org/#/)
+> [基本使用](https://docsify.js.org/#/zh-cn/quickstart)
 
 1. 全局安装docsify
 

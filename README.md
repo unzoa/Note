@@ -1,11 +1,17 @@
-# Note
+# unzoa Note
 
 > 关于知识库的记录。
 
-
-## 导出pdf
+## 本地预览
 
 ```bash
-# 参阅：/docs/docsify/md2pdf.md
-npm run convert
+# 安装电子书驱动
+npm i docsify-cli -g
+
+# 启动
+npm run dev
 ```
+
+## GitHub Pages
+
+[Note](https://unzoa.github.io/Note/)
