@@ -14,7 +14,3 @@ npm run dev
 
 
 ```
-
-GitHub Pages
-
-[Note](https://unzoa.github.io/Note/)

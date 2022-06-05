@@ -48,6 +48,14 @@ object-fit: cover; 属性值可自行决定
 - flex [介绍](https://www.cnblogs.com/qingchunshiguang/p/8011103.html)
 - grid [介绍](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout) | [详细](https://www.jianshu.com/p/41c038baf994)
 
+3. margin-top
+
+**使用%时，相对于父元素的width**
+
+> CSS权威指南中的解释：若是相对于父元素的高度计算会形成死循环。
+“我们认为，正常流中的大多数元素都会足够高以包含其后代元素（包括外边距），如果一个元素的上下外边距是父元素的height的百分数，就可能导致一个无限循环，父元素的height会增加，以适应后代元素上下外边距的增加，而相应的，上下外边距因为父元素height的增加也会增加，形成无限循环。”
+
+> 还有一种说法是根本原因并不是因为死循环。例如zhangxinxu认为相对于 height 计算，大多数情况下计算值都是 0，跟摆设没什么 区别，还不如相对宽度计算，因为 CSS 默认的是水平流，计算值一直会有效，而且我们还可以 利用这一特性实现一些有意思的布局效果。也就是面向场景和需求设计，这种设计可以让我们轻松实现自适应的等比例矩形效果。
 
 ## 定位
 
