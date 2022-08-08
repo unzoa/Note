@@ -133,7 +133,8 @@
 
 * 电脑
   * Mac
+    * [安装软件](view/computer/mac/app.md)
     * [清理图标](view/computer/mac/clearIcon.md)
     * [vue-cli发热](view/computer/mac/vue-cli项目.md)
     * [x-code](view/computer/mac/x-code.md)
-    * [安装](view/computer/mac/install.md)
+    * [重装电脑](view/computer/mac/install.md)
