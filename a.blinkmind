@@ -1,0 +1,603 @@
+{
+  "rootTopicKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+  "editorRootTopicKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+  "focusKey": "dac4ef41-a8f8-49fa-8cea-eeaac9d7fa88",
+  "extData": {
+    "TOPIC_REFERENCE": {
+      "reference": {}
+    }
+  },
+  "topics": [
+    {
+      "key": "4acacb1f-2aa6-4724-917f-335394bd878e",
+      "parentKey": "f7c815da-46c9-4452-a7f7-33eb114cc905",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "设计原理"
+        }
+      ]
+    },
+    {
+      "key": "adbc81b9-321f-4738-9fea-abefa52b9873",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Electron"
+        }
+      ]
+    },
+    {
+      "key": "dac4ef41-a8f8-49fa-8cea-eeaac9d7fa88",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [
+        "f7c815da-46c9-4452-a7f7-33eb114cc905",
+        "1ceae9e4-8203-4e9b-a6ed-55d463081fe8"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": " vue"
+        }
+      ]
+    },
+    {
+      "key": "7f3786ec-17fc-44ea-8ca3-6e4338596e7f",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [
+        "3c69b3fb-429b-4bf6-8f99-7b479cdffabf"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "模式"
+        }
+      ]
+    },
+    {
+      "key": "3c69b3fb-429b-4bf6-8f99-7b479cdffabf",
+      "parentKey": "7f3786ec-17fc-44ea-8ca3-6e4338596e7f",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "MVC/MVVM"
+        }
+      ]
+    },
+    {
+      "key": "ecaeb1a7-82c0-4994-bf72-db054c233aff",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "管理"
+        }
+      ]
+    },
+    {
+      "key": "a00cac94-6978-4abd-96bc-51e24bff21bc",
+      "parentKey": "a145465f-36cc-48e6-a595-1f895d24af45",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "工程效能提升"
+        }
+      ]
+    },
+    {
+      "key": "e3939083-958c-4a3e-8ffd-3f63fbc62f5a",
+      "parentKey": "5af6c9c2-360e-483c-8e3d-8eda2b1a5be9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "进阶"
+        }
+      ]
+    },
+    {
+      "key": "b3d44472-ffa2-40ab-be2b-774f5eaff120",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "TS"
+        }
+      ]
+    },
+    {
+      "key": "26240aab-cdab-44f7-993b-085c5bcb9e55",
+      "parentKey": "1155e70b-dce1-42fa-9305-ec3e0ecdae1c",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "IOS/Android/Flutter客户端"
+        }
+      ]
+    },
+    {
+      "key": "a9475abe-dc95-4ac6-be63-00629bb8e89d",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "库/框架设计"
+        }
+      ]
+    },
+    {
+      "key": "037d40ac-6d63-477f-b314-670fb79f0f70",
+      "parentKey": "a145465f-36cc-48e6-a595-1f895d24af45",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "稳定性体系建设"
+        }
+      ]
+    },
+    {
+      "key": "ecdb7b75-c6e3-4947-8448-bee761d5a938",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [
+        "bc380722-fe54-4914-8482-6434039d6f1a"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "小程序"
+        }
+      ]
+    },
+    {
+      "key": "780ed1ec-eff7-4887-ba52-e59e4b91593a",
+      "parentKey": "0cd32d1d-580b-47aa-a254-62111c801b4f",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "pnpm"
+        }
+      ]
+    },
+    {
+      "key": "5af6c9c2-360e-483c-8e3d-8eda2b1a5be9",
+      "parentKey": "3762f6d9-33bd-4f7a-a8f7-a3e0aa496198",
+      "subKeys": [
+        "e3939083-958c-4a3e-8ffd-3f63fbc62f5a",
+        "123ffed9-529f-468e-a2ab-f61e2837e5b9"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "使用"
+        }
+      ]
+    },
+    {
+      "key": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "parentKey": null,
+      "subKeys": [
+        "dac4ef41-a8f8-49fa-8cea-eeaac9d7fa88",
+        "3762f6d9-33bd-4f7a-a8f7-a3e0aa496198",
+        "b3d44472-ffa2-40ab-be2b-774f5eaff120",
+        "7f3786ec-17fc-44ea-8ca3-6e4338596e7f",
+        "e185101f-2a3c-4368-b8ea-c4e0f0ac8077",
+        "2311d586-88a6-41dc-935c-f3116f16ba3a",
+        "0cd32d1d-580b-47aa-a254-62111c801b4f",
+        "a9475abe-dc95-4ac6-be63-00629bb8e89d",
+        "adbc81b9-321f-4738-9fea-abefa52b9873",
+        "1155e70b-dce1-42fa-9305-ec3e0ecdae1c",
+        "ecdb7b75-c6e3-4947-8448-bee761d5a938",
+        "a145465f-36cc-48e6-a595-1f895d24af45",
+        "825c6263-4bce-4114-a836-5741b89d38c6",
+        "b4e1d67b-a3af-4f1b-9db4-a2ba136fdd8b",
+        "ecaeb1a7-82c0-4994-bf72-db054c233aff"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "learn"
+        }
+      ]
+    },
+    {
+      "key": "85a19817-ab87-4fdc-b411-06fb91bd0c7b",
+      "parentKey": "e185101f-2a3c-4368-b8ea-c4e0f0ac8077",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "浏览器原理机制"
+        }
+      ]
+    },
+    {
+      "key": "fe0a8ebf-e629-4b2c-bf8f-c68fc8b1ff4d",
+      "parentKey": "0cd32d1d-580b-47aa-a254-62111c801b4f",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "yarn"
+        }
+      ]
+    },
+    {
+      "key": "f7c815da-46c9-4452-a7f7-33eb114cc905",
+      "parentKey": "dac4ef41-a8f8-49fa-8cea-eeaac9d7fa88",
+      "subKeys": [
+        "4acacb1f-2aa6-4724-917f-335394bd878e"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "vue2解析"
+        }
+      ]
+    },
+    {
+      "key": "e185101f-2a3c-4368-b8ea-c4e0f0ac8077",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [
+        "85a19817-ab87-4fdc-b411-06fb91bd0c7b"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "计算机基础"
+        }
+      ]
+    },
+    {
+      "key": "0cd32d1d-580b-47aa-a254-62111c801b4f",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [
+        "780ed1ec-eff7-4887-ba52-e59e4b91593a",
+        "fe0a8ebf-e629-4b2c-bf8f-c68fc8b1ff4d",
+        "2ead0ebf-d1c5-49b3-84a0-5e7f9c5b2ea0"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "工程化"
+        }
+      ]
+    },
+    {
+      "key": "bc380722-fe54-4914-8482-6434039d6f1a",
+      "parentKey": "ecdb7b75-c6e3-4947-8448-bee761d5a938",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "微信/支付宝/钉钉"
+        }
+      ]
+    },
+    {
+      "key": "825c6263-4bce-4114-a836-5741b89d38c6",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "理财"
+        }
+      ]
+    },
+    {
+      "key": "27e9fbe3-4d53-4e33-885b-70bcc1c41350",
+      "parentKey": "3762f6d9-33bd-4f7a-a8f7-a3e0aa496198",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "ReactNative"
+        }
+      ]
+    },
+    {
+      "key": "1155e70b-dce1-42fa-9305-ec3e0ecdae1c",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [
+        "20cf149a-981e-43f0-ae7b-6102142f43c3",
+        "26240aab-cdab-44f7-993b-085c5bcb9e55",
+        "11b122d3-3f8f-4fd0-9d6f-1aef47b176a0"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "全栈"
+        }
+      ]
+    },
+    {
+      "key": "0b783cd8-530e-41f2-9009-1974e9839e46",
+      "parentKey": "1ceae9e4-8203-4e9b-a6ed-55d463081fe8",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "解析"
+        }
+      ]
+    },
+    {
+      "key": "123ffed9-529f-468e-a2ab-f61e2837e5b9",
+      "parentKey": "5af6c9c2-360e-483c-8e3d-8eda2b1a5be9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "解析"
+        }
+      ]
+    },
+    {
+      "key": "11b122d3-3f8f-4fd0-9d6f-1aef47b176a0",
+      "parentKey": "1155e70b-dce1-42fa-9305-ec3e0ecdae1c",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "python/rust"
+        }
+      ]
+    },
+    {
+      "key": "3762f6d9-33bd-4f7a-a8f7-a3e0aa496198",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [
+        "5af6c9c2-360e-483c-8e3d-8eda2b1a5be9",
+        "27e9fbe3-4d53-4e33-885b-70bcc1c41350"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "react"
+        }
+      ]
+    },
+    {
+      "key": "2ead0ebf-d1c5-49b3-84a0-5e7f9c5b2ea0",
+      "parentKey": "0cd32d1d-580b-47aa-a254-62111c801b4f",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "webpack"
+        }
+      ]
+    },
+    {
+      "key": "a145465f-36cc-48e6-a595-1f895d24af45",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [
+        "7b335d6d-6fc7-485a-aa73-75a5fe686a68",
+        "a00cac94-6978-4abd-96bc-51e24bff21bc",
+        "037d40ac-6d63-477f-b314-670fb79f0f70",
+        "11333a30-4a8d-4c20-9e9d-6841e8ad9fc5"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "技术沉淀"
+        }
+      ]
+    },
+    {
+      "key": "b4e1d67b-a3af-4f1b-9db4-a2ba136fdd8b",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "副业"
+        }
+      ]
+    },
+    {
+      "key": "20cf149a-981e-43f0-ae7b-6102142f43c3",
+      "parentKey": "1155e70b-dce1-42fa-9305-ec3e0ecdae1c",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Koa/Egg/Express"
+        }
+      ]
+    },
+    {
+      "key": "1ceae9e4-8203-4e9b-a6ed-55d463081fe8",
+      "parentKey": "dac4ef41-a8f8-49fa-8cea-eeaac9d7fa88",
+      "subKeys": [
+        "0b783cd8-530e-41f2-9009-1974e9839e46"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "vue3"
+        }
+      ]
+    },
+    {
+      "key": "7b335d6d-6fc7-485a-aa73-75a5fe686a68",
+      "parentKey": "a145465f-36cc-48e6-a595-1f895d24af45",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "低代码搭建 "
+        }
+      ]
+    },
+    {
+      "key": "2f7a1ba9-3978-487c-9b6d-97ee45210430",
+      "parentKey": "2311d586-88a6-41dc-935c-f3116f16ba3a",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "canvas/svg/webGL/css3"
+        }
+      ]
+    },
+    {
+      "key": "11333a30-4a8d-4c20-9e9d-6841e8ad9fc5",
+      "parentKey": "a145465f-36cc-48e6-a595-1f895d24af45",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "互动可视化"
+        }
+      ]
+    },
+    {
+      "key": "2311d586-88a6-41dc-935c-f3116f16ba3a",
+      "parentKey": "1b9c0a59-eff7-4fac-b490-e6e3b520fba7",
+      "subKeys": [
+        "2f7a1ba9-3978-487c-9b6d-97ee45210430"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "绘图"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "readOnly": false,
+    "allowUndo": true,
+    "layoutDir": 0,
+    "theme": {
+      "name": "default",
+      "randomColor": true,
+      "background": "rgb(57,60,65)",
+      "highlightColor": "#50C9CE",
+      "marginH": 60,
+      "marginV": 20,
+      "contentStyle": {
+        "lineHeight": "1.5",
+        "fontSize": "16px"
+      },
+      "linkStyle": {
+        "lineRadius": 5,
+        "lineType": "curve",
+        "lineWidth": "3px"
+      },
+      "rootTopic": {
+        "contentStyle": {
+          "fontSize": "36px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": "3px"
+        }
+      },
+      "primaryTopic": {
+        "contentStyle": {
+          "fontSize": "24px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": "3px"
+        }
+      },
+      "normalTopic": {
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": "3px"
+        }
+      }
+    }
+  },
+  "formatVersion": "0.0"
+}

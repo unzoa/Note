@@ -129,6 +129,21 @@ insert into weibo
   values(0,?,?)
 ```
 
+### 若主键存在则更新
+
+```js
+const keys = ['user_id', 'list_id', 'anchor']
+const values = [user_id, list_id, anchor]
+const updData = keys.map((k, ind) => {
+  return `${k}=${values[ind]}`
+}).join()
+
+$SQL(`insert into
+  user_view_anchor(${ keys.join()}) values(${values.join()})
+  on duplicate key
+  update ${updData}`)
+```
+
 ## 更新数据
 
 ```sql
