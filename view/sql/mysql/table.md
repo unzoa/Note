@@ -76,6 +76,11 @@ select * from 表
 # 排除值查询
 select * from 表
   where 字段 not in 要排除的合集字符串;
+
+
+# 时间区间查询
+select * from 表
+  where time between '2022-11-11 00:00:00' and '2022-11-12 00:00:00';
 ```
 
 ## 增加字段
