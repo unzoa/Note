@@ -114,8 +114,8 @@
 
   * [Nginx 使用](view/service/nginx.md)
 
-  * [存储]
-    * [七牛]
+  * 存储
+    * 七牛
       * [基本使用](view/service/storage/qiniu/qiniu.md)
 
 * 网路安全
