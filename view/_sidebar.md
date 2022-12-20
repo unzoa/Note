@@ -110,8 +110,13 @@
       * [同步文件](view/service/centos/syncFile.md)
       * [vim使用](view/service/centos/vim.md)
       * [查询内存](view/service/centos/storage.md)
+      * [序列号](view/service/centos/serial-number.md)
 
   * [Nginx 使用](view/service/nginx.md)
+
+  * [存储]
+    * [七牛]
+      * [基本使用](view/service/storage/qiniu/qiniu.md)
 
 * 网路安全
   * 威胁情报
