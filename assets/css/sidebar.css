@@ -1,0 +1,12 @@
+.sidebar-nav {
+  padding: 0 20px;
+}
+
+.sidebar-nav h3 a span {
+  color: #bfbfbf !important;
+}
+
+.sidebar-nav h4 {
+  line-height: 35px;
+  margin: 0;
+}

@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <!-- <link rel="stylesheet" href="./assets/css/vue.css"> -->
+
+  <link rel="stylesheet" href="./assets/css/vue.css">
   <!-- Theme: Simple Dark -->
-  <link rel="stylesheet" href="./assets/css/theme-simple-dark.css">
+  <!-- <link rel="stylesheet" href="./assets/css/theme-simple-dark.css"> -->
 
   <link rel="stylesheet" href="./assets/css/sidebar.min.css" />
+  <link rel="stylesheet" href="./assets/css/sidebar.css">
 </head>
 <body>
   <div id="app">Loading ...</div>
@@ -18,13 +20,11 @@
   <script>
     window.$docsify = {
       // logo: 'assets/img/botticeli.png',
-      name: 'unzoa note',
+      name: '',
 
       coverpage: 'README.md',
 
-      themeColor: '#3399f3',
-
-      loadNavbar: 'view/_navbar.md',
+      // themeColor: '#3399f3',
 
       search: {
         paths: 'auto',
@@ -33,15 +33,17 @@
         depth: 3,
       },
 
+      loadNavbar: 'view/_navbar.md',
       loadSidebar: 'view/_sidebar.md',
+      subMaxLevel: 5,
 
       auto2top: true,
 
       count:{
-        countable:true,
-        fontsize:'0.9em',
-        color:'rgb(90,90,90)',
-        language:'Default'
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'Default'
       }
     }
 
