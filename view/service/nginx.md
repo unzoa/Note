@@ -33,9 +33,9 @@ listen       port;
 server_name  localhost;
 
 # 配置项目路径
-# server_name:listen/ 相当于 root/paths
 # 访问：server_name:listen
 
+# 相当于 root/paths
 loaction / {
   root root/paths;
   index index.html;
@@ -43,15 +43,26 @@ loaction / {
   try_files $uri /index.html;
 }
 
+# 相当于 root/paths/p
+location /p {
+  root root/paths;
+  index index.html;
+}
+
+
 # 配置代理服务
 # 代理地址：proxy_pass, 结尾处带斜杠，访问指向的地址会删除前缀；反之，不删除。
-# 访问：server_name:listen/前缀/sth/
-# proxy_pass/ 指向 proxy_pass/sth/
-# proxy_pass  指向 proxy_pass/前缀/sth/
 
-location /api {
-  proxy_pass http://server:port;
+# 访问：server_name:listen/前缀/sth
+# proxy_pass/ 指向 proxy_pass/sth
+# proxy_pass  指向 proxy_pass/前缀/sth
+
+# 相当于 http://server:port/sth
+location /api/ {
+  proxy_pass http://server:port/;
 }
+
+# 相当于 http://server:port/user/sth
 location /user {
   proxy_pass http://server:port;
 }

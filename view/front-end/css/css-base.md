@@ -87,6 +87,12 @@ ease-in-out | 规定以慢速开始和结束的过渡效果（等于 cubic-bezie
 cubic-bezier(n,n,n,n) | 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值
 
 
+**注意**
+
+- Q：容器设置radius，overflow: hidden，当子元素img设置了动画属性时，img会超出去
+	- A：在容器上增加 transform: rotate(0deg); -webkit-transform: rotate(0deg);
+	  - 不明原因的解决
+
 ### 动画停留
 ```css
 /*动画*/
