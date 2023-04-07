@@ -119,12 +119,14 @@
   * 安装
     * [mysql](view/service/centos/mysql.md)
     * [nginx](view/service/centos/nginx.md)
-    * [ndoe](view/service/centos/node.md)
+    * [node](view/service/centos/node.md)
   * 命令
     * [同步文件](view/service/centos/syncFile.md)
     * [vim使用](view/service/centos/vim.md)
     * [查询内存](view/service/centos/storage.md)
     * [序列号](view/service/centos/serial-number.md)
+  * 漏洞
+    * [CVE-2021-4034](view/service/centos/CVE-2021-4034.md)
 
 * Nginx
   * [使用](view/service/nginx.md)
