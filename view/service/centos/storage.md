@@ -11,3 +11,9 @@ df -lh
 # tmpfs           920M     0  920M    0% /sys/fs/cgroup
 # tmpfs           184M     0  184M    0% /run/user/0
 ```
+
+释放内存缓存
+
+```bash
+echo 1 > /proc/sys/vm/drop_caches
+```
