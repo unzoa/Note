@@ -112,3 +112,12 @@ pyenv activate jarvis
 pyenv deactivate
 ```
 退出成功，终端名字会变成默认
+
+
+指定全局版本
+```sh
+pyenv global jarvis
+```
+
+**实际上当你切换版本后, 相应的pip和包仓库都是会自动切换过去的**
+
