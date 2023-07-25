@@ -98,6 +98,7 @@
   * [初始化](view/back-end/node/init.md)
   * [安装注意](view/back-end/node/npm_install.md)
   * [简单的项目](view/back-end/node/node_project.md)
+  * [nsfwjs](view/back-end/node/nsfwjs.md)
 
 * Python
   * [pip安装](view/back-end/python/install.md)
