@@ -90,6 +90,7 @@
   * [Canvas](view/front-end/technique/canvas.md)
   * [SVG](view/front-end/technique/svg.md)
   * [鉴权](view/front-end/technique/authority.md)
+  * [PWA](view/front-end/technique/pwa.md)
 
 <h3>后端</h3>
 
