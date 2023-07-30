@@ -168,3 +168,4 @@
   * [vue-cli发热](view/computer/mac/vue-cli项目.md)
   * [x-code](view/computer/mac/x-code.md)
   * [重装电脑](view/computer/mac/install.md)
+  * [ssh-keepAlive](view/computer/mac/keep-ssh-alive.md)
