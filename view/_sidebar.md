@@ -170,3 +170,4 @@
   * [重装电脑](view/computer/mac/install.md)
   * [ssh-keepAlive](view/computer/mac/keep-ssh-alive.md)
   * [auto-ssh](view/computer/mac/auto-ssh.md)
+  * [vpn](view/computer/mac/vpn.md)
