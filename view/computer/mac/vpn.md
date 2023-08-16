@@ -2,6 +2,8 @@
 
 ## Prepare
 
+> MacOS.Ventura 以下
+
 ```
 vpnname
 vpnpwd
@@ -52,7 +54,9 @@ plugin L2TP.ppp
 l2tpnoipsec
 ```
 
-3. 最后点高级
+## Step 4
+
+最后点高级，配置clash的代理
 
 ```
 “选项”tab下，把里面”通过VPN连接发送所有流量“钩上
@@ -60,7 +64,7 @@ l2tpnoipsec
 ```
 点击弹窗底部”好“
 
-## Step 4
+## Step 5
 
 点击右侧底部“应用”，保证不在公司网络情况下，点击上方的“连接”，稍等片刻即可联通
 
