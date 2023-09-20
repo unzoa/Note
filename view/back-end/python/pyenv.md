@@ -97,7 +97,7 @@ eval "$(pyenv virtualenv-init -)"
 
 重载.zshrc
 ```sh
-source ~./zshrc
+source .zshrc
 ```
 
 启动
