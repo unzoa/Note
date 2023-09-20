@@ -149,7 +149,7 @@
 
 * 杀软
   * clamav
-    * [关于规则](view/cyber_security/threat_intelligence/clamav/clamav.md)
+    * [关于规则](view/cyber_security/clamav/clamav.md)
 
 
 <h3>工具</h3>
