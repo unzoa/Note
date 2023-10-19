@@ -178,3 +178,4 @@
   * [ssh-keepAlive](view/computer/mac/keep-ssh-alive.md)
   * [auto-ssh](view/computer/mac/auto-ssh.md)
   * [vpn](view/computer/mac/vpn.md)
+  * [安装软件](view/computer/mac/install-app.md)
