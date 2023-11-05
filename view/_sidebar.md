@@ -108,7 +108,7 @@
 
 * MySQL
   * [Mac下安装](view/sql/mysql/start.md)
-  * [迁移sql文件](view/sql/mysql/movesql.md)
+  * [迁移sql文件](view/sql/mysql/moveSql.md)
   * 常用命令
     * [库](view/sql/mysql/database.md)
     * [表](view/sql/mysql/table.md)
@@ -129,6 +129,8 @@
     * [序列号](view/service/centos/serial-number.md)
   * 漏洞
     * [CVE-2021-4034](view/service/centos/CVE-2021-4034.md)
+
+* [unbuntu](view/service/ubuntu/ubuntu.md)
 
 * Nginx
   * [使用](view/service/nginx.md)
