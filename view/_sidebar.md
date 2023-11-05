@@ -102,6 +102,7 @@
 
 * Python
   * [pip安装](view/back-end/python/install.md)
+  * [版本控制](view/back-end/python/pyenv.md)
 
 
 <h3>数据库</h3>
@@ -139,12 +140,18 @@
   * 七牛
     * [基本使用](view/service/storage/qiniu/qiniu.md)
 
+* Docker
+  * [基本使用](view/docker/docker.md)
 
 <h3>网路安全</h3>
 
 * 威胁情报
   * IOC
     * [介绍](view/cyber_security/threat_intelligence/IOC/ioc.md)
+
+* 杀软
+  * clamav
+    * [关于规则](view/cyber_security/clamav/clamav.md)
 
 
 <h3>工具</h3>
@@ -173,3 +180,4 @@
   * [ssh-keepAlive](view/computer/mac/keep-ssh-alive.md)
   * [auto-ssh](view/computer/mac/auto-ssh.md)
   * [vpn](view/computer/mac/vpn.md)
+  * [安装软件](view/computer/mac/install-app.md)
