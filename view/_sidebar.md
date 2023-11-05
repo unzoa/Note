@@ -131,7 +131,12 @@
   * 漏洞
     * [CVE-2021-4034](view/service/centos/CVE-2021-4034.md)
 
-* [unbuntu](view/service/ubuntu/ubuntu.md)
+* unbuntu
+  * 安装
+    * [安装docker](view/service/ubuntu/Docker.md)
+    * [安装mysql](view/service/ubuntu/docker-mysql.md)
+    * [安装nginx](view/service/ubuntu/docker-nginx.md)
+    * [后端](view/service/ubuntu/docker-backend.md)
 
 * Nginx
   * [使用](view/service/nginx.md)

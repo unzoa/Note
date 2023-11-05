@@ -4,7 +4,7 @@
 
 ## Task List
 
-- [安装docker](./Docker.md)
-- [安装mysql](./docker-mysql.md)
-- [安装nginx](./docker-nginx.md)
-- [后端](./docker-backend.md)
+* [安装docker](view/service/ubuntu/Docker.md)
+* [安装mysql](view/service/ubuntu/docker-mysql.md)
+* [安装nginx](view/service/ubuntu/docker-nginx.md)
+* [后端](view/service/ubuntu/docker-backend.md)
