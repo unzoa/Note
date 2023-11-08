@@ -204,3 +204,11 @@ delete from 数据表 where age = 23;
 delete from 表名 where 字段 in (值1, 值2, 值...)
 ```
 
+
+## 存储json
+
+1、处理字段类型为mediumtext，
+    MediumText	最大长度 16777215 个字节(2^24-1
+    Blob (Binary large objects)储存二进位资料，且有分大小写
+    memo text not null
+2、存储时，转字符串，用单引号包裹

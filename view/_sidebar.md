@@ -137,6 +137,8 @@
     * [安装mysql](view/service/ubuntu/docker-mysql.md)
     * [安装nginx](view/service/ubuntu/docker-nginx.md)
     * [后端](view/service/ubuntu/docker-backend.md)
+    * [时间问题](view/service/ubuntu/date.md)
+    * [中文乱码](view/service/ubuntu/cn-q.md)
 
 * Nginx
   * [使用](view/service/nginx.md)
