@@ -32,5 +32,13 @@ data "+%Z" # CST
 
 # 此时，nodejs new Date() 获取的时间仍然是慢了8小时
 # 尝试重启服务器
-
+# 失败
 ```
+
+```python
+# 安装了py， datetime 获取的是对的
+import datetime;
+datetime.datetime.now()
+# 正确
+```
+
