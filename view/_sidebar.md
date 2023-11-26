@@ -144,6 +144,7 @@
 * 存储
   * 七牛
     * [基本使用](view/service/storage/qiniu/qiniu.md)
+    * [替换证书](view/service/storage/qiniu/ssl.md)
 
 * Docker
   * [基本使用](view/docker/docker.md)
