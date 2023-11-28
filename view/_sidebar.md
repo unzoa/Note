@@ -117,17 +117,20 @@
 
 <h3>服务</h3>
 
+* linux
+  * 常用命令
+    * [grep](view/service/linux/grep.md)
+    * [同步文件](view/service/linux/syncFile.md)
+    * [vim使用](view/service/linux/vim.md)
+    * [查询内存](view/service/linux/storage.md)
+    * [序列号](view/service/linux/serial-number.md)
+
 * centOS
   * [Start](view/service/centos/start.md)
   * 安装
     * [mysql](view/service/centos/mysql.md)
     * [nginx](view/service/centos/nginx.md)
     * [node](view/service/centos/node.md)
-  * 命令
-    * [同步文件](view/service/centos/syncFile.md)
-    * [vim使用](view/service/centos/vim.md)
-    * [查询内存](view/service/centos/storage.md)
-    * [序列号](view/service/centos/serial-number.md)
   * 漏洞
     * [CVE-2021-4034](view/service/centos/CVE-2021-4034.md)
 
