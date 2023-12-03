@@ -135,6 +135,7 @@
   * 安装
     * [安装docker](view/service/ubuntu/Docker.md)
     * [安装mysql](view/service/ubuntu/docker-mysql.md)
+      * [宿主机安装](view/service/ubuntu/mysql.md)
     * [安装nginx](view/service/ubuntu/docker-nginx.md)
     * [后端](view/service/ubuntu/docker-backend.md)
     * [时间问题](view/service/ubuntu/date.md)
