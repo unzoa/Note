@@ -102,7 +102,8 @@
 
 * Python
   * [pip安装](view/back-end/python/install.md)
-  * [版本控制](view/back-end/python/pyenv.md)
+  * [版本控制](view/back-end/python/version.md)
+    * [pyenv-macos](view/back-end/python/pyenv.md)
 
 
 <h3>数据库</h3>
