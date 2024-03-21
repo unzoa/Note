@@ -19,7 +19,6 @@ py -3.x -m venv .venv
 # 其中，
 # 3.x是指定的电脑上安装的版本
 # .venv 是虚拟环境目录
-
 # 启动虚拟环境，否则pip依然是伏笔中顺序第一版本
 .venv/Scripts/activate
 ```
