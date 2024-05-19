@@ -2,7 +2,7 @@
 
 ## 镜像 image
 
-### nuxt的部署
+### dockerfile
 
 1. 创建一个ubuntu的基础系统
 2. 安装必要的工具
@@ -31,6 +31,35 @@ ADD .output /app/.output
 ADD reports /app/reports
 
 EXPOSE 3000
+```
+
+### 可单独build
+
+> 一个纯净ubuntu，安装了必要软件后，需要有一个进程一直运行才能保证运行起来不退出
+
+创建一个run.sh
+```shell
+#!/bin/bash
+
+while true; do
+    sleep 1000
+done
+```
+
+然后dockerfile中
+```dockerfile
+WORKDIR /app
+
+COPY run.sh run.sh
+
+RUN chmod +x run.sh
+
+# 设置容器启动后执行的命令
+CMD ["./run.sh"]
+```
+
+```bash
+docker build -t imageName:version .
 ```
 
 ## 多容器 compose
