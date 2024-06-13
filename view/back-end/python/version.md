@@ -23,3 +23,43 @@ py -3.x -m venv .venv
 .venv/Scripts/activate
 ```
 
+## macos
+
+从官网上下载了3.12，3.11并顺序安装，python命令不能识别
+```bash
+ls /usr/local/bin | grep python
+
+python3
+python3-config
+python3-intel64
+python3.11
+python3.11-config
+python3.11-intel64
+python3.12
+python3.12-config
+python3.12-intel64
+
+
+python3 --version
+
+Python 3.11.9
+
+```
+
+新建项目
+
+```bash
+py -3.11 -m venv .venv
+zsh: command not found: py
+# 在 macOS 上，py 命令通常不是默认安装的，而是 Windows 上的 Python Launcher 提供的命令。
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+# pip安装完可以通过以下命令退出虚拟环境：
+deactivate
+```
+
+
+
+
