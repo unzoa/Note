@@ -156,6 +156,7 @@
 * Docker
   * [基本使用](view/docker/docker.md)
   * [创建镜像](view/docker/docker-compose.md)
+  * [mysql迁移](view/docker/move.md)
 
 <h3>网路安全</h3>
 
