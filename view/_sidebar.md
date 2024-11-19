@@ -52,6 +52,9 @@
     * [ExportWord](view/front-end/npm/other/exportWord.md)
     * [GSAP](view/front-end/npm/other/gsap.md)
 
+* PWA
+  * [消息推送](view/front-end/pwa/pusher.md)
+
 * 桌面端
   * NW.js
     * [介绍](view/front-end/desktop/nw/README.md)
