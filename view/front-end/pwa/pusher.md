@@ -87,9 +87,7 @@ self.addEventListener('notificationclick', function (event) {
 *  - 事件内容
 * 3. 定时任务进行推送
 
-#### 关键代码
-
-- step 1 生成密钥
+#### step 1 生成密钥
 
 ```js
 const vapidKeys = webpush.generateVAPIDKeys();
@@ -97,7 +95,7 @@ console.log('Public Key:', vapidKeys.publicKey);
 console.log('Private Key:', vapidKeys.privateKey);
 ```
 
-- step 2 设置 VAPID 公钥和私钥
+#### step 2 设置 VAPID 公钥和私钥
 
 ```js
 webpush.setVapidDetails(
@@ -107,7 +105,7 @@ webpush.setVapidDetails(
 );
 ```
 
-- step 3 前端注册完sw后，获取接收通知权限
+#### step 3 前端注册完sw后，获取接收通知权限
 
 ```js
 if ('serviceWorker' in navigator) {
@@ -171,7 +169,7 @@ function urlBase64ToUint8Array (base64String: string) {
 }
 ```
 
-- Step 4 后端接收到设备信息，推送消息
+#### Step 4 后端接收到设备信息，推送消息
 
 ```js
 /**
