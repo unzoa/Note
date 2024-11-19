@@ -12,7 +12,7 @@
   - https
   - nodejs web-push
 
-### 打包环境和安装
+## 打包环境和安装
 
 ```bash
 # vite安装项目
@@ -20,7 +20,7 @@
 npm i vite-plugin-pwa -D
 ```
 
-### 配置
+## 配置
 
 > 在打包时候 vite-plugin-pwa 会自动生成sw.js ，但是需要将新的sw的代码插入到打包的sw中
 
@@ -34,7 +34,7 @@ export default defineConfig({
       filename: 'sw.js',            // 生成的 Service Worker 文件名
 ```
 
-### 自定义 sw.js 配置
+## 自定义 sw.js 配置
 
 ```js
 // 在 src/sw.js 中添加 import { precacheAndRoute } from 'workbox-precaching'; 和 precacheAndRoute(self.__WB_MANIFEST);。
@@ -76,7 +76,7 @@ self.addEventListener('notificationclick', function (event) {
 
 
 
-### 服务实现
+## 服务实现
 
 > 基于 koa2 后端编写api
 
@@ -87,7 +87,7 @@ self.addEventListener('notificationclick', function (event) {
 *  - 事件内容
 * 3. 定时任务进行推送
 
-#### step 1 生成密钥
+### step 1 生成密钥
 
 ```js
 const vapidKeys = webpush.generateVAPIDKeys();
@@ -95,7 +95,7 @@ console.log('Public Key:', vapidKeys.publicKey);
 console.log('Private Key:', vapidKeys.privateKey);
 ```
 
-#### step 2 设置 VAPID 公钥和私钥
+### step 2 设置 VAPID 公钥和私钥
 
 ```js
 webpush.setVapidDetails(
@@ -105,7 +105,7 @@ webpush.setVapidDetails(
 );
 ```
 
-#### step 3 前端注册完sw后，获取接收通知权限
+### step 3 前端注册完sw后，获取接收通知权限
 
 ```js
 if ('serviceWorker' in navigator) {
@@ -169,7 +169,7 @@ function urlBase64ToUint8Array (base64String: string) {
 }
 ```
 
-#### Step 4 后端接收到设备信息，推送消息
+### Step 4 后端接收到设备信息，推送消息
 
 ```js
 /**
