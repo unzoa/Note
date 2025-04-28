@@ -108,6 +108,12 @@
   * [版本控制](view/back-end/python/version.md)
     * [pyenv-macos](view/back-end/python/pyenv.md)
 
+<h3>存储</h3>
+
+  * 七牛
+    * [基本使用](view/storage/qiniu/qiniu.md)
+    * [配置](view/storage/qiniu/config/config.md)
+    * [替换证书](view/storage/qiniu/ssl/ssl.md)
 
 <h3>数据库</h3>
 
@@ -150,11 +156,6 @@
 
 * Nginx
   * [使用](view/service/nginx.md)
-
-* 存储
-  * 七牛
-    * [基本使用](view/service/storage/qiniu/qiniu.md)
-    * [替换证书](view/service/storage/qiniu/ssl.md)
 
 * Docker
   * [基本使用](view/docker/docker.md)
