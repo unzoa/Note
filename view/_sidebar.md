@@ -28,6 +28,12 @@
   * [Proxy](view/front-end/frame/react/proxy.md)
   * [样式](view/front-end/frame/react/style.md)
 
+* UmiJs
+  * [介绍](view/front-end/umi/umi.md)
+  * [路由](view/front-end/umi/route-config.md)
+  * [请求、代理](view/front-end/umi/proxy.md)
+  * [状态管理](view/front-end/umi/useModel.md)
+
 * 小程序
   * [使用](view/front-end/frame/mini-program.md)
 
@@ -94,6 +100,7 @@
   * [SVG](view/front-end/technique/svg.md)
   * [鉴权](view/front-end/technique/authority.md)
   * [PWA](view/front-end/technique/pwa.md)
+  * [Socket](view/front-end/technique/socket.md)
 
 <h3>后端</h3>
 
