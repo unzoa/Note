@@ -164,6 +164,9 @@
 * Nginx
   * [使用](view/service/nginx.md)
 
+* SSL
+  * [证书](view/service/永久域名证书.md)
+
 * Docker
   * [基本使用](view/docker/docker.md)
   * [创建镜像](view/docker/docker-compose.md)
