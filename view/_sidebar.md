@@ -172,6 +172,9 @@
   * [创建镜像](view/docker/docker-compose.md)
   * [mysql迁移](view/docker/move.md)
 
+* 内存
+  * [内存优化](view/service/服务器内存优化总结文档（MySQL+Swap）.md)
+
 <h3>网路安全</h3>
 
 * 威胁情报
