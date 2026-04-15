@@ -109,6 +109,7 @@
   * [安装注意](view/back-end/node/npm_install.md)
   * [简单的项目](view/back-end/node/node_project.md)
   * [nsfwjs](view/back-end/node/nsfwjs.md)
+  * [内存优化](view/back-end/node/服务器内存溢出分析.md)
 
 * Python
   * [pip安装](view/back-end/python/install.md)
@@ -160,6 +161,7 @@
     * [后端](view/service/ubuntu/docker-backend.md)
     * [时间问题](view/service/ubuntu/date.md)
     * [中文乱码](view/service/ubuntu/cn-q.md)
+    * [RSS碎片内存优化](view/service/ubuntu/RSS碎片内存优化.md)
 
 * Nginx
   * [使用](view/service/nginx.md)
@@ -174,6 +176,8 @@
 
 * 内存
   * [内存优化](view/service/服务器内存优化总结文档（MySQL+Swap）.md)
+  * [内存溢出分析](view/back-end/node/服务器内存溢出分析.md)
+  * [RSS碎片内存优化](view/service/ubuntu/RSS碎片内存优化.md)
 
 <h3>网路安全</h3>
 
