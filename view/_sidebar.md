@@ -202,6 +202,7 @@
 * [Sublime](view/tools/sublime.md)
 * [Svn](view/tools/svn.md)
 * [VS Code](view/tools/vscode.md)
+* [Trae](view/tools/trae.md)
 * [zsh](view/tools/zsh.md)
 
 
